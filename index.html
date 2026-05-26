@@ -262,7 +262,7 @@ svg.chart{display:block;overflow:visible;}
   </div>
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="switchTab('bp')">商业计划书</button>
-    <button class="nav-tab" onclick="switchTab('insights')">全球果汁&能量饮品洞察</button>
+    <button class="nav-tab" onclick="switchTab('insights')">全球鲜果&能量饮品全景</button>
   </div>
 </nav>
 
@@ -642,7 +642,7 @@ function switchTab(tab){
 
 </div><!-- /page-bp -->
 
-<!-- ══ PAGE: 全球果汁&能量饮品洞察 ══ -->
+<!-- ══ PAGE: 全球鲜果&能量饮品全景 ══ -->
 <div id="page-insights" style="padding-top:56px;">
 <style>
 /* ══ INSIGHTS v3 — White Minimal ══ */
@@ -650,8 +650,19 @@ function switchTab(tab){
 
 .wi-hero {
   background: #fff;
-  padding: 100px 120px 80px;
+  padding: 0;
   border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+.wi-hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=1800&q=85') center/cover;
+  opacity: 0.08;
+}
+.wi-hero-inner {
+  position: relative; z-index: 1;
+  padding: 100px 120px 80px;
 }
 .wi-hero-eyebrow {
   font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
@@ -931,9 +942,11 @@ function switchTab(tab){
 
 <!-- ── HERO ── -->
 <section class="wi-hero">
-  <div class="wi-hero-eyebrow">Global Market Intelligence · 2026</div>
-  <h1 class="wi-hero-title">全球果汁<br>&amp;<span>能量饮品</span><br>洞察</h1>
-  <p class="wi-hero-desc">7 个全球标杆品牌深度解析，读懂「身体状态消费化」这场正在改变饮品赛道的全球革命。</p>
+  <div class="wi-hero-bg"></div>
+  <div class="wi-hero-inner">
+  <div class="wi-hero-eyebrow">Global Fresh Juice &amp; Energy Drinks · Intelligence 2026</div>
+  <h1 class="wi-hero-title">全球鲜果<br>&amp;<span>能量饮品</span><br>全景</h1>
+  <p class="wi-hero-desc">7 个全球标杆品牌深度解析——从澳洲鲜果汁连锁到美国功能能量饮，<br>读懂新一代健康饮品消费者正在寻找什么。</p>
   <div class="wi-hero-meta">
     <div class="wi-meta-item">
       <div class="wi-meta-num">7</div>
@@ -951,13 +964,13 @@ function switchTab(tab){
       <div class="wi-meta-num">1</div>
       <div class="wi-meta-label">核心趋势</div>
     </div>
-  </div>
+  </div><!-- /wi-hero-inner -->
 </section>
 
 <!-- ══ CHAPTER 01 ══ -->
 <div class="wi-chapter">
   <div class="wi-ch-line"></div>
-  <div class="wi-ch-label">01 · 果汁门店标杆 — 强烈建议深度研究</div>
+  <div class="wi-ch-label">01 · 鲜果汁连锁标杆 — 强烈建议深度研究</div>
   <div class="wi-ch-line"></div>
 </div>
 
@@ -988,62 +1001,63 @@ function switchTab(tab){
   </div>
 </div>
 
-<!-- BRAND 02: Joe & The Juice -->
+<!-- BRAND 02: innocent drinks -->
 <div class="wi-brand">
   <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80" alt="Joe & The Juice">
+    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=900&q=85" alt="innocent drinks">
   </div>
   <div class="wi-brand-info">
     <div class="wi-brand-num">02</div>
-    <div class="wi-brand-category">都市潮流 · 能量空间</div>
-    <div class="wi-brand-name">Joe &amp; The Juice</div>
-    <div class="wi-brand-flag">🇺🇸 美国 / 全球 · 潮流果汁连锁</div>
-    <div class="wi-brand-like">"Supreme + 果汁店"</div>
+    <div class="wi-brand-category">鲜果汁 · 欧洲最大品牌</div>
+    <div class="wi-brand-name">innocent drinks</div>
+    <div class="wi-brand-flag">🇬🇧 英国 · 欧洲 15 国 · 可口可乐战略投资</div>
+    <div class="wi-brand-like">"欧洲最会讲故事的果汁品牌"</div>
     <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Urban</span>
-      <span class="wi-brand-tag">Music</span>
-      <span class="wi-brand-tag">Lifestyle</span>
-      <span class="wi-brand-tag">Protein</span>
+      <span class="wi-brand-tag">Natural</span>
+      <span class="wi-brand-tag">No Additives</span>
+      <span class="wi-brand-tag">Brand Story</span>
+      <span class="wi-brand-tag">Playful</span>
     </div>
-    <div class="wi-analysis">把果汁店变成了年轻白领的「第三空间」。门店内播放电子音乐，员工着装潮流，视觉语言接近潮牌。证明果汁品牌可以同时拥有健康定位和潮流文化资产。</div>
+    <div class="wi-analysis">从三个大学生用 500 英镑起步，成长为欧洲最大天然果汁品牌，最终被可口可乐战略投资。核心武器是极具感染力的品牌人格——包装上的文案幽默、真诚、有温度，成为教科书级别的品牌叙事案例。</div>
     <div class="wi-refs-title">参考点</div>
     <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>「第三空间」策略：让门店成为目的地而非顺手买的地方</li>
-      <li><span class="wi-ref-arrow">→</span>音乐 + 视觉 + 员工形象三位一体的品牌氛围营造</li>
-      <li><span class="wi-ref-arrow">→</span>健身、办公、社交三场景无缝衔接</li>
+      <li><span class="wi-ref-arrow">→</span>品牌人格化：把「无添加、纯天然」讲成有趣的故事而非枯燥标签</li>
+      <li><span class="wi-ref-arrow">→</span>包装即媒体：每个瓶子都是品牌沟通的界面</li>
+      <li><span class="wi-ref-arrow">→</span>小众到国民品牌的升级路径：真诚 + 坚持 + 口碑裂变</li>
     </ul>
   </div>
 </div>
 
-<!-- BRAND 03: Playa Bowls -->
+<!-- BRAND 03: Boost Juice -->
 <div class="wi-brand">
   <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=900&q=80" alt="Playa Bowls">
+    <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=900&q=85" alt="Boost Juice">
   </div>
   <div class="wi-brand-info">
     <div class="wi-brand-num">03</div>
-    <div class="wi-brand-category">超级食物 · 热带文化</div>
-    <div class="wi-brand-name">Playa Bowls</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 巴西莓超级食物</div>
-    <div class="wi-brand-like">"热带版 Shake Shack"</div>
+    <div class="wi-brand-category">鲜果汁连锁 · 最像通喜</div>
+    <div class="wi-brand-name">Boost Juice</div>
+    <div class="wi-brand-flag">🇦🇺 澳洲 · 全球 600+ 门店 · 14 国</div>
+    <div class="wi-brand-like">"澳洲版通喜果汁"</div>
     <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Açaí</span>
-      <span class="wi-brand-tag">Superfood</span>
-      <span class="wi-brand-tag">Tropical</span>
+      <span class="wi-brand-tag">Fresh Juice</span>
+      <span class="wi-brand-tag">Smoothie</span>
+      <span class="wi-brand-tag">Franchise</span>
+      <span class="wi-brand-tag">Healthy</span>
     </div>
-    <div class="wi-analysis">把巴西莓这个小众超级食物，打造成美国年轻人的健康生活符号。产品颜值极高，天然具备社媒传播力。证明食材本身可以成为品牌核心 IP。</div>
+    <div class="wi-analysis">澳洲最大鲜果汁连锁，从一家店成长到全球 600+ 门店，核心是标准化的新鲜现榨模型。门店小、翻台快、产品简洁——是目前全球最接近通喜现有门店模型的标杆品牌。</div>
     <div class="wi-refs-title">参考点</div>
     <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>超级食材 IP 化：把成分本身变成品牌故事核心</li>
-      <li><span class="wi-ref-arrow">→</span>高颜值产品的天然社交媒体传播路径</li>
-      <li><span class="wi-ref-arrow">→</span>热带文化在全球年轻消费者中的天然吸引力</li>
+      <li><span class="wi-ref-arrow">→</span>小门店高翻台的鲜果汁连锁扩张模型，直接参考价值最高</li>
+      <li><span class="wi-ref-arrow">→</span>菜单精简策略：爆款 SKU 集中，减少复杂度提升效率</li>
+      <li><span class="wi-ref-arrow">→</span>从本地品牌到国际特许经营的品牌升级路径</li>
     </ul>
   </div>
 </div>
 
 <!-- PULL QUOTE 01 -->
 <div class="wi-pull">
-  <p>这三个果汁门店品牌共同证明：<strong>把饮品从「解渴」升维到「状态管理」</strong>——用户买的不是一杯果汁，是一次对自己身体的投资。这是通喜能量需要讲述的核心故事。</p>
+  <p>这五个鲜果汁品牌从不同角度共同证明：<strong>「新鲜、纯粹、有功能」是鲜果汁品牌升级的三个核心锚点</strong>——不是口味更多，而是目的更清晰。这是通喜能量需要讲述的核心故事。</p>
 </div>
 
 <!-- ══ CHAPTER 02 ══ -->
@@ -1138,28 +1152,29 @@ function switchTab(tab){
   </div>
 </div>
 
-<!-- BRAND 07: GHOST Energy -->
+<!-- BRAND 07: Natalie's Orchid Island Juice -->
 <div class="wi-brand">
   <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?w=900&q=80" alt="GHOST Energy">
+    <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=900&q=85" alt="Natalie's Juice">
   </div>
   <div class="wi-brand-info">
     <div class="wi-brand-num">07</div>
-    <div class="wi-brand-category">潮流 IP · 联名文化</div>
-    <div class="wi-brand-name">GHOST Energy</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 年轻潮流健身能量饮</div>
-    <div class="wi-brand-like">"Supreme × 能量饮"</div>
+    <div class="wi-brand-category">高端鲜榨 · 无防腐剂</div>
+    <div class="wi-brand-name">Natalie's</div>
+    <div class="wi-brand-flag">🇺🇸 美国 · 高端鲜榨果汁 · 家族品牌</div>
+    <div class="wi-brand-like">"美国最纯粹的鲜榨果汁"</div>
     <div class="wi-brand-tags">
-      <span class="wi-brand-tag">IP Collab</span>
-      <span class="wi-brand-tag">Streetwear</span>
-      <span class="wi-brand-tag">Gaming</span>
+      <span class="wi-brand-tag">Fresh Squeezed</span>
+      <span class="wi-brand-tag">No Preservatives</span>
+      <span class="wi-brand-tag">Premium</span>
+      <span class="wi-brand-tag">Clean Label</span>
     </div>
-    <div class="wi-analysis">用潮流 IP 联名把功能饮料变成了「可收藏的文化商品」。与 Oreo、Sonic 等 IP 联名，每次新品都制造话题事件。目标用户：Z世代 + 游戏 + 健身三交叉人群。</div>
+    <div class="wi-analysis">佛罗里达家族果园直接榨汁，零添加、无防腐剂、不调配。用极度克制的「纯粹」定位，在高端超市和米其林餐厅站稳脚跟。证明了「什么都不加」本身就是最强的品牌主张。</div>
     <div class="wi-refs-title">参考点</div>
     <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>IP 联名：每次新品 = 一次文化事件，而非普通上新</li>
-      <li><span class="wi-ref-arrow">→</span>限量感包装设计驱动社媒分享和收藏行为</li>
-      <li><span class="wi-ref-arrow">→</span>游戏 × 健身 × 潮流三圈层交叉用户精准渗透</li>
+      <li><span class="wi-ref-arrow">→</span>「零添加」作为核心品牌主张，反向建立高端信任感</li>
+      <li><span class="wi-ref-arrow">→</span>从果园到杯子的溯源故事，构建产品透明度护城河</li>
+      <li><span class="wi-ref-arrow">→</span>高端渠道（精品超市/餐厅）优先，再向大众市场扩展</li>
     </ul>
   </div>
 </div>
@@ -1177,13 +1192,13 @@ function switchTab(tab){
     <div class="wi-rank-col">
       <div class="wi-rank-tier">第一梯队 · 强烈建议</div>
       <div class="wi-rank-item"><div class="wi-rank-num">1</div><div><div class="wi-rank-name">Smoothie King</div><div class="wi-rank-desc">功能菜单 · 健身版星巴克</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">2</div><div><div class="wi-rank-name">Joe & The Juice</div><div class="wi-rank-desc">潮流空间 · 都市白领</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">2</div><div><div class="wi-rank-name">Boost Juice</div><div class="wi-rank-desc">门店模型 · 最像通喜</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">3</div><div><div class="wi-rank-name">Celsius</div><div class="wi-rank-desc">0糖女性市场 · 功能定位</div></div></div>
     </div>
     <div class="wi-rank-col">
       <div class="wi-rank-tier">第二梯队 · 品牌升级</div>
-      <div class="wi-rank-item"><div class="wi-rank-num">4</div><div><div class="wi-rank-name">Playa Bowls</div><div class="wi-rank-desc">超级食材 IP 化</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">5</div><div><div class="wi-rank-name">GHOST Energy</div><div class="wi-rank-desc">IP联名 · 文化认同</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">4</div><div><div class="wi-rank-name">innocent drinks</div><div class="wi-rank-desc">品牌人格化 · 故事驱动</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">5</div><div><div class="wi-rank-name">Natalie's</div><div class="wi-rank-desc">零添加 · 高端鲜榨</div></div></div>
     </div>
     <div class="wi-rank-col">
       <div class="wi-rank-tier">第三梯队 · 视觉参考</div>
