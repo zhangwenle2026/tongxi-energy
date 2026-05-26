@@ -35,6 +35,25 @@ nav{
 .nav-mark{width:26px;height:26px;background:var(--g);border-radius:4px;display:flex;align-items:center;justify-content:center;}
 .nav-mark svg{width:14px;height:14px;}
 .nav-name{font-size:13px;font-weight:700;color:var(--ink);}
+
+/* TAB SWITCHER */
+.nav-tabs{display:flex;align-items:center;gap:2px;}
+.nav-tab{
+  font-size:12px;font-weight:400;color:var(--faint);
+  padding:6px 16px;border-radius:20px;cursor:pointer;
+  letter-spacing:0.02em;transition:all 0.15s ease;
+  border:none;background:none;font-family:inherit;
+  white-space:nowrap;
+}
+.nav-tab:hover{color:var(--ink);}
+.nav-tab.active{
+  background:var(--g);color:#fff;font-weight:600;
+}
+
+/* PAGE VISIBILITY */
+#page-bp{display:block;}
+#page-insights{display:none;}
+
 .nav-tag{font-size:11px;color:var(--faint);letter-spacing:0.14em;text-transform:uppercase;}
 
 /* CHAPTER DIVIDER — magazine style */
@@ -241,8 +260,25 @@ svg.chart{display:block;overflow:visible;}
     </div>
     <div><div class="nav-name">通喜果汁</div></div>
   </div>
-  <div class="nav-tag">商业计划书 · 2026</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchTab('bp')">商业计划书</button>
+    <button class="nav-tab" onclick="switchTab('insights')">全球果汁&能量饮品洞察</button>
+  </div>
 </nav>
+
+<script>
+function switchTab(tab){
+  document.getElementById('page-bp').style.display = tab==='bp' ? 'block' : 'none';
+  document.getElementById('page-insights').style.display = tab==='insights' ? 'block' : 'none';
+  document.querySelectorAll('.nav-tab').forEach((el,i)=>{
+    el.classList.toggle('active', (tab==='bp' && i===0) || (tab==='insights' && i===1));
+  });
+  window.scrollTo(0,0);
+}
+</script>
+
+<!-- ══ PAGE: 商业计划书 ══ -->
+<div id="page-bp">
 
 <!-- COVER -->
 <div style="padding-top:56px;">
@@ -603,6 +639,18 @@ svg.chart{display:block;overflow:visible;}
   <div class="ft-l">通喜果汁 · Tongxi · 2026</div>
   <div class="ft-r">保密文件 · Confidential</div>
 </footer>
+
+</div><!-- /page-bp -->
+
+<!-- ══ PAGE: 全球果汁&能量饮品洞察 ══ -->
+<div id="page-insights" style="padding-top:56px;">
+  <div class="s" style="padding-top:100px;padding-bottom:80px;">
+    <div class="eye">全球市场洞察 · 2026</div>
+    <div class="hero-num">全球果汁</div>
+    <div class="hero-num"><span class="g">能量饮品洞察</span></div>
+    <div class="hero-cap" style="margin-top:32px;">内容即将上线 · <strong>Content Coming Soon</strong></div>
+  </div>
+</div><!-- /page-insights -->
 
 </body>
 </html>
