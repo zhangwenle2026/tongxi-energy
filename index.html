@@ -3,767 +3,736 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>通喜果汁·能量进化 — 全系列能量饮商业计划书</title>
+<title>通喜果汁·能量进化 — 商业计划书</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:#0A0A0F; --bg2:#0F0F18; --card:#13131F; --border:#1E1E30; --border2:#2A2A40;
-  --orange:#FF6B35; --teal:#00D4AA; --purple:#8B5CF6; --red:#FF4444; --yellow:#FFC832;
-  --text:#F0F0F5; --text2:#8888AA; --text3:#555570;
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;line-height:1.6;overflow-x:hidden;}
-nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,10,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
-.nav-brand{font-size:0.9rem;font-weight:700;color:var(--orange);}
-.nav-links{display:flex;gap:1.5rem;list-style:none;}
-.nav-links a{font-size:0.78rem;color:var(--text2);text-decoration:none;}
-.nav-links a:hover{color:var(--orange);}
-.wrap{max-width:1200px;margin:0 auto;padding:0 2rem;}
-section{padding:5rem 0;}
-.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);}
-.sec-label{font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);margin-bottom:0.6rem;}
-.sec-title{font-size:2rem;font-weight:800;margin-bottom:1rem;line-height:1.2;}
-.sec-sub{font-size:0.95rem;color:var(--text2);max-width:640px;margin-bottom:2.5rem;line-height:1.7;}
+  :root {
+    --bg: #F8F7F2;
+    --text: #2A2A2A;
+    --green: #4A7C59;
+    --line: #E5E5E5;
+    --muted: #999999;
+    --body-text: #555555;
+  }
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:56px;background:radial-gradient(ellipse at 50% 0%,rgba(255,107,53,0.09) 0%,transparent 65%);}
-.hero-label{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--orange);background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);border-radius:100px;padding:0.4rem 1.2rem;margin-bottom:1.5rem;}
-.hero-title{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:1.5rem;}
-.hl-orange{color:var(--orange);}
-.hl-teal{color:var(--teal);}
-.hero-desc{font-size:1rem;color:var(--text2);max-width:780px;margin:0 auto 3rem;line-height:1.85;}
-.hero-stats{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap;}
-.hero-stat-num{font-size:2.4rem;font-weight:900;display:block;line-height:1;}
-.hero-stat-label{font-size:0.78rem;color:var(--text2);margin-top:0.3rem;}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-/* CARDS */
-.cards-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.8rem;}
-.card-icon{font-size:1.8rem;margin-bottom:1rem;display:block;}
-.card-title{font-size:1rem;font-weight:700;margin-bottom:0.5rem;}
-.card-desc{font-size:0.82rem;color:var(--text2);line-height:1.6;}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-/* MARKET */
-.market-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.mcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;}
-.mcard-num{font-size:2.6rem;font-weight:900;line-height:1;margin:0.5rem 0;}
-.mcard-title{font-size:0.9rem;font-weight:700;margin-bottom:0.4rem;}
-.mcard-tag{font-size:0.75rem;font-weight:600;margin-bottom:0.8rem;}
-.mcard-desc{font-size:0.82rem;color:var(--text2);line-height:1.6;}
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 0 48px;
+    height: 52px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand { font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: 0.02em; }
+  .nav-right { font-size: 12px; color: var(--muted); letter-spacing: 0.05em; }
 
-/* TABLE */
-.tbl-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border);}
-table{width:100%;border-collapse:collapse;}
-th{background:var(--bg2);padding:0.9rem 1.2rem;text-align:left;font-size:0.8rem;font-weight:700;color:var(--text2);border-bottom:1px solid var(--border);}
-td{padding:0.85rem 1.2rem;font-size:0.85rem;border-bottom:1px solid var(--border);}
-tr:last-child td{border-bottom:none;}
-tr:nth-child(even) td{background:rgba(255,255,255,0.015);}
-tr:hover td{background:rgba(255,255,255,0.03);}
-.td-good{color:var(--teal);font-weight:600;}
-.td-bad{color:var(--red);font-weight:600;}
-.td-bold{font-weight:700;color:var(--text2);}
+  /* WRAP */
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 48px; }
 
-/* SERIES */
-.series-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:2.5rem;}
-.scard{border-radius:14px;padding:1.5rem;border:1px solid;}
-.scard.or{background:rgba(255,107,53,0.06);border-color:rgba(255,107,53,0.25);}
-.scard.pu{background:rgba(139,92,246,0.06);border-color:rgba(139,92,246,0.25);}
-.scard.te{background:rgba(0,212,170,0.06);border-color:rgba(0,212,170,0.25);}
-.scard.ye{background:rgba(255,200,50,0.06);border-color:rgba(255,200,50,0.25);}
-.scard-icon{font-size:1.6rem;margin-bottom:0.8rem;display:block;}
-.scard-name{font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;}
-.scard.or .scard-name{color:var(--orange);}
-.scard.pu .scard-name{color:var(--purple);}
-.scard.te .scard-name{color:var(--teal);}
-.scard.ye .scard-name{color:var(--yellow);}
-.scard-desc{font-size:0.78rem;color:var(--text2);line-height:1.5;}
+  /* COVER */
+  .cover {
+    min-height: 100vh;
+    padding-top: 52px;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-left: 48px; padding-right: 48px;
+  }
+  .cover-inner { max-width: 800px; margin: 0 auto; width: 100%; }
+  .cover-eyebrow {
+    font-size: 11px; font-weight: 500; color: var(--muted);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .cover-title-line1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800; line-height: 1.0;
+    color: var(--text); display: block;
+  }
+  .cover-title-line2 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800; line-height: 1.0;
+    color: var(--green); display: block;
+    margin-top: 0.05em;
+  }
+  .cover-sub {
+    font-size: 16px; color: var(--muted); font-weight: 400;
+    margin-top: 32px; letter-spacing: 0.01em;
+  }
+  .cover-footer {
+    margin-top: 80px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 11px; color: var(--muted); letter-spacing: 0.08em;
+  }
 
-.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0.8rem;margin-bottom:2rem;}
-.pitem{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1.1rem;display:flex;gap:0.7rem;align-items:flex-start;}
-.pnum{font-size:0.7rem;font-weight:700;color:var(--orange);background:rgba(255,107,53,0.1);border-radius:6px;padding:0.2rem 0.5rem;white-space:nowrap;margin-top:2px;}
-.pname{font-size:0.88rem;font-weight:600;margin-bottom:0.15rem;}
-.pingr{font-size:0.75rem;color:var(--text2);}
+  /* SECTION */
+  section { padding: 120px 0; border-top: 1px solid var(--line); }
+  .sec-label {
+    font-size: 11px; font-weight: 500; color: var(--muted);
+    letter-spacing: 0.15em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .sec-title {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 700; line-height: 1.25;
+    color: var(--text); margin-bottom: 48px;
+    max-width: 600px;
+  }
+  .sec-body {
+    font-size: 15px; color: var(--body-text);
+    line-height: 1.85; max-width: 620px;
+    margin-bottom: 48px;
+  }
 
-.diy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;}
-.diy{background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.2);border-radius:10px;padding:1rem;display:flex;justify-content:space-between;align-items:center;}
-.diy-name{font-size:0.85rem;font-weight:600;}
-.diy-dose{font-size:0.72rem;color:var(--purple);}
-.diy-price{font-size:0.85rem;font-weight:700;color:var(--orange);}
+  /* CONCLUSION ITEMS */
+  .concl-list { display: flex; flex-direction: column; gap: 36px; }
+  .concl-item { display: flex; gap: 24px; align-items: flex-start; }
+  .concl-bar { width: 3px; min-height: 44px; background: var(--green); flex-shrink: 0; margin-top: 4px; }
+  .concl-label { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .concl-text { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.55; }
+  .concl-text span { color: var(--green); }
 
-/* UE */
-.ue-panel{border-radius:16px;border:1px solid;padding:2rem;margin-bottom:1.5rem;}
-.ue-panel.ue-red{background:rgba(255,68,68,0.03);border-color:rgba(255,68,68,0.2);}
-.ue-panel.ue-green{background:rgba(0,212,170,0.03);border-color:rgba(0,212,170,0.2);}
-.ue-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap;}
-.ue-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:100px;}
-.ue-badge.red{background:rgba(255,68,68,0.12);color:var(--red);}
-.ue-badge.green{background:rgba(0,212,170,0.12);color:var(--teal);}
-.ue-title{font-size:1rem;font-weight:700;}
-.ue-sub{font-size:0.8rem;color:var(--text2);}
-.cmp-tbl{width:100%;border-collapse:collapse;}
-.cmp-tbl th{padding:0.9rem 1.2rem;font-size:0.8rem;font-weight:700;text-align:center;}
-.cmp-tbl th.dim{background:var(--bg2);color:var(--text2);text-align:left;}
-.cmp-tbl th.bef{background:rgba(255,68,68,0.08);color:var(--red);}
-.cmp-tbl th.aft{background:rgba(0,212,170,0.08);color:var(--teal);}
-.cmp-tbl th.chg{background:rgba(255,107,53,0.08);color:var(--orange);}
-.cmp-tbl td{padding:0.8rem 1.2rem;font-size:0.85rem;text-align:center;border-bottom:1px solid var(--border);}
-.cmp-tbl td.dim{text-align:left;font-weight:600;color:var(--text2);}
-.cmp-tbl td.aft-v{color:var(--teal);font-weight:700;}
-.cmp-tbl td.chg-v{color:var(--orange);font-weight:700;}
-.cmp-tbl tr:nth-child(even) td{background:rgba(255,255,255,0.015);}
-.big-change{font-size:1.1rem;}
+  /* KEY METRICS ROW */
+  .metrics-row { display: flex; gap: 0; margin-top: 64px; border-top: 1px solid var(--line); }
+  .metric { flex: 1; padding: 32px 0; border-right: 1px solid var(--line); padding-right: 32px; margin-right: 32px; }
+  .metric:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .metric-num { font-size: 2.4rem; font-weight: 800; color: var(--green); line-height: 1; display: block; }
+  .metric-label { font-size: 12px; color: var(--muted); margin-top: 8px; letter-spacing: 0.03em; }
 
-.reasons-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1.5rem;}
-.reason{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1rem;text-align:center;}
-.reason-num{font-size:1.8rem;font-weight:900;color:var(--teal);line-height:1;margin-bottom:0.4rem;}
-.reason-title{font-size:0.8rem;font-weight:700;margin-bottom:0.2rem;}
-.reason-sub{font-size:0.7rem;color:var(--text2);}
+  /* BACKGROUND - DATA BLOCKS */
+  .data-row { display: flex; flex-direction: column; gap: 0; }
+  .data-item { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .data-item:first-child { border-top: 1px solid var(--line); }
+  .data-key { font-size: 14px; color: var(--body-text); font-weight: 400; }
+  .data-val { font-size: 14px; color: var(--text); font-weight: 600; }
+  .data-val.green { color: var(--green); }
+  .data-val.muted { color: var(--muted); font-weight: 400; }
 
-/* TIMELINE */
-.timeline{position:relative;padding-left:2.5rem;}
-.timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--orange),var(--teal));border-radius:2px;}
-.tl{position:relative;margin-bottom:1.8rem;padding-left:1rem;}
-.tl::before{content:'';position:absolute;left:-1.6rem;top:0.4rem;width:10px;height:10px;border-radius:50%;background:var(--orange);border:2px solid var(--bg);box-shadow:0 0 0 2px var(--orange);}
-.tl:nth-child(2)::before,.tl:nth-child(5)::before{background:var(--teal);box-shadow:0 0 0 2px var(--teal);}
-.tl:nth-child(3)::before,.tl:nth-child(6)::before{background:var(--purple);box-shadow:0 0 0 2px var(--purple);}
-.tl-period{font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--orange);margin-bottom:0.2rem;}
-.tl-title{font-size:1rem;font-weight:700;margin-bottom:0.2rem;}
-.tl-desc{font-size:0.82rem;color:var(--text2);line-height:1.5;}
+  /* TWO-COL */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .col-title { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
 
-/* FINANCE */
-.fin-hero{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2.5rem;}
-.fin-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;}
-.fin-num{font-size:2.4rem;font-weight:900;display:block;line-height:1;margin:0.5rem 0;}
-.fin-label{font-size:0.8rem;color:var(--text2);}
-.fin-sub{font-size:0.7rem;color:var(--text3);margin-top:0.3rem;}
+  /* TABLE */
+  .tbl { width: 100%; border-collapse: collapse; }
+  .tbl th { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; text-align: left; padding: 0 0 12px 0; border-bottom: 1px solid var(--line); }
+  .tbl th.r { text-align: right; }
+  .tbl td { font-size: 14px; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .tbl td.r { text-align: right; }
+  .tbl td.green { color: var(--green); font-weight: 600; }
+  .tbl td.muted { color: var(--muted); }
+  .tbl td.strong { font-weight: 700; }
+  .tbl tr:last-child td { border-bottom: none; }
 
-/* RISK */
-.risk-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;}
-.rcard{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem 1rem;text-align:center;}
-.rcard-icon{font-size:1.6rem;margin-bottom:0.6rem;display:block;}
-.rcard-title{font-size:0.88rem;font-weight:700;margin-bottom:0.5rem;}
-.rcard-arrow{color:var(--orange);font-size:0.75rem;margin:0.4rem 0;}
-.rcard-resp{font-size:0.75rem;color:var(--text2);line-height:1.5;}
+  /* UE COMPARE */
+  .ue-compare { width: 100%; border-collapse: collapse; }
+  .ue-compare th { font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; padding: 0 16px 12px 0; border-bottom: 1px solid var(--line); text-align: right; }
+  .ue-compare th:first-child { text-align: left; padding-left: 0; }
+  .ue-compare td { font-size: 14px; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); text-align: right; color: var(--text); }
+  .ue-compare td:first-child { text-align: left; padding-left: 0; color: var(--body-text); }
+  .ue-compare td.green { color: var(--green); font-weight: 700; }
+  .ue-compare td.muted { color: var(--muted); }
+  .ue-compare td.big { font-size: 1.1rem; font-weight: 800; color: var(--green); }
+  .ue-compare tr:last-child td { border-bottom: none; }
+  .ue-compare tr.highlight td { background: none; }
+  .ue-compare tr.highlight td:first-child { font-weight: 600; color: var(--text); }
 
-/* PILOT */
-.pilot-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-.pcard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;}
-.pcard.primary{border-color:rgba(255,107,53,0.3);background:rgba(255,107,53,0.03);}
-.pbadge{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.3rem 0.8rem;border-radius:100px;margin-bottom:0.8rem;}
-.pbadge.primary{background:rgba(255,107,53,0.12);color:var(--orange);}
-.pbadge.alt{background:rgba(0,212,170,0.1);color:var(--teal);}
-.pcard-name{font-size:1.2rem;font-weight:700;margin-bottom:0.3rem;}
-.pcard-sub{font-size:0.82rem;color:var(--text2);margin-bottom:1rem;}
-.tags{display:flex;flex-wrap:wrap;gap:0.5rem;}
-.tag{font-size:0.72rem;background:rgba(255,255,255,0.05);border:1px solid var(--border2);border-radius:100px;padding:0.25rem 0.7rem;color:var(--text2);}
+  /* PRODUCTS */
+  .product-list { display: flex; flex-direction: column; gap: 0; }
+  .product-item { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .product-item:first-child { border-top: 1px solid var(--line); }
+  .product-num { font-size: 11px; color: var(--muted); width: 28px; flex-shrink: 0; }
+  .product-name { font-size: 14px; font-weight: 600; color: var(--text); flex: 1; }
+  .product-ingr { font-size: 13px; color: var(--muted); }
 
-/* CONCLUSION */
-.concl-banner{background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(0,212,170,0.05));border:1px solid rgba(255,107,53,0.2);border-radius:20px;padding:3rem;text-align:center;margin-bottom:2.5rem;}
-.concl-title{font-size:1.6rem;font-weight:800;margin-bottom:0.8rem;}
-.concl-desc{font-size:0.95rem;color:var(--text2);max-width:600px;margin:0 auto;}
-.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
-.astep{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;position:relative;overflow:hidden;}
-.astep::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
-.astep:nth-child(1)::before{background:linear-gradient(90deg,var(--orange),#FF8C00);}
-.astep:nth-child(2)::before{background:linear-gradient(90deg,var(--teal),#00B894);}
-.astep:nth-child(3)::before{background:linear-gradient(90deg,var(--purple),#6D28D9);}
-.astep-num{font-size:3rem;font-weight:900;opacity:0.08;line-height:1;margin-bottom:0.5rem;}
-.astep-title{font-size:1rem;font-weight:700;margin-bottom:0.4rem;}
-.astep-desc{font-size:0.82rem;color:var(--text2);}
+  .series-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 48px; }
+  .series-item { padding: 28px 0; border-bottom: 1px solid var(--line); padding-right: 32px; }
+  .series-item:nth-child(odd) { border-right: 1px solid var(--line); padding-right: 40px; }
+  .series-item:nth-child(even) { padding-left: 40px; padding-right: 0; }
+  .series-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .series-range { font-size: 13px; color: var(--green); font-weight: 600; margin-bottom: 8px; }
+  .series-desc { font-size: 13px; color: var(--body-text); line-height: 1.6; }
 
-footer{border-top:1px solid var(--border);padding:2rem;text-align:center;}
-.footer-brand{color:var(--orange);font-weight:600;}
-.footer-conf{display:inline-block;margin-top:0.5rem;background:rgba(255,68,68,0.08);border:1px solid rgba(255,68,68,0.2);color:var(--red);padding:0.2rem 0.8rem;border-radius:100px;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;}
-.footer-text{font-size:0.78rem;color:var(--text3);}
+  .diy-list { display: flex; flex-direction: column; gap: 0; }
+  .diy-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .diy-item:first-child { border-top: 1px solid var(--line); }
+  .diy-name { font-size: 14px; color: var(--text); }
+  .diy-dose { font-size: 12px; color: var(--muted); margin-left: 12px; }
+  .diy-price { font-size: 14px; font-weight: 600; color: var(--green); }
 
-/* SUBSECTION */
-.sub-head{font-size:1rem;font-weight:700;margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
-.sub-head span{color:var(--orange);}
+  /* TIMELINE */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item { display: flex; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .tl-item:first-child { border-top: 1px solid var(--line); }
+  .tl-period { font-size: 12px; font-weight: 600; color: var(--green); white-space: nowrap; min-width: 90px; padding-top: 2px; }
+  .tl-content {}
+  .tl-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .tl-desc { font-size: 13px; color: var(--body-text); line-height: 1.65; }
 
-@media(max-width:900px){
-  .cards-4,.market-grid,.series-grid,.reasons-grid,.risk-grid,.fin-hero,.action-grid{grid-template-columns:1fr 1fr;}
-  .pilot-grid,.diy-grid{grid-template-columns:1fr;}
-  .nav-links{display:none;}
-}
-@media(max-width:600px){
-  .cards-4,.market-grid,.series-grid,.reasons-grid,.risk-grid,.fin-hero,.action-grid{grid-template-columns:1fr;}
-}
+  /* FINANCE HERO */
+  .fin-nums { display: flex; gap: 0; margin-bottom: 64px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .fin-num-item { flex: 1; padding: 40px 0; border-right: 1px solid var(--line); padding-right: 40px; margin-right: 40px; }
+  .fin-num-item:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+  .fin-big { font-size: 2.8rem; font-weight: 800; color: var(--green); display: block; line-height: 1; }
+  .fin-label { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .fin-sub { font-size: 11px; color: var(--line); margin-top: 4px; /* intentionally light */ }
+
+  /* RISK */
+  .risk-list { display: flex; flex-direction: column; gap: 0; }
+  .risk-item { display: grid; grid-template-columns: 160px 1fr 1fr; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); align-items: start; }
+  .risk-item:first-child { border-top: 1px solid var(--line); }
+  .risk-name { font-size: 14px; font-weight: 600; color: var(--text); }
+  .risk-desc { font-size: 13px; color: var(--body-text); line-height: 1.6; }
+  .risk-resp { font-size: 13px; color: var(--green); line-height: 1.6; }
+
+  /* ACTION STEPS */
+  .action-steps { display: flex; flex-direction: column; gap: 0; }
+  .action-step { display: flex; gap: 32px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--line); }
+  .action-step:first-child { border-top: 1px solid var(--line); }
+  .action-step-num { font-size: 2rem; font-weight: 800; color: var(--line); min-width: 48px; line-height: 1; }
+  .action-step-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .action-step-desc { font-size: 13px; color: var(--body-text); line-height: 1.6; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 40px 48px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-brand { font-size: 13px; font-weight: 600; color: var(--green); }
+  .footer-conf { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* STAT CALLOUT */
+  .stat-callout { margin: 48px 0; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat-callout-num { font-size: 3.5rem; font-weight: 800; color: var(--green); line-height: 1; }
+  .stat-callout-label { font-size: 14px; color: var(--body-text); margin-top: 8px; }
+
+  /* INSIGHT BOX */
+  .insight { margin: 48px 0; padding-left: 24px; border-left: 3px solid var(--green); }
+  .insight-text { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.6; }
+  .insight-sub { font-size: 13px; color: var(--body-text); margin-top: 6px; }
+
+  @media (max-width: 768px) {
+    nav, .cover, .wrap, footer { padding-left: 24px; padding-right: 24px; }
+    .two-col, .series-grid { grid-template-columns: 1fr; }
+    .series-item:nth-child(odd) { border-right: none; padding-right: 0; }
+    .series-item:nth-child(even) { padding-left: 0; }
+    .risk-item { grid-template-columns: 1fr; gap: 8px; }
+    .metrics-row, .fin-nums { flex-direction: column; }
+    .metric, .fin-num-item { border-right: none; border-bottom: 1px solid var(--line); padding: 24px 0; margin: 0; }
+  }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-inner">
-    <div class="nav-brand">通喜果汁 · 能量进化</div>
-    <ul class="nav-links">
-      <li><a href="#summary">执行摘要</a></li>
-      <li><a href="#market">市场</a></li>
-      <li><a href="#product">产品</a></li>
-      <li><a href="#ue">UE模型</a></li>
-      <li><a href="#pilot">试点</a></li>
-      <li><a href="#roadmap">执行计划</a></li>
-      <li><a href="#finance">财务</a></li>
-      <li><a href="#conclusion">结论</a></li>
-    </ul>
-  </div>
+  <div class="nav-brand">通喜果汁 · 能量进化</div>
+  <div class="nav-right">商业计划书 · 2026</div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-label">全系列能量饮商业计划书 · 2026</div>
-    <h1 class="hero-title">通喜果汁<br><span class="hl-orange">能量进化</span></h1>
-    <p class="hero-desc">依托通喜现有60+门店与0糖品牌心智，7天上线"果汁+能量饮"集合店。通过高毛利、低边际成本的能量饮，将通喜单店净利润率从5.5%提升至31%，彻底解决"高营收、低净利"痛点。3个月打造第二增长曲线，12个月拆分独立子品牌。</p>
-    <div class="hero-stats">
-      <div>
-        <span class="hero-stat-num" style="color:var(--orange)">13天</span>
-        <div class="hero-stat-label">单店回本周期</div>
-      </div>
-      <div>
-        <span class="hero-stat-num" style="color:var(--teal)">+809%</span>
-        <div class="hero-stat-label">单店月净利增幅</div>
-      </div>
-      <div>
-        <span class="hero-stat-num" style="color:var(--purple)">¥116万</span>
-        <div class="hero-stat-label">全公司年新增净利</div>
-      </div>
-      <div>
-        <span class="hero-stat-num" style="color:var(--yellow)">7天</span>
-        <div class="hero-stat-label">上线周期</div>
-      </div>
-    </div>
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">商业分析与落地计划书 · 2026</div>
+    <span class="cover-title-line1">通喜果汁</span>
+    <span class="cover-title-line2">能量进化</span>
+    <div class="cover-sub">全系列能量饮品牌扩张计划</div>
+    <div class="cover-footer">厦门通喜餐饮管理有限公司 · 战略发展部 · 保密文件</div>
   </div>
-</section>
-<div class="divider"></div>
+</div>
 
-<!-- 01 执行摘要 -->
-<section id="summary">
+<!-- 01 核心结论 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">01 · 执行摘要</div>
-    <h2 class="sec-title">四大核心亮点</h2>
-    <div class="cards-4">
-      <div class="card" style="border-top:3px solid var(--orange)">
-        <span class="card-icon">🎯</span>
-        <div class="card-title">市场机会</div>
-        <div class="card-desc">380亿健身营养饮料赛道，厦门健身人群占比43.1%，是全国最佳起步城市，需求真实存在且高速增长。</div>
-      </div>
-      <div class="card" style="border-top:3px solid var(--teal)">
-        <span class="card-icon">⚡</span>
-        <div class="card-title">通喜独家优势</div>
-        <div class="card-desc">品牌+供应链+60+门店+精准客群，四大壁垒同时具备。零新增固定成本即可启动，进入门槛极低。</div>
-      </div>
-      <div class="card" style="border-top:3px solid var(--purple)">
-        <span class="card-icon">💡</span>
-        <div class="card-title">核心价值</div>
-        <div class="card-desc">彻底解决通喜原模型"利润薄"的根本痛点。单店月净利从5,520元提升至50,160元，增幅809%。</div>
-      </div>
-      <div class="card" style="border-top:3px solid var(--yellow)">
-        <span class="card-icon">📈</span>
-        <div class="card-title">核心目标</div>
-        <div class="card-desc">试点店月营收提升60%，全公司12个月新增净利润116万元，第二增长曲线正式建立。</div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
+    <div class="sec-label">01 · 核心结论</div>
+    <h2 class="sec-title">一个决定，解决利润薄的根本问题</h2>
 
-<!-- 02 市场背景 -->
-<section id="market">
-  <div class="wrap">
-    <div class="sec-label">02 · 市场背景</div>
-    <h2 class="sec-title">三大趋势叠加，厦门是最佳起点</h2>
-    <div class="market-grid">
-      <div class="mcard" style="border-top:3px solid var(--orange)">
-        <div class="mcard-title">行业趋势</div>
-        <div class="mcard-num" style="color:var(--orange)">¥380亿</div>
-        <div class="mcard-tag" style="color:var(--teal)">健康饮品 · 功能性 · 现制 — 三大趋势叠加</div>
-        <div class="mcard-desc">功能性饮料年增速超18%，现制健康饮品替代传统含糖饮料趋势不可逆。消费者对"看得见成分"的现制功能饮品需求爆发式增长。</div>
-      </div>
-      <div class="mcard" style="border-top:3px solid var(--teal)">
-        <div class="mcard-title">厦门市场</div>
-        <div class="mcard-num" style="color:var(--teal)">43.1%</div>
-        <div class="mcard-tag" style="color:var(--teal)">厦门市民健身参与率，全国领先</div>
-        <div class="mcard-desc">厦门人均体育消费金额全国前五，健身房密度高，运动人群消费意愿强。观音山、湖里等核心商圈周边高端健身房集群显著。</div>
-      </div>
-      <div class="mcard" style="border-top:3px solid var(--purple)">
-        <div class="mcard-title">通喜壁垒</div>
-        <div class="mcard-num" style="color:var(--purple)">60+</div>
-        <div class="mcard-tag" style="color:var(--purple)">门店覆盖，本土头部果汁品牌</div>
-        <div class="mcard-desc">"无水无糖自然甜"心智深入人心，进驻万象城/万达/SM等主流商场，供应链成熟稳定，用户信任基础扎实。</div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<!-- 03 竞品对标 -->
-<section id="compete">
-  <div class="wrap">
-    <div class="sec-label">03 · 竞品对标</div>
-    <h2 class="sec-title">巴西 Energy Bar 成功模式拆解</h2>
-    <p class="sec-sub">Energy Bar 是巴西最具代表性的功能性现制饮品品牌，主打健身场景，Super Shakes 440ml 覆盖5大消费场景，标准化程度高。</p>
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>对比维度</th>
-            <th>巴西 Energy Bar</th>
-            <th>通喜能量饮（计划）</th>
-            <th>通喜优势</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="td-bold">产品体系</td>
-            <td>Super Shakes 440ml，覆盖健身前/中/后/早餐/日常5大场景</td>
-            <td>11款SKU + DIY能量包，复用鲜榨果汁基底</td>
-            <td class="td-good">真正0添加糖，成分透明可见</td>
-          </tr>
-          <tr>
-            <td class="td-bold">渠道布局</td>
-            <td>健身房精准选址，单一渠道</td>
-            <td>商场+写字楼+健身房周边，全渠道覆盖</td>
-            <td class="td-good">60+门店存量资产，立即启动</td>
-          </tr>
-          <tr>
-            <td class="td-bold">供应链成本</td>
-            <td>进口乳清蛋白，原料成本较高</td>
-            <td>本土化原料，通喜现有供应链优先</td>
-            <td class="td-good">成本优势20%-30%</td>
-          </tr>
-          <tr>
-            <td class="td-bold">品牌壁垒</td>
-            <td>健身场景强关联，视觉识别度高</td>
-            <td>叠加"鲜榨+功能"双重心智</td>
-            <td class="td-good">通喜已有用户信任资产</td>
-          </tr>
-          <tr>
-            <td class="td-bold">核心人群</td>
-            <td>健身爱好者，相对单一</td>
-            <td>健身人群+健康饮食人群+儿童家长</td>
-            <td class="td-good">更宽泛的用户基础</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<!-- 04 产品策略 -->
-<section id="product">
-  <div class="wrap">
-    <div class="sec-label">04 · 产品策略</div>
-    <h2 class="sec-title">通喜专属0糖能量饮矩阵</h2>
-    <p class="sec-sub">四大系列11款核心产品，全部复用现有果汁基底，配合6种DIY能量包提升客单价。</p>
-
-    <div class="series-grid">
-      <div class="scard or">
-        <span class="scard-icon">🟠</span>
-        <div class="scard-name">基础能量系列</div>
-        <div class="scard-desc">补充日常活力，以通喜现有鲜榨基底为核心，添加BCAA和天然能量成分，入门级选择。</div>
-      </div>
-      <div class="scard pu">
-        <span class="scard-icon">🟣</span>
-        <div class="scard-name">进阶增肌系列</div>
-        <div class="scard-desc">高蛋白+肌酸配方，精准覆盖训练后黄金窗口期，帮助肌肉恢复和增长。</div>
-      </div>
-      <div class="scard te">
-        <span class="scard-icon">🟢</span>
-        <div class="scard-name">抗氧化修复系列</div>
-        <div class="scard-desc">Açaí+螺旋藻+谷氨酰胺，深度运动恢复，抗氧化、消炎，适合高强度训练后。</div>
-      </div>
-      <div class="scard ye">
-        <span class="scard-icon">⚡</span>
-        <div class="scard-name">训练前特饮系列</div>
-        <div class="scard-desc">冷萃咖啡+MCT油，提升专注力和爆发力。无人工添加剂，纯天然能量来源。</div>
-      </div>
-    </div>
-
-    <div class="sub-head"><span>11款核心产品</span></div>
-    <div class="product-grid">
-      <div class="pitem"><span class="pnum">01</span><div><div class="pname">活力橙能量</div><div class="pingr">鲜橙 + BCAA + 蜂蜜</div></div></div>
-      <div class="pitem"><span class="pnum">02</span><div><div class="pname">西柚燃脂</div><div class="pingr">西柚 + 左旋肉碱 + 椰子水</div></div></div>
-      <div class="pitem"><span class="pnum">03</span><div><div class="pname">螺旋藻蛋白</div><div class="pingr">螺旋藻 + 乳清蛋白 + 香蕉</div></div></div>
-      <div class="pitem"><span class="pnum">04</span><div><div class="pname">百香果BCAA</div><div class="pingr">百香果 + BCAA + 肌酸</div></div></div>
-      <div class="pitem"><span class="pnum">05</span><div><div class="pname">红心火龙果修复</div><div class="pingr">火龙果 + 谷氨酰胺 + 乳清蛋白</div></div></div>
-      <div class="pitem"><span class="pnum">06</span><div><div class="pname">咖啡能量炸弹</div><div class="pingr">冷萃咖啡 + MCT油 + 乳清蛋白</div></div></div>
-      <div class="pitem"><span class="pnum">07</span><div><div class="pname">芒果爆发力</div><div class="pingr">芒果 + 肌酸 + 椰子水</div></div></div>
-      <div class="pitem"><span class="pnum">08</span><div><div class="pname">草莓BCAA果昔</div><div class="pingr">草莓 + BCAA + 低脂牛奶</div></div></div>
-      <div class="pitem"><span class="pnum">09</span><div><div class="pname">绿野仙踪</div><div class="pingr">菠菜 + 苹果 + 螺旋藻 + 姜</div></div></div>
-      <div class="pitem"><span class="pnum">10</span><div><div class="pname">夜间修复</div><div class="pingr">蓝莓 + 谷氨酰胺 + 慢释放蛋白</div></div></div>
-      <div class="pitem"><span class="pnum">11</span><div><div class="pname">超级充电站（DIY）</div><div class="pingr">选择基底 + 2种能量包</div></div></div>
-    </div>
-
-    <div class="sub-head"><span>DIY 能量包</span> — 每包 +¥8，提升客单价神器</div>
-    <div class="diy-grid">
-      <div class="diy"><div><div class="diy-name">乳清蛋白</div><div class="diy-dose">Whey Protein +5g</div></div><div class="diy-price">+¥8</div></div>
-      <div class="diy"><div><div class="diy-name">BCAA</div><div class="diy-dose">支链氨基酸 +3g</div></div><div class="diy-price">+¥8</div></div>
-      <div class="diy"><div><div class="diy-name">肌酸</div><div class="diy-dose">Creatine +3g</div></div><div class="diy-price">+¥8</div></div>
-      <div class="diy"><div><div class="diy-name">螺旋藻粉</div><div class="diy-dose">Spirulina +2g</div></div><div class="diy-price">+¥8</div></div>
-      <div class="diy"><div><div class="diy-name">左旋肉碱</div><div class="diy-dose">L-Carnitine +2g</div></div><div class="diy-price">+¥8</div></div>
-      <div class="diy"><div><div class="diy-name">胶原蛋白</div><div class="diy-dose">Collagen +5g</div></div><div class="diy-price">+¥8</div></div>
-    </div>
-  </div>
-</section>
-<div class="divider"></div>
-
-<!-- 05 UE模型 -->
-<section id="ue">
-  <div class="wrap">
-    <div class="sec-label">05 · 单店UE模型</div>
-    <h2 class="sec-title">从5.5%到31%：利润率的质变</h2>
-    <p class="sec-sub">能量饮100%复用原有固定成本，边际成本仅为原料成本，每卖一杯的净利是果汁的3-4倍。</p>
-
-    <!-- 5.1 原UE -->
-    <div class="ue-panel ue-red">
-      <div class="ue-head">
-        <span class="ue-badge red">痛点现状</span>
+    <div class="concl-list">
+      <div class="concl-item">
+        <div class="concl-bar"></div>
         <div>
-          <div class="ue-title">原鲜榨果汁单店UE（JFC品尚中心标准店）</div>
-          <div class="ue-sub">高营收、高固定成本、高水果损耗，净利润率仅5.5%</div>
+          <div class="concl-label">核心定位</div>
+          <div class="concl-text">依托60+厦门门店与「0糖鲜榨」品牌心智，打造果汁+能量饮集合店，开辟<span>第二增长曲线</span></div>
         </div>
       </div>
-      <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>指标</th><th>数值</th><th>备注</th></tr></thead>
-          <tbody>
-            <tr><td>门店面积</td><td>25㎡</td><td>核心商圈标准店</td></tr>
-            <tr><td>月租金</td><td>¥35,000</td><td>高端商场一楼</td></tr>
-            <tr><td>月人工</td><td>¥22,000</td><td>4名员工</td></tr>
-            <tr><td>水电杂费</td><td>¥3,000</td><td></td></tr>
-            <tr><td class="td-bold">月固定成本</td><td class="td-bold">¥60,000</td><td></td></tr>
-            <tr><td>日均出杯</td><td>120杯</td><td></td></tr>
-            <tr><td>平均客单价</td><td>¥28</td><td></td></tr>
-            <tr><td>月营收</td><td>¥100,800</td><td></td></tr>
-            <tr><td>鲜榨果汁毛利率</td><td>65%</td><td class="td-bad">含水果损耗15-20%</td></tr>
-            <tr><td>月毛利</td><td>¥65,520</td><td></td></tr>
-            <tr><td class="td-bold">月净利润</td><td class="td-bad">¥5,520</td><td></td></tr>
-            <tr><td class="td-bold">净利润率</td><td class="td-bad">5.5%</td><td>行业平均，旺季最高8%</td></tr>
-            <tr><td>回本周期</td><td class="td-bad">18-24个月</td><td></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- 5.2 对比 -->
-    <div class="ue-panel ue-green">
-      <div class="ue-head">
-        <span class="ue-badge green">增长目标</span>
+      <div class="concl-item">
+        <div class="concl-bar"></div>
         <div>
-          <div class="ue-title">新增能量饮后UE对比（上线1个月目标）</div>
-          <div class="ue-sub">零新增固定成本，净利率从5.5%跃升至31%</div>
+          <div class="concl-label">核心价值</div>
+          <div class="concl-text">单店净利率从 <span>5.5%</span> 提升至 <span>31%</span>，彻底解决原有鲜榨果汁"高营收、低净利"痛点</div>
         </div>
       </div>
-      <div class="tbl-wrap">
-        <table class="cmp-tbl">
-          <thead>
-            <tr>
-              <th class="dim">指标</th>
-              <th class="bef">上线前</th>
-              <th class="aft">上线后（目标）</th>
-              <th class="chg">变化幅度</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="dim">月固定成本</td><td class="before-val">¥60,000</td><td class="aft-v">¥60,000</td><td class="chg-v">+0% 🎯</td></tr>
-            <tr><td class="dim">日均出杯</td><td>120杯</td><td class="aft-v">150杯（100果汁+50能量饮）</td><td class="chg-v">+25%</td></tr>
-            <tr><td class="dim">平均客单价</td><td>¥28</td><td class="aft-v">¥36</td><td class="chg-v">+28.6%</td></tr>
-            <tr><td class="dim">月营收</td><td>¥100,800</td><td class="aft-v">¥162,000</td><td class="chg-v">+60.7%</td></tr>
-            <tr><td class="dim">综合毛利率</td><td>65%</td><td class="aft-v">68%</td><td class="chg-v">+3%</td></tr>
-            <tr><td class="dim">月毛利</td><td>¥65,520</td><td class="aft-v">¥110,160</td><td class="chg-v">+68.1%</td></tr>
-            <tr><td class="dim" style="font-weight:800">月净利润</td><td style="font-size:1rem;font-weight:700">¥5,520</td><td class="aft-v" style="font-size:1.1rem;font-weight:800">¥50,160</td><td class="chg-v big-change">+809% 🚀</td></tr>
-            <tr><td class="dim" style="font-weight:800">净利润率</td><td style="color:var(--red);font-weight:700">5.5%</td><td class="aft-v" style="font-size:1.1rem;font-weight:800">31.0%</td><td class="chg-v">+25.5pts</td></tr>
-            <tr><td class="dim">回本周期</td><td style="color:var(--red)">18-24个月</td><td class="aft-v" style="font-weight:800">13天</td><td class="chg-v">大幅缩短</td></tr>
-          </tbody>
-        </table>
+      <div class="concl-item">
+        <div class="concl-bar"></div>
+        <div>
+          <div class="concl-label">关键指标</div>
+          <div class="concl-text">项目单独回本周期 <span>13天</span>；3个月完成门店复制；12个月拆分「通喜能量」独立子品牌</div>
+        </div>
       </div>
     </div>
 
-    <!-- 5.3 单品对比 -->
-    <div class="sub-head"><span>5.3</span> 单品UE对比（单杯500ml）</div>
-    <div class="tbl-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>指标</th>
-            <th style="color:var(--teal)">能量饮</th>
-            <th style="color:var(--text2)">鲜榨果汁</th>
-            <th style="color:var(--orange)">对比</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>售价</td><td>¥28</td><td>¥28</td><td>相同</td></tr>
-          <tr><td>原料成本</td><td class="td-good">¥8.5</td><td>¥9.8</td><td class="td-good">-13%</td></tr>
-          <tr><td>水果损耗</td><td class="td-good">0%</td><td class="td-bad">15-20%</td><td class="td-good">无损耗</td></tr>
-          <tr><td>制作时间</td><td class="td-good">60-90秒</td><td>120-180秒</td><td class="td-good">快50%</td></tr>
-          <tr><td>单杯毛利率</td><td class="td-good">69.6%</td><td>65%</td><td class="td-good">+4.6pts</td></tr>
-          <tr><td class="td-bold">单杯边际净利</td><td class="td-good" style="font-weight:800">¥19.5</td><td>¥16.7</td><td class="td-good">+16.8%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- 5.4 原因 -->
-    <div class="sub-head"><span>5.4</span> UE提升的5大核心原因</div>
-    <div class="reasons-grid">
-      <div class="reason">
-        <div class="reason-num">零</div>
-        <div class="reason-title">零新增固定成本</div>
-        <div class="reason-sub">租金/人工/设备/水电全部复用</div>
+    <div class="metrics-row">
+      <div class="metric">
+        <span class="metric-num">13天</span>
+        <div class="metric-label">单店回本周期</div>
       </div>
-      <div class="reason">
-        <div class="reason-num">0%</div>
-        <div class="reason-title">无水果损耗</div>
-        <div class="reason-sub">粉类保质期12-18个月，几乎零损耗</div>
+      <div class="metric">
+        <span class="metric-num">+809%</span>
+        <div class="metric-label">单店月净利增幅</div>
       </div>
-      <div class="reason">
-        <div class="reason-num">+50%</div>
-        <div class="reason-title">出餐效率提升</div>
-        <div class="reason-sub">高峰时段产能提升33%</div>
+      <div class="metric">
+        <span class="metric-num">¥116万</span>
+        <div class="metric-label">全公司年新增净利</div>
       </div>
-      <div class="reason">
-        <div class="reason-num">+¥8</div>
-        <div class="reason-title">客单价提升</div>
-        <div class="reason-sub">+DIY能量包进一步拉高</div>
-      </div>
-      <div class="reason">
-        <div class="reason-num">全天</div>
-        <div class="reason-title">全时段均衡营收</div>
-        <div class="reason-sub">覆盖早餐/运动后/下午茶</div>
+      <div class="metric">
+        <span class="metric-num">7天</span>
+        <div class="metric-label">上线周期</div>
       </div>
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- 06 试点门店 -->
-<section id="pilot">
+<!-- 02 项目背景与行业机会 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">06 · 试点门店</div>
-    <h2 class="sec-title">精准选址，确保首战必胜</h2>
-    <div class="pilot-grid">
-      <div class="pcard primary">
-        <div class="pbadge primary">首选试点</div>
-        <div class="pcard-name">JFC品尚中心店</div>
-        <div class="pcard-sub">观音山国际商务区 · 厦门最高端健身人群聚集地</div>
-        <div class="tags">
-          <span class="tag">写字楼白领密集</span>
-          <span class="tag">周边高端健身房集群</span>
-          <span class="tag">消费能力强</span>
-          <span class="tag">客群精准匹配</span>
-          <span class="tag">门店条件成熟</span>
+    <div class="sec-label">02 · 项目背景与行业机会</div>
+    <h2 class="sec-title">三重结构性机会，厦门是最优起点</h2>
+
+    <div class="two-col">
+      <div>
+        <div class="col-title">行业数据</div>
+        <div class="data-row">
+          <div class="data-item">
+            <span class="data-key">国内健身营养饮品市场规模</span>
+            <span class="data-val green">¥380亿</span>
+          </div>
+          <div class="data-item">
+            <span class="data-key">年增速</span>
+            <span class="data-val green">13.7%</span>
+          </div>
+          <div class="data-item">
+            <span class="data-key">现制功能性饮品赛道竞争</span>
+            <span class="data-val">尚处蓝海</span>
+          </div>
         </div>
       </div>
-      <div class="pcard">
-        <div class="pbadge alt">备选门店</div>
-        <div class="pcard-name">湖里万达店 / SM城市广场店</div>
-        <div class="pcard-sub">备选方案，可复制性高，客流量大</div>
-        <div style="margin-top:1.2rem">
-          <div class="sub-head" style="margin-top:0;font-size:0.85rem"><span>筛选标准</span></div>
-          <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.8rem">
-            <div style="font-size:0.82rem;display:flex;gap:0.5rem"><span style="color:var(--orange)">①</span><span>客群精准：健身房周边或运动人群高密度区域</span></div>
-            <div style="font-size:0.82rem;display:flex;gap:0.5rem"><span style="color:var(--orange)">②</span><span>消费能力强：客单价28-45元区间接受度高</span></div>
-            <div style="font-size:0.82rem;display:flex;gap:0.5rem"><span style="color:var(--orange)">③</span><span>门店条件好：现有设备可直接兼容，无需改造</span></div>
-            <div style="font-size:0.82rem;display:flex;gap:0.5rem"><span style="color:var(--orange)">④</span><span>可复制性高：成功后可作为标准模板推广</span></div>
+      <div>
+        <div class="col-title">厦门区域优势</div>
+        <div class="data-row">
+          <div class="data-item">
+            <span class="data-key">厦门健身人群占比</span>
+            <span class="data-val green">43.1%</span>
+          </div>
+          <div class="data-item">
+            <span class="data-key">人均体育消费</span>
+            <span class="data-val green">¥3,640</span>
+          </div>
+          <div class="data-item">
+            <span class="data-key">消费基础</span>
+            <span class="data-val">全国前五</span>
           </div>
         </div>
       </div>
     </div>
+
+    <div style="margin-top: 64px;">
+      <div class="col-title">通喜现有业务痛点</div>
+      <div class="data-row">
+        <div class="data-item">
+          <span class="data-key">核心商场租金 + 人工成本</span>
+          <span class="data-val">月固定成本 ¥60,000</span>
+        </div>
+        <div class="data-item">
+          <span class="data-key">鲜榨水果损耗率</span>
+          <span class="data-val">15% — 20%</span>
+        </div>
+        <div class="data-item">
+          <span class="data-key">当前单店净利润率</span>
+          <span class="data-val">5.5%（旺季最高 8%）</span>
+        </div>
+        <div class="data-item">
+          <span class="data-key">原有回本周期</span>
+          <span class="data-val">18 — 24 个月</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight" style="margin-top: 48px;">
+      <div class="insight-text">通喜的核心壁垒已具备：品牌口碑、成熟供应链、全渠道门店网络、存量客群。</div>
+      <div class="insight-sub">新增能量饮项目无需任何固定成本投入，边际扩张成本趋近于零。</div>
+    </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- 07 执行时间表 -->
-<section id="roadmap">
+<!-- 03 竞品对标 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">07 · 执行时间表</div>
-    <h2 class="sec-title">7天上线，12个月独立子品牌</h2>
-    <div class="timeline">
-      <div class="tl">
-        <div class="tl-period">第 1–3 天</div>
-        <div class="tl-title">试点准备</div>
-        <div class="tl-desc">原料采购（乳清蛋白/BCAA/肌酸/螺旋藻等功能性粉类）、物料制作（菜单板/价签/包装杯印LOGO）、人员培训（制作SOP+话术）</div>
+    <div class="sec-label">03 · 竞品对标分析</div>
+    <h2 class="sec-title">巴西 Energy Bar 验证了这条路</h2>
+    <p class="sec-body">巴西 Energy Bar 以健身场景为核心，标准化 Super Shakes 440ml，覆盖训练前/中/后/早餐/日常五大场景，是功能性现制饮品品牌的成熟范本。</p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:20%">维度</th>
+          <th>巴西 Energy Bar</th>
+          <th>通喜能量饮</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="strong">甜味配方</td>
+          <td>天然水果+蜂蜜，部分添加</td>
+          <td class="green">100% 水果天然 0 添加糖</td>
+        </tr>
+        <tr>
+          <td class="strong">供应链</td>
+          <td>进口原料为主，成本较高</td>
+          <td class="green">本土化原料，通喜现有供应链</td>
+        </tr>
+        <tr>
+          <td class="strong">门店场景</td>
+          <td>健身房精准选址，单一渠道</td>
+          <td class="green">商场 + 写字楼 + 健身房，全渠道</td>
+        </tr>
+        <tr>
+          <td class="strong">客群范围</td>
+          <td>健身爱好者，相对单一</td>
+          <td class="green">健身人群 + 健康饮食人群 + 家长</td>
+        </tr>
+        <tr>
+          <td class="strong">品牌信任度</td>
+          <td>新兴品牌，需持续建设</td>
+          <td class="green">通喜本土口碑，用户信任已建立</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 04 产品体系 -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">04 · 产品体系规划</div>
+    <h2 class="sec-title">四大系列，11款配方，全量复用现有基底</h2>
+
+    <div class="series-grid">
+      <div class="series-item">
+        <div class="series-name">基础能量系列</div>
+        <div class="series-range">¥24 — 26</div>
+        <div class="series-desc">补充日常活力，复用鲜榨果汁基底，添加 BCAA 和天然能量成分，入门首选</div>
       </div>
-      <div class="tl">
-        <div class="tl-period">第 4–7 天</div>
-        <div class="tl-title">内部测试与优化</div>
-        <div class="tl-desc">5款基础款口味优化测试（掩盖螺旋藻/BCAA苦味），定价验证，制作流程计时优化，确保单杯≤90秒</div>
+      <div class="series-item">
+        <div class="series-name">进阶增肌系列</div>
+        <div class="series-range">¥28 — 32</div>
+        <div class="series-desc">高蛋白 + 肌酸配方，覆盖训练后黄金窗口期，帮助肌肉恢复与增长</div>
       </div>
-      <div class="tl">
-        <div class="tl-period">第 8–14 天</div>
-        <div class="tl-title">正式上线</div>
-        <div class="tl-desc">全系列11款产品上线，开业活动（首日试饮+折扣），本地健身博主/KOL推广，小红书/抖音内容种草</div>
+      <div class="series-item">
+        <div class="series-name">抗氧化修复系列</div>
+        <div class="series-range">¥26 — 30</div>
+        <div class="series-desc">螺旋藻 + 谷氨酰胺，深度运动恢复，抗氧化，适合高强度训练后补给</div>
       </div>
-      <div class="tl">
-        <div class="tl-period">第 15–30 天</div>
-        <div class="tl-title">数据监测与迭代</div>
-        <div class="tl-desc">日报追踪：出杯量/客单价/SKU结构/复购率，快速迭代滞销款，强化爆款备货，收集用户反馈</div>
+      <div class="series-item">
+        <div class="series-name">训练前特饮系列</div>
+        <div class="series-range">¥30 — 34</div>
+        <div class="series-desc">冷萃咖啡 + MCT油，提升专注力与爆发力，无人工添加剂，纯天然能量</div>
       </div>
-      <div class="tl">
-        <div class="tl-period">第 31–90 天</div>
-        <div class="tl-title">复制扩张 3-5 家核心门店</div>
-        <div class="tl-desc">基于试点数据选择最优复制门店，标准化SOP落地，批量采购降低原料成本，3个月完成第二增长曲线验证</div>
-      </div>
-      <div class="tl">
-        <div class="tl-period">第 91–365 天</div>
-        <div class="tl-title">全厦门上线 + 独立子品牌拆分</div>
-        <div class="tl-desc">全60+门店上线能量饮产品线，品牌独立化（新LOGO/包装/视觉系统），考虑独立子品牌拆分与融资，探索全国复制可行性</div>
+    </div>
+
+    <div class="col-title">11 款核心产品</div>
+    <div class="product-list">
+      <div class="product-item"><span class="product-num">01</span><span class="product-name">活力橙能量</span><span class="product-ingr">鲜橙 · BCAA · 蜂蜜</span></div>
+      <div class="product-item"><span class="product-num">02</span><span class="product-name">西柚燃脂</span><span class="product-ingr">西柚 · 左旋肉碱 · 椰子水</span></div>
+      <div class="product-item"><span class="product-num">03</span><span class="product-name">螺旋藻蛋白</span><span class="product-ingr">螺旋藻 · 乳清蛋白 · 香蕉</span></div>
+      <div class="product-item"><span class="product-num">04</span><span class="product-name">百香果 BCAA</span><span class="product-ingr">百香果 · BCAA · 肌酸</span></div>
+      <div class="product-item"><span class="product-num">05</span><span class="product-name">红心火龙果修复</span><span class="product-ingr">火龙果 · 谷氨酰胺 · 乳清蛋白</span></div>
+      <div class="product-item"><span class="product-num">06</span><span class="product-name">咖啡能量炸弹</span><span class="product-ingr">冷萃咖啡 · MCT油 · 乳清蛋白</span></div>
+      <div class="product-item"><span class="product-num">07</span><span class="product-name">芒果爆发力</span><span class="product-ingr">芒果 · 肌酸 · 椰子水</span></div>
+      <div class="product-item"><span class="product-num">08</span><span class="product-name">草莓 BCAA 果昔</span><span class="product-ingr">草莓 · BCAA · 低脂牛奶</span></div>
+      <div class="product-item"><span class="product-num">09</span><span class="product-name">绿野仙踪</span><span class="product-ingr">菠菜 · 苹果 · 螺旋藻 · 姜</span></div>
+      <div class="product-item"><span class="product-num">10</span><span class="product-name">夜间修复</span><span class="product-ingr">蓝莓 · 谷氨酰胺 · 慢释放蛋白</span></div>
+      <div class="product-item"><span class="product-num">11</span><span class="product-name">超级充电站（DIY）</span><span class="product-ingr">选择基底 · 自选 2 种能量包</span></div>
+    </div>
+
+    <div style="margin-top: 48px;">
+      <div class="col-title">DIY 能量升级包 — 每包 +¥8</div>
+      <div class="diy-list">
+        <div class="diy-item"><span class="diy-name">乳清蛋白 <span class="diy-dose">Whey Protein Isolate · +5g</span></span><span class="diy-price">+¥8</span></div>
+        <div class="diy-item"><span class="diy-name">BCAA <span class="diy-dose">支链氨基酸 · +3g</span></span><span class="diy-price">+¥8</span></div>
+        <div class="diy-item"><span class="diy-name">肌酸 <span class="diy-dose">Creatine Monohydrate · +3g</span></span><span class="diy-price">+¥8</span></div>
+        <div class="diy-item"><span class="diy-name">螺旋藻粉 <span class="diy-dose">Spirulina · +2g</span></span><span class="diy-price">+¥8</span></div>
+        <div class="diy-item"><span class="diy-name">左旋肉碱 <span class="diy-dose">L-Carnitine · +2g</span></span><span class="diy-price">+¥8</span></div>
+        <div class="diy-item"><span class="diy-name">胶原蛋白 <span class="diy-dose">Collagen Peptide · +5g</span></span><span class="diy-price">+¥8</span></div>
       </div>
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- 08 财务预测 -->
-<section id="finance">
+<!-- 05 UE模型 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">08 · 财务预测</div>
-    <h2 class="sec-title">低投入，高回报，快回本</h2>
+    <div class="sec-label">05 · 单店 UE 模型对比</div>
+    <h2 class="sec-title">从 5.5% 到 31%，净利率的质变</h2>
+    <p class="sec-body">能量饮 100% 复用原有固定成本，边际成本仅为原料成本。每卖出一杯能量饮的净利润，是鲜榨果汁的 3—4 倍。</p>
 
-    <div class="fin-hero">
-      <div class="fin-card">
-        <div class="fin-label">试点总投资（仅原料+物料）</div>
-        <span class="fin-num" style="color:var(--orange)">¥11,500</span>
-        <div class="fin-sub">无任何固定成本新增</div>
-      </div>
-      <div class="fin-card">
-        <div class="fin-label">单店月净利提升</div>
-        <span class="fin-num" style="color:var(--teal)">¥44,640</span>
-        <div class="fin-sub">从5,520元→50,160元，增幅809%</div>
-      </div>
-      <div class="fin-card">
-        <div class="fin-label">12个月全公司新增净利</div>
-        <span class="fin-num" style="color:var(--purple)">¥116万</span>
-        <div class="fin-sub">30家门店全面覆盖目标</div>
-      </div>
-    </div>
+    <div class="col-title" style="margin-bottom: 0;">原有鲜榨果汁 vs 新增能量饮后</div>
+    <table class="ue-compare" style="margin-top: 24px;">
+      <thead>
+        <tr>
+          <th style="text-align:left">指标</th>
+          <th>上线前</th>
+          <th>上线后</th>
+          <th>变化</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>月固定成本</td><td>¥60,000</td><td>¥60,000</td><td class="green">+0%</td></tr>
+        <tr><td>日均出杯</td><td>120 杯</td><td>150 杯</td><td class="green">+25%</td></tr>
+        <tr><td>平均客单价</td><td>¥28</td><td>¥36</td><td class="green">+28.6%</td></tr>
+        <tr><td>月营收</td><td>¥100,800</td><td>¥162,000</td><td class="green">+60.7%</td></tr>
+        <tr><td>综合毛利率</td><td>65%</td><td>68%</td><td class="green">+3pts</td></tr>
+        <tr class="highlight"><td>月净利润</td><td class="muted">¥5,520</td><td class="big">¥50,160</td><td class="big">+809%</td></tr>
+        <tr class="highlight"><td>净利润率</td><td class="muted">5.5%</td><td class="big">31.0%</td><td class="big">+25.5pts</td></tr>
+        <tr><td>回本周期</td><td class="muted">18—24 个月</td><td class="green">13 天</td><td class="green">大幅缩短</td></tr>
+      </tbody>
+    </table>
 
-    <div class="tbl-wrap">
-      <table>
+    <div style="margin-top: 64px;">
+      <div class="col-title">能量饮单品 UE（单杯对比）</div>
+      <table class="ue-compare">
         <thead>
-          <tr>
-            <th>时间节点</th>
-            <th>上线门店数</th>
-            <th>月新增净利</th>
-            <th>累计新增净利</th>
-            <th>里程碑</th>
-          </tr>
+          <tr><th style="text-align:left">指标</th><th>能量饮</th><th>鲜榨果汁</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>第1个月（试点）</td>
-            <td>1家</td>
-            <td class="td-good">¥4.4万</td>
-            <td>¥4.4万</td>
-            <td>试点验证</td>
-          </tr>
-          <tr>
-            <td>第3个月</td>
-            <td>3家</td>
-            <td class="td-good">¥13.4万</td>
-            <td>¥31万</td>
-            <td>第二增长曲线成立</td>
-          </tr>
-          <tr>
-            <td>第6个月</td>
-            <td>10家</td>
-            <td class="td-good">¥44.6万</td>
-            <td>¥165万</td>
-            <td>品牌独立化启动</td>
-          </tr>
-          <tr>
-            <td class="td-bold">第12个月</td>
-            <td class="td-bold">30家</td>
-            <td class="td-good" style="font-size:1rem;font-weight:800">¥133.9万</td>
-            <td class="td-good" style="font-size:1rem;font-weight:800">¥654万</td>
-            <td class="td-good">子品牌拆分融资</td>
-          </tr>
+          <tr><td>售价</td><td>¥28</td><td>¥28</td></tr>
+          <tr><td>原料成本</td><td class="green">¥8.5</td><td>¥9.8</td></tr>
+          <tr><td>水果损耗</td><td class="green">0%</td><td class="muted">15—20%</td></tr>
+          <tr><td>制作时间</td><td class="green">60—90 秒</td><td class="muted">120—180 秒</td></tr>
+          <tr><td>单杯毛利率</td><td class="green">69.6%</td><td>65%</td></tr>
+          <tr class="highlight"><td>单杯边际净利</td><td class="big">¥19.5</td><td class="muted">¥16.7</td></tr>
         </tbody>
       </table>
     </div>
+
+    <div style="margin-top: 64px;">
+      <div class="col-title">盈利提升核心原因</div>
+      <div class="data-row">
+        <div class="data-item"><span class="data-key">① 复用固定成本</span><span class="data-val">租金/人工/设备/水电，零新增</span></div>
+        <div class="data-item"><span class="data-key">② 原料零损耗</span><span class="data-val">粉类保质期 12—18 个月</span></div>
+        <div class="data-item"><span class="data-key">③ 出餐效率提升</span><span class="data-val">单杯制作快 50%，高峰产能 +33%</span></div>
+        <div class="data-item"><span class="data-key">④ 客单价提升</span><span class="data-val">+¥8 基础涨幅，DIY 包进一步拉高</span></div>
+        <div class="data-item"><span class="data-key">⑤ 全时段营收均衡</span><span class="data-val">覆盖早餐 / 运动后 / 下午茶时段</span></div>
+      </div>
+    </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- 09 风险应对 -->
-<section id="risk">
+<!-- 06 落地执行 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">09 · 风险评估</div>
-    <h2 class="sec-title">五大风险与应对措施</h2>
-    <div class="risk-grid">
-      <div class="rcard">
-        <span class="rcard-icon">👅</span>
-        <div class="rcard-title">口味接受度</div>
-        <div class="rcard-arrow">↓ 应对</div>
-        <div class="rcard-resp">小范围测试+轻量版/标准版双轨上线，口味优化后再全量推广</div>
+    <div class="sec-label">06 · 落地执行方案</div>
+    <h2 class="sec-title">集合店模式，7 天内正式上线</h2>
+
+    <div class="two-col" style="margin-bottom: 64px;">
+      <div>
+        <div class="col-title">首选试点门店</div>
+        <div style="font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px;">JFC 品尚中心店</div>
+        <div style="font-size: 13px; color: var(--muted); margin-bottom: 20px;">观音山国际商务区</div>
+        <div class="data-row">
+          <div class="data-item"><span class="data-key">客群</span><span class="data-val">写字楼白领 + 健身人群</span></div>
+          <div class="data-item"><span class="data-key">周边</span><span class="data-val">高端健身房集群</span></div>
+          <div class="data-item"><span class="data-key">消费力</span><span class="data-val">客单价 28—45 元接受度高</span></div>
+          <div class="data-item"><span class="data-key">可复制性</span><span class="data-val">可作为标准模板</span></div>
+        </div>
       </div>
-      <div class="rcard">
-        <span class="rcard-icon">⚖️</span>
-        <div class="rcard-title">合规宣传</div>
-        <div class="rcard-arrow">↓ 应对</div>
-        <div class="rcard-resp">统一话术培训，明确可宣传与禁止宣传的功效，避免夸大</div>
+      <div>
+        <div class="col-title">备选门店</div>
+        <div style="font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px;">湖里万达店</div>
+        <div style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">客流量大，商圈成熟</div>
+        <div style="font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px;">SM 城市广场店</div>
+        <div style="font-size: 13px; color: var(--muted);">覆盖人群广，家庭客群多</div>
       </div>
-      <div class="rcard">
-        <span class="rcard-icon">🏃</span>
-        <div class="rcard-title">竞品模仿</div>
-        <div class="rcard-arrow">↓ 应对</div>
-        <div class="rcard-resp">快速迭代产品，深度绑定健身房会员体系，建立用户粘性护城河</div>
-      </div>
-      <div class="rcard">
-        <span class="rcard-icon">📦</span>
-        <div class="rcard-title">原料供应</div>
-        <div class="rcard-arrow">↓ 应对</div>
-        <div class="rcard-resp">多供应商备份，保持1个月安全库存，粉类保质期长风险可控</div>
-      </div>
-      <div class="rcard">
-        <span class="rcard-icon">👨‍🍳</span>
-        <div class="rcard-title">员工操作</div>
-        <div class="rcard-arrow">↓ 应对</div>
-        <div class="rcard-resp">严格SOP标准化，视频培训+考核，绩效提成激励，提升执行力</div>
-      </div>
+    </div>
+
+    <div class="col-title">运营模式与 SOP</div>
+    <div class="data-row">
+      <div class="data-item"><span class="data-key">集合店模式</span><span class="data-val">100% 复用现有设备、人员、供应链</span></div>
+      <div class="data-item"><span class="data-key">制作标准</span><span class="data-val">全品类单杯制作时长 ≤ 90 秒</span></div>
+      <div class="data-item"><span class="data-key">质控红线</span><span class="data-val">绝不加水加冰，功能性粉类最后加入</span></div>
+      <div class="data-item"><span class="data-key">口感优化</span><span class="data-val">螺旋藻/BCAA 苦味掩盖方案已验证</span></div>
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
-<!-- 10 结论 -->
-<section id="conclusion">
+<!-- 07 财务预测 -->
+<section>
   <div class="wrap">
-    <div class="sec-label">10 · 结论与行动</div>
-    <h2 class="sec-title">零风险 · 高收益 · 可进可退</h2>
+    <div class="sec-label">07 · 投资回报与财务预测</div>
+    <h2 class="sec-title">¥11,500 启动，12 个月创造 ¥116 万净利</h2>
 
-    <div class="concl-banner">
-      <div class="concl-title">这是通喜迄今最佳的增长机会</div>
-      <div class="concl-desc">零新增固定成本 × 净利率提升5倍 × 7天即可上线 × 失败成本几乎为零<br>没有任何理由不立即启动。</div>
+    <div class="fin-nums">
+      <div class="fin-num-item">
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;">试点总投入</div>
+        <span class="fin-big">¥11,500</span>
+        <div class="fin-label">仅原料 + 物料，零固定成本新增</div>
+      </div>
+      <div class="fin-num-item">
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;">回本周期</div>
+        <span class="fin-big">13天</span>
+        <div class="fin-label">月净利从 ¥5,520 → ¥50,160</div>
+      </div>
+      <div class="fin-num-item">
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px;">12个月全域净利</div>
+        <span class="fin-big">¥116万</span>
+        <div class="fin-label">30家门店全面覆盖目标</div>
+      </div>
     </div>
 
-    <div class="action-grid">
-      <div class="astep">
-        <div class="astep-num">01</div>
-        <div class="astep-title">批准试点</div>
-        <div class="astep-desc">今日决策，选定JFC品尚中心店作为首家试点，确定负责人与考核指标</div>
+    <div class="col-title">分阶段门店扩张预测</div>
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>时间</th>
+          <th class="r">上线门店</th>
+          <th class="r">月新增净利</th>
+          <th class="r">累计新增净利</th>
+          <th>里程碑</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>第 1 个月</td>
+          <td class="r">1 家</td>
+          <td class="r">¥4.4 万</td>
+          <td class="r">¥4.4 万</td>
+          <td class="muted">试点验证</td>
+        </tr>
+        <tr>
+          <td>第 3 个月</td>
+          <td class="r">3 家</td>
+          <td class="r">¥13.4 万</td>
+          <td class="r">¥31 万</td>
+          <td class="muted">第二增长曲线成立</td>
+        </tr>
+        <tr>
+          <td>第 6 个月</td>
+          <td class="r">10 家</td>
+          <td class="r">¥44.6 万</td>
+          <td class="r">¥165 万</td>
+          <td class="muted">品牌独立化启动</td>
+        </tr>
+        <tr>
+          <td class="strong">第 12 个月</td>
+          <td class="r strong">30 家</td>
+          <td class="r green">¥133.9 万</td>
+          <td class="r green">¥654 万</td>
+          <td class="green">子品牌拆分融资</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 08 风险评估 -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">08 · 风险评估与应对策略</div>
+    <h2 class="sec-title">五项风险均有明确应对方案</h2>
+
+    <div class="risk-list">
+      <div style="display: grid; grid-template-columns: 160px 1fr 1fr; gap: 32px; padding: 14px 0; border-bottom: 1px solid var(--line);">
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;">风险类型</div>
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;">风险描述</div>
+        <div style="font-size: 11px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;">应对措施</div>
       </div>
-      <div class="astep">
-        <div class="astep-num">02</div>
-        <div class="astep-title">3天内完成采购</div>
-        <div class="astep-desc">采购乳清蛋白/BCAA/肌酸/螺旋藻等功能性原料，制作菜单物料，总预算≤¥11,500</div>
+      <div class="risk-item">
+        <div class="risk-name">口味接受度</div>
+        <div class="risk-desc">功能性成分（螺旋藻/BCAA）可能影响口感，客户初次体验不佳</div>
+        <div class="risk-resp">小范围测试，推出轻量版/标准版双轨；优化后全量上线</div>
       </div>
-      <div class="astep">
-        <div class="astep-num">03</div>
-        <div class="astep-title">7天内正式上线</div>
-        <div class="astep-desc">完成员工培训与口味测试，全系列产品上架，配合开业活动引爆首周流量</div>
+      <div class="risk-item">
+        <div class="risk-name">宣传合规</div>
+        <div class="risk-desc">功能性饮品宣传易触碰保健品/医疗功效监管红线</div>
+        <div class="risk-resp">统一话术培训，严禁宣传保健/医疗功效，仅强调"天然成分"</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-name">竞品模仿</div>
+        <div class="risk-desc">产品配方被同城品牌快速跟进复制</div>
+        <div class="risk-resp">快速产品迭代，深度绑定健身场馆会员体系建立护城河</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-name">供应链风险</div>
+        <div class="risk-desc">单一供应商断货可能影响产品供应稳定性</div>
+        <div class="risk-resp">多供应商备份，保持 1 个月安全库存，粉类保质期长</div>
+      </div>
+      <div class="risk-item">
+        <div class="risk-name">操作规范</div>
+        <div class="risk-desc">员工配方执行不标准影响产品一致性</div>
+        <div class="risk-resp">视频培训 + 定期考核，绩效提成激励，严格执行 SOP</div>
       </div>
     </div>
   </div>
 </section>
-<div class="divider"></div>
 
+<!-- 09 下一步行动 -->
+<section>
+  <div class="wrap">
+    <div class="sec-label">09 · 下一步行动规划</div>
+    <h2 class="sec-title">7 天内，正式上线</h2>
+    <p class="sec-body">无需额外资源，无需改造门店，无需招聘员工。所有条件已经具备，唯一需要的是一个开始的决定。</p>
+
+    <div class="action-steps">
+      <div class="action-step">
+        <div class="action-step-num">01</div>
+        <div>
+          <div class="action-step-title">项目立项审批</div>
+          <div class="action-step-desc">今日确认启动，选定 JFC 品尚中心店为首家试点，指定负责人与考核指标</div>
+        </div>
+      </div>
+      <div class="action-step">
+        <div class="action-step-num">02</div>
+        <div>
+          <div class="action-step-title">3 日内完成采购</div>
+          <div class="action-step-desc">采购乳清蛋白 / BCAA / 肌酸 / 螺旋藻等功能性原料，制作菜单物料，总预算 ≤ ¥11,500</div>
+        </div>
+      </div>
+      <div class="action-step">
+        <div class="action-step-num">03</div>
+        <div>
+          <div class="action-step-title">5 日内完成培训</div>
+          <div class="action-step-desc">全员 SOP 培训，口味测试与优化，确保单杯制作 ≤ 90 秒，统一宣传话术</div>
+        </div>
+      </div>
+      <div class="action-step">
+        <div class="action-step-num">04</div>
+        <div>
+          <div class="action-step-title">7 日内正式上线</div>
+          <div class="action-step-desc">全系列产品上架，配合开业活动与本地 KOL 推广，引爆首周流量，正式开始数据监测</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insight" style="margin-top: 64px;">
+      <div class="insight-text">零新增固定成本 × 净利率提升 5 倍 × 7 天即可上线 × 失败成本几乎为零</div>
+      <div class="insight-sub">这是通喜迄今最低风险、最高回报、最快落地的增长机会。</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <div class="footer-text">
-    <span class="footer-brand">通喜果汁</span> · 2026 · 战略发展部
-  </div>
-  <div class="footer-conf">保密文件 · CONFIDENTIAL</div>
+  <div class="footer-brand">通喜果汁 · 能量进化</div>
+  <div class="footer-conf">保密文件 · Confidential · 2026</div>
 </footer>
 
 </body>
