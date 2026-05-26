@@ -246,6 +246,242 @@ svg.chart{display:block;overflow:visible;}
   .ch-div::before,.ch-div::after{width:40px;}
 }
 </style>
+<style>
+/* ══ Insights v5 ══ */
+.wi-hero {
+  background: #fff;
+  padding: 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+.wi-hero-bg {
+  position: absolute; inset: 0;
+  background: url('https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=1800&q=85') center/cover;
+  opacity: 0.08;
+}
+.wi-hero-inner {
+  position: relative; z-index: 1;
+  padding: 100px 120px 80px;
+}
+.wi-hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #8DC63F; margin-bottom: 20px; font-weight: 500;
+}
+.wi-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4.5vw, 64px);
+  font-weight: 900; line-height: 1.1;
+  letter-spacing: -1px; color: #0F0F0F;
+  margin: 0 0 16px;
+}
+.wi-hero-title span { color: #8DC63F; }
+.wi-hero-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 400; font-style: italic;
+  color: #8DC63F; letter-spacing: 0.02em;
+  margin-top: 0; margin-bottom: 12px;
+  max-width: 640px;
+}
+.wi-hero-desc {
+  font-size: 15px; font-weight: 300; color: #666;
+  max-width: 600px; line-height: 1.8; margin-top: 0;
+}
+
+/* chapter divider */
+.wi-ch {
+  text-align: center;
+  padding: 64px 0 40px;
+  border-top: 1px solid #eee;
+  margin-top: 0;
+}
+.wi-ch-label {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: #8DC63F; font-weight: 600;
+}
+.wi-ch-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900; color: #0F0F0F;
+  margin-top: 8px;
+}
+.wi-ch-desc { font-size: 14px; color: #999; margin-top: 8px; }
+
+/* brand block */
+.wi-brand {
+  display: grid;
+  min-height: 520px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.wi-brand-ltr { grid-template-columns: 480px 1fr; }
+.wi-brand-rtl { grid-template-columns: 1fr 480px; }
+
+.wi-brand-img {
+  position: relative; overflow: hidden; background: #f5f5f5;
+}
+.wi-brand-img img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.6s ease;
+}
+.wi-brand:hover .wi-brand-img img { transform: scale(1.03); }
+
+.wi-brand-info {
+  padding: 44px 52px;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border: 1px solid #f5f5f5;
+}
+.wi-brand-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px; font-weight: 900; color: #f0f0f0; line-height: 1;
+  margin-bottom: -8px;
+}
+.wi-brand-category {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #8DC63F; font-weight: 600; margin-bottom: 4px;
+}
+.wi-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 900; color: #0F0F0F;
+  margin-bottom: 4px; line-height: 1.1;
+}
+.wi-brand-flag { font-size: 13px; color: #999; margin-bottom: 12px; }
+.wi-brand-like {
+  font-size: 13px; font-style: italic; color: #8DC63F;
+  margin-bottom: 16px; font-weight: 400;
+}
+.wi-brand-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px;
+}
+.wi-brand-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 4px 10px;
+  border: 1px solid #ddd; border-radius: 2px; color: #666;
+}
+.wi-analysis {
+  font-size: 13px; color: #555; line-height: 1.75;
+  border-left: 2px solid #8DC63F; padding-left: 12px;
+  margin-bottom: 20px;
+}
+.wi-refs-title {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #bbb; font-weight: 600; margin-bottom: 8px;
+}
+.wi-refs { list-style: none; padding: 0; margin: 0 0 16px; }
+.wi-refs li {
+  font-size: 12px; color: #666; padding: 5px 0;
+  border-bottom: 1px solid #f5f5f5; display: flex; gap: 8px;
+}
+.wi-ref-arrow { color: #8DC63F; font-weight: 700; flex-shrink: 0; }
+.wi-brand-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 4px;
+  padding: 7px 14px;
+  border: 1px solid #c8e09a;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.07em;
+  color: #2D6A2D; text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.18s;
+  width: fit-content;
+}
+.wi-brand-link:hover { background: #8DC63F; color: #fff; border-color: #8DC63F; }
+
+/* pull quote */
+.wi-pull {
+  max-width: 800px; margin: 48px auto;
+  padding: 0 24px 0 28px;
+  border-left: 3px solid #8DC63F;
+  font-size: 17px; font-weight: 300; color: #333; line-height: 1.8;
+}
+.wi-pull strong { font-weight: 700; color: #0F0F0F; }
+
+/* priority ranking */
+.wi-priority {
+  background: #0a0f0a; padding: 72px 80px;
+}
+.wi-priority-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 900; color: #fff;
+  margin-bottom: 8px;
+}
+.wi-priority-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 40px; }
+.wi-rank-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+}
+.wi-rank-col { background: #111; padding: 32px 28px; }
+.wi-rank-tier {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #8DC63F; font-weight: 600; margin-bottom: 20px;
+}
+.wi-rank-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 12px 0; border-bottom: 1px solid #1a1a1a;
+}
+.wi-rank-item:last-child { border-bottom: none; }
+.wi-rank-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900; color: #8DC63F;
+  line-height: 1; min-width: 32px;
+}
+.wi-rank-name { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+.wi-rank-desc { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+/* trend table */
+.wi-trend {
+  background: #111; padding: 72px 80px;
+  border-top: 1px solid #1a1a1a;
+}
+.wi-trend-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 900; color: #fff; margin-bottom: 8px;
+}
+.wi-trend-sub { font-size: 13px; color: rgba(255,255,255,0.3); margin-bottom: 36px; }
+.wi-trend-table { width: 100%; border-collapse: collapse; }
+.wi-trend-table th {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3); font-weight: 600;
+  padding: 12px 16px; border-bottom: 1px solid #222; text-align: left;
+}
+.wi-trend-table td {
+  padding: 14px 16px; border-bottom: 1px solid #1a1a1a;
+  font-size: 13px; color: rgba(255,255,255,0.7); vertical-align: top;
+}
+.wi-trend-table td:first-child { color: #8DC63F; font-weight: 600; }
+.wi-trend-old { text-decoration: line-through; color: rgba(255,255,255,0.25) !important; font-weight: 400 !important; }
+.wi-trend-new { color: #8DC63F !important; font-weight: 600 !important; }
+
+/* conclusion */
+.wi-conclusion { padding: 72px 80px; background: #fff; }
+.wi-conclusion-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 900; color: #0F0F0F; margin-bottom: 8px;
+}
+.wi-conclusion-sub { font-size: 13px; color: #999; margin-bottom: 36px; }
+.wi-conclusion-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.wi-conclusion-card {
+  padding: 28px 24px; border-top: 3px solid #8DC63F; background: #fafafa;
+}
+.wi-conclusion-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 900; color: #8DC63F; margin-bottom: 8px;
+}
+.wi-conclusion-label { font-size: 13px; font-weight: 700; color: #0F0F0F; margin-bottom: 6px; }
+.wi-conclusion-desc { font-size: 12px; color: #666; line-height: 1.7; }
+
+/* footer */
+.wi-footer {
+  background: #0a0f0a; padding: 48px 80px; text-align: center;
+}
+
+@media(max-width:900px){
+  .wi-hero-inner { padding: 60px 24px 48px; }
+  .wi-brand-ltr,.wi-brand-rtl { grid-template-columns: 1fr; }
+  .wi-brand-img { height: 280px; }
+  .wi-brand-info { padding: 28px 24px; }
+  .wi-priority,.wi-trend,.wi-conclusion { padding: 48px 24px; }
+  .wi-rank-grid,.wi-conclusion-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
@@ -641,654 +877,365 @@ function switchTab(tab){
   <div class="ft-l">通喜果汁 · Tongxi · 2026</div>
   <div class="ft-r">保密文件 · Confidential</div>
 </footer>
-
 </div><!-- /page-bp -->
 
-<!-- ══ PAGE: 全球鲜果&能量饮品全景 ══ -->
-<div id="page-insights" style="padding-top:56px;">
-<style>
-/* ══ INSIGHTS v3 — White Minimal ══ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&display=swap');
+<div id="page-insights" style="padding-top:56px; background:#fff; font-family:'Inter',sans-serif;">
 
-.wi-hero {
-  background: #fff;
-  padding: 0;
-  border-bottom: 1px solid #eee;
-  position: relative;
-  overflow: hidden;
-}
-.wi-hero-bg {
-  position: absolute; inset: 0;
-  background: url('https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=1800&q=85') center/cover;
-  opacity: 0.08;
-}
-.wi-hero-inner {
-  position: relative; z-index: 1;
-  padding: 100px 120px 80px;
-}
-.wi-hero-eyebrow {
-  font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #8DC63F;
-  margin-bottom: 24px;
-}
-.wi-hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4.5vw, 64px);
-  font-weight: 900; line-height: 1.1;
-  letter-spacing: -1px; color: #0F0F0F;
-  margin-bottom: 24px;
-}
-.wi-hero-title span { color: #8DC63F; }
-.wi-hero-en {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px; font-weight: 400; font-style: italic;
-  color: #8DC63F; letter-spacing: 0.02em;
-  margin-top: 18px; margin-bottom: 6px;
-  max-width: 640px;
-}
-.wi-hero-desc {
-  font-size: 15px; font-weight: 300; color: #666;
-  max-width: 600px; line-height: 1.8; margin-top: 0;
-}
-.wi-hero-meta {
-  display: flex; gap: 56px; margin-top: 56px;
-  padding-top: 40px; border-top: 1px solid #eee;
-}
-.wi-meta-item {}
-.wi-meta-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px; font-weight: 900; color: #0F0F0F; line-height: 1;
-}
-.wi-meta-label {
-  font-size: 10px; font-weight: 500; letter-spacing: 0.18em;
-  text-transform: uppercase; color: #bbb; margin-top: 6px;
-}
-
-/* ── BRAND BLOCK ── */
-.wi-brand {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 520px;
-  border-bottom: 1px solid #eee;
-}
-.wi-brand:nth-child(even) { direction: rtl; }
-.wi-brand:nth-child(even) > * { direction: ltr; }
-
-.wi-brand-img {
-  position: relative; overflow: hidden;
-  background: #111;
-}
-.wi-brand-img img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover; opacity: 0.9;
-  transition: transform 0.6s ease;
-}
-.wi-brand:hover .wi-brand-img img {
-  transform: scale(1.04);
-}
-
-.wi-brand-info {
-  padding: 64px 72px;
-  display: flex; flex-direction: column; justify-content: center;
-  background: #fff;
-}
-.wi-brand-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 72px; font-weight: 900;
-  color: #f0f0f0; line-height: 1;
-  margin-bottom: -8px;
-}
-.wi-brand-category {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #8DC63F;
-  margin-bottom: 12px;
-}
-.wi-brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 3vw, 44px);
-  font-weight: 900; color: #0F0F0F;
-  line-height: 1.1; margin-bottom: 6px;
-}
-.wi-brand-flag {
-  font-size: 13px; font-weight: 300; color: #999;
-  margin-bottom: 20px;
-}
-.wi-brand-like {
-  font-size: 13px; font-style: italic; color: #8DC63F;
-  margin-bottom: 16px; font-weight: 400;
-}
-.wi-brand-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 20px;
-  padding: 7px 14px;
-  border: 1px solid #c8e09a;
-  border-radius: 3px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; font-weight: 500; letter-spacing: 0.07em;
-  color: #2D6A2D; text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.18s;
-}
-.wi-brand-link:hover {
-  background: #8DC63F; color: #fff; border-color: #8DC63F;
-}
-.wi-brand-link-arrow { font-style: normal; }
-.wi-brand-tags {
-  display: flex; flex-wrap: wrap; gap: 6px;
-  margin-bottom: 28px;
-}
-.wi-brand-tag {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; padding: 4px 12px;
-  border: 1px solid #8DC63F; border-radius: 20px;
-  color: #8DC63F; background: #f9fdf4;
-}
-
-/* Analysis block */
-.wi-analysis {
-  font-size: 13px; font-weight: 300; color: #444;
-  line-height: 1.85; margin-bottom: 28px;
-  border-left: 2px solid #8DC63F;
-  padding-left: 16px;
-}
-
-/* Ref list */
-.wi-refs-title {
-  font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #bbb;
-  margin-bottom: 12px;
-}
-.wi-refs { list-style: none; }
-.wi-refs li {
-  display: flex; gap: 10px; align-items: flex-start;
-  padding: 9px 0; border-bottom: 1px solid #f0f0f0;
-  font-size: 12px; font-weight: 300; color: #555; line-height: 1.6;
-}
-.wi-refs li:last-child { border-bottom: none; }
-.wi-ref-arrow { color: #8DC63F; font-size: 11px; margin-top: 2px; flex-shrink: 0; }
-
-/* ── CHAPTER DIVIDER ── */
-.wi-chapter {
-  display: flex; align-items: center; gap: 20px;
-  padding: 64px 120px 40px;
-  background: #fff;
-}
-.wi-ch-line { flex: 1; height: 1px; background: #eee; }
-.wi-ch-label {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #8DC63F; white-space: nowrap;
-}
-
-/* ── PULL QUOTE ── */
-.wi-pull {
-  background: #f9fdf4;
-  padding: 64px 120px;
-  border-top: 1px solid #e8f5d0;
-  border-bottom: 1px solid #e8f5d0;
-}
-.wi-pull p {
-  font-size: clamp(16px, 2vw, 22px);
-  font-weight: 300; color: #333;
-  line-height: 1.85; max-width: 900px;
-  border-left: 3px solid #8DC63F;
-  padding-left: 28px;
-}
-.wi-pull strong { font-weight: 700; color: #2D6A2D; }
-
-/* ── PRIORITY ── */
-.wi-priority {
-  padding: 80px 120px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-.wi-priority-h {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 4vw, 56px);
-  font-weight: 900; color: #0F0F0F;
-  letter-spacing: -1.5px; margin-bottom: 6px;
-}
-.wi-priority-sub {
-  font-size: 13px; font-weight: 300; color: #999;
-  margin-bottom: 48px;
-}
-.wi-rank-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-}
-.wi-rank-col { border-right: 1px solid #eee; padding-right: 40px; padding-left: 0; }
-.wi-rank-col:first-child { padding-left: 0; }
-.wi-rank-col:last-child { border-right: none; padding-left: 40px; padding-right: 0; }
-.wi-rank-col:nth-child(2) { padding-left: 40px; padding-right: 40px; }
-.wi-rank-tier {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; padding: 14px 0 10px;
-  border-top: 2px solid;
-}
-.wi-rank-col:nth-child(1) .wi-rank-tier { color: #8DC63F; border-color: #8DC63F; }
-.wi-rank-col:nth-child(2) .wi-rank-tier { color: #aaa; border-color: #ddd; }
-.wi-rank-col:nth-child(3) .wi-rank-tier { color: #ccc; border-color: #eee; }
-.wi-rank-item {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 0; border-bottom: 1px solid #f5f5f5;
-}
-.wi-rank-num {
-  width: 26px; height: 26px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700; flex-shrink: 0;
-}
-.wi-rank-col:nth-child(1) .wi-rank-num { background: #8DC63F; color: #fff; }
-.wi-rank-col:nth-child(2) .wi-rank-num { background: #f0f0f0; color: #999; }
-.wi-rank-col:nth-child(3) .wi-rank-num { background: #f7f7f7; color: #bbb; }
-.wi-rank-name { font-size: 13px; font-weight: 500; color: #0F0F0F; }
-.wi-rank-desc { font-size: 11px; font-weight: 300; color: #aaa; margin-top: 2px; }
-
-/* ── TREND TABLE ── */
-.wi-trend {
-  padding: 80px 120px;
-  background: #0f1a0f;
-}
-.wi-trend-h {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 3.5vw, 48px);
-  font-weight: 900; color: #fff;
-  letter-spacing: -1.5px; margin-bottom: 40px;
-}
-.wi-trend-table { width: 100%; border-collapse: collapse; }
-.wi-trend-table th {
-  font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: rgba(255,255,255,0.25);
-  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
-  text-align: left;
-}
-.wi-trend-table td {
-  padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
-  font-size: 13px; font-weight: 300; vertical-align: top;
-}
-.wi-trend-table td:first-child { font-weight: 700; color: #8DC63F; width: 130px; }
-.wi-trend-table td.old { color: rgba(255,255,255,0.2); text-decoration: line-through; width: 220px; }
-.wi-trend-table td.new { color: rgba(255,255,255,0.8); }
-
-/* ── CONCLUSION ── */
-.wi-conclusion {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 0;
-}
-.wi-con-card {
-  padding: 56px 52px;
-  border-right: 1px solid #eee;
-  background: #fff;
-}
-.wi-con-card:last-child { border-right: none; }
-.wi-con-label {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-  text-transform: uppercase; color: #8DC63F; margin-bottom: 16px;
-}
-.wi-con-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px; font-weight: 900; color: #0F0F0F;
-  line-height: 1.3; margin-bottom: 14px;
-}
-.wi-con-desc {
-  font-size: 12px; font-weight: 300; color: #888; line-height: 1.85;
-}
-
-/* ── FOOTER ── */
-.wi-footer {
-  background: #2D6A2D; padding: 36px 120px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.wi-footer-l {
-  font-family: 'Playfair Display', serif;
-  font-size: 15px; font-weight: 900; font-style: italic; color: #fff;
-}
-.wi-footer-r {
-  font-size: 10px; font-weight: 500; letter-spacing: 0.2em;
-  text-transform: uppercase; color: rgba(255,255,255,0.4);
-}
-
-/* responsive */
-@media(max-width:900px){
-  .wi-hero { padding: 80px 24px 60px; }
-  .wi-brand { grid-template-columns: 1fr; }
-  .wi-brand:nth-child(even) { direction: ltr; }
-  .wi-brand-img { min-height: 280px; }
-  .wi-brand-info { padding: 40px 24px; }
-  .wi-chapter { padding: 48px 24px 32px; }
-  .wi-pull { padding: 48px 24px; }
-  .wi-priority { padding: 60px 24px; }
-  .wi-rank-grid { grid-template-columns: 1fr; gap: 32px; }
-  .wi-rank-col { border-right: none; padding: 0; }
-  .wi-trend { padding: 60px 24px; }
-  .wi-conclusion { grid-template-columns: 1fr; }
-  .wi-con-card { border-right: none; border-bottom: 1px solid #eee; padding: 40px 24px; }
-  .wi-footer { padding: 28px 24px; flex-direction: column; gap: 10px; }
-  .wi-hero-meta { gap: 28px; flex-wrap: wrap; }
-}
-</style>
-
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="wi-hero">
   <div class="wi-hero-bg"></div>
   <div class="wi-hero-inner">
-  <div class="wi-hero-eyebrow">GLOBAL FRESH JUICE &amp; ENERGY DRINKS · MARKET INTELLIGENCE 2026</div>
-  <h1 class="wi-hero-title">全球鲜果汁 · <span>能量饮品</span>全景洞察</h1>
-  <p class="wi-hero-en">A Deep Dive into 7 World-Class Brands Reshaping the Health Beverage Industry</p>
-  <p class="wi-hero-desc">7 个全球标杆品牌深度解析——从澳洲鲜果汁连锁到美国功能能量饮，<br>读懂新一代健康饮品消费者正在寻找什么。</p>
-  <div class="wi-hero-meta">
-    <div class="wi-meta-item">
-      <div class="wi-meta-num">7</div>
-      <div class="wi-meta-label">标杆品牌</div>
-    </div>
-    <div class="wi-meta-item">
-      <div class="wi-meta-num">3</div>
-      <div class="wi-meta-label">品牌梯队</div>
-    </div>
-    <div class="wi-meta-item">
-      <div class="wi-meta-num">380<span style="font-size:22px;font-family:Inter,sans-serif;">亿</span></div>
-      <div class="wi-meta-label">健康饮品市场</div>
-    </div>
-    <div class="wi-meta-item">
-      <div class="wi-meta-num">1</div>
-      <div class="wi-meta-label">核心趋势</div>
-    </div>
-  </div><!-- /wi-hero-inner -->
+    <div class="wi-hero-eyebrow">GLOBAL FRESH JUICE &amp; ENERGY DRINKS · MARKET INTELLIGENCE 2026</div>
+    <h1 class="wi-hero-title">全球鲜果汁 · <span>能量饮品</span>全景洞察</h1>
+    <p class="wi-hero-en">A Deep Dive into 8 World-Class Brands Reshaping the Health Beverage Industry</p>
+    <p class="wi-hero-desc">8 个全球标杆品牌深度解析——从高端功能昔天花板到小门店破圈模型，读懂新一代健康饮品消费者正在寻找什么。</p>
+  </div>
 </section>
 
-<!-- ══ CHAPTER 01 ══ -->
-<div class="wi-chapter">
-  <div class="wi-ch-line"></div>
-  <div class="wi-ch-label">01 · 鲜果汁连锁标杆 — 强烈建议深度研究</div>
-  <div class="wi-ch-line"></div>
+<!-- CHAPTER 01 -->
+<div class="wi-ch">
+  <div class="wi-ch-label">01 · 高端功能昔标杆 — 品牌天花板</div>
+  <div class="wi-ch-title">The Premium Tier</div>
+  <div class="wi-ch-desc">定义行业高度，通喜能量对标的方向</div>
 </div>
 
-<!-- BRAND 01: Smoothie King -->
-<div class="wi-brand">
+<!-- BRAND 01: Erewhon -->
+<div class="wi-brand wi-brand-ltr">
+  <div class="wi-brand-img">
+    <img src="https://images.unsplash.com/photo-1638176066666-ffb2f013c7dd?w=900&q=85" alt="Erewhon">
+  </div>
+  <div class="wi-brand-info">
+    <div>
+      <div class="wi-brand-num">01</div>
+      <div class="wi-brand-category">高端功能昔 · 好莱坞明星御用</div>
+      <div class="wi-brand-name">Erewhon</div>
+      <div class="wi-brand-flag">🇺🇸 美国洛杉矶 · 全球功能昔定价天花板</div>
+      <div class="wi-brand-like">"一杯昔卖到 $21，排队2小时也值得"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Premium</span>
+        <span class="wi-brand-tag">Celebrity</span>
+        <span class="wi-brand-tag">Functional</span>
+        <span class="wi-brand-tag">Hype</span>
+      </div>
+      <div class="wi-analysis">好莱坞明星联名特调昔，每款都有名字和故事。Hailey Bieber 的草莓皮肤昔、Kendall Jenner 的紫色蓝莓昔，每次联名都引爆 Instagram。证明功能性果昔可以成为「文化事件」而不只是饮料。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>联名策略：与厦门本地 KOL/健身达人联名出品特调款，制造话题</li>
+        <li><span class="wi-ref-arrow">→</span>每杯有名字有故事，让产品成为社交货币而非功能品</li>
+        <li><span class="wi-ref-arrow">→</span>高定价=高品质感知，TORCE ENERGY 溢价空间参考</li>
+      </ul>
+    </div>
+    <a class="wi-brand-link" href="https://www.erewhonmarket.com" target="_blank" rel="noopener">Visit erewhonmarket.com ↗</a>
+  </div>
+</div>
+
+<!-- BRAND 02: Joe & The Juice -->
+<div class="wi-brand wi-brand-rtl">
+  <div class="wi-brand-info" style="border-right:1px solid #f5f5f5;">
+    <div>
+      <div class="wi-brand-num">02</div>
+      <div class="wi-brand-category">都市鲜果昔 · 品牌美学标杆</div>
+      <div class="wi-brand-name">Joe &amp; The Juice</div>
+      <div class="wi-brand-flag">🇩🇰 丹麦 · 全球 350+ 门店 · 40 国</div>
+      <div class="wi-brand-like">"Supreme × 鲜果汁店"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Urban Cool</span>
+        <span class="wi-brand-tag">Fresh Juice</span>
+        <span class="wi-brand-tag">Protein</span>
+        <span class="wi-brand-tag">Music</span>
+      </div>
+      <div class="wi-analysis">把果汁店变成潮流文化空间。门店内播放电子音乐，员工着装潮流，菜单以鲜榨果汁+蛋白昔为核心。在全球精英商圈（纽约第五大道、伦敦金融城）遍地开花，是目前最接近 TORCE ENERGY 品牌美学的对标案例。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>门店即品牌：音乐+视觉+员工形象三位一体，TORCE 门店改造参考</li>
+        <li><span class="wi-ref-arrow">→</span>鲜榨果汁+蛋白昔双线产品结构，与通喜现有+TORCE 新品完全吻合</li>
+        <li><span class="wi-ref-arrow">→</span>精英商圈选址策略：观音山/SM等高端场景优先渗透</li>
+      </ul>
+    </div>
+    <a class="wi-brand-link" href="https://www.joejuice.com" target="_blank" rel="noopener">Visit joejuice.com ↗</a>
+  </div>
+  <div class="wi-brand-img">
+    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=900&q=85" alt="Joe & The Juice">
+  </div>
+</div>
+
+<div class="wi-pull">
+  前两个品牌共同证明：<strong>功能性果昔的竞争已经不在「味道」，而在「文化认同」</strong>——消费者买的是一种对自己生活方式的声明。这正是 TORCE ENERGY 需要建立的核心资产。
+</div>
+
+<!-- CHAPTER 02 -->
+<div class="wi-ch">
+  <div class="wi-ch-label">02 · 鲜果汁连锁扩张 — 规模化路径</div>
+  <div class="wi-ch-title">The Scale Players</div>
+  <div class="wi-ch-desc">从一家店到全球连锁，通喜扩张的参考路径</div>
+</div>
+
+<!-- BRAND 03: Smoothie King -->
+<div class="wi-brand wi-brand-ltr">
   <div class="wi-brand-img">
     <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=900&q=85" alt="Smoothie King">
   </div>
   <div class="wi-brand-info">
-    <div class="wi-brand-num">01</div>
-    <div class="wi-brand-category">果汁门店 · 健身能量</div>
-    <div class="wi-brand-name">Smoothie King</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 1,400+ 门店</div>
-    <div class="wi-brand-like">"健身版星巴克"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Protein</span>
-      <span class="wi-brand-tag">Fitness</span>
-      <span class="wi-brand-tag">Recovery</span>
-      <span class="wi-brand-tag">Slim</span>
+    <div>
+      <div class="wi-brand-num">03</div>
+      <div class="wi-brand-category">健身果昔连锁 · 规模化标杆</div>
+      <div class="wi-brand-name">Smoothie King</div>
+      <div class="wi-brand-flag">🇺🇸 美国 · 全球 1,400+ 门店 · 健身场景锁定</div>
+      <div class="wi-brand-like">"健身房旁边必有一家"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Fitness</span>
+        <span class="wi-brand-tag">Smoothie</span>
+        <span class="wi-brand-tag">Supplement</span>
+        <span class="wi-brand-tag">Franchise</span>
+      </div>
+      <div class="wi-analysis">全球最大健身果昔连锁，核心策略是「与健身房捆绑选址」。产品按健身目标分类（增肌/减脂/恢复/能量），让消费者秒懂该选哪杯。旗舰产品「The Activator」含肌酸+乳清，与通喜能量产品线高度重叠。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>按「健身目标」而非「口味」分类产品，降低选择难度提高转化</li>
+        <li><span class="wi-ref-arrow">→</span>门店选址与健身房/运动场景强捆绑，观音山健身圈是天然试验场</li>
+        <li><span class="wi-ref-arrow">→</span>特许经营规模化路径：标准化程度越高，扩张成本越低</li>
+      </ul>
     </div>
-    <div class="wi-analysis">把「果昔」彻底重新定义为「身体管理工具」。菜单按功能目的分层——增肌、减脂、恢复、能量——而非按口味分类。是目前最接近通喜能量系列应该做的事情的品牌。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>功能菜单结构：按「目的/场景」而非「口味」命名，每杯都有清晰理由</li>
-      <li><span class="wi-ref-arrow">→</span>增肌 / 减脂 / 恢复三层需求精准分层，客单价自然提升</li>
-      <li><span class="wi-ref-arrow">→</span>会员订阅制（Smoothie King Club）锁定高频健身用户复购</li>
-    </ul>
     <a class="wi-brand-link" href="https://www.smoothieking.com" target="_blank" rel="noopener">Visit smoothieking.com ↗</a>
-
   </div>
 </div>
 
-<!-- BRAND 02: innocent drinks -->
-<div class="wi-brand">
-  <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=900&q=85" alt="innocent drinks">
-  </div>
-  <div class="wi-brand-info">
-    <div class="wi-brand-num">02</div>
-    <div class="wi-brand-category">鲜果汁 · 欧洲最大品牌</div>
-    <div class="wi-brand-name">innocent drinks</div>
-    <div class="wi-brand-flag">🇬🇧 英国 · 欧洲 15 国 · 可口可乐战略投资</div>
-    <div class="wi-brand-like">"欧洲最会讲故事的果汁品牌"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Natural</span>
-      <span class="wi-brand-tag">No Additives</span>
-      <span class="wi-brand-tag">Brand Story</span>
-      <span class="wi-brand-tag">Playful</span>
+<!-- BRAND 04: Oakberry -->
+<div class="wi-brand wi-brand-rtl">
+  <div class="wi-brand-info" style="border-right:1px solid #f5f5f5;">
+    <div>
+      <div class="wi-brand-num">04</div>
+      <div class="wi-brand-category">巴西超级食物 · 全球最快扩张</div>
+      <div class="wi-brand-name">Oakberry</div>
+      <div class="wi-brand-flag">🇧🇷 巴西 · 全球 700+ 门店 · 40 国 · 创立仅 8 年</div>
+      <div class="wi-brand-like">"巴西走出来的全球健康品牌"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Açaí</span>
+        <span class="wi-brand-tag">Brazilian</span>
+        <span class="wi-brand-tag">Superfood</span>
+        <span class="wi-brand-tag">Global</span>
+      </div>
+      <div class="wi-analysis">从巴西圣保罗一家小店，8年扩张到40国700+门店，是近10年全球健康餐饮扩张速度最快的品牌之一。核心是把巴西莓（Açaí）这个超级食材做成全球化 IP。和通喜的「巴西能量」基因高度呼应——同样来自热带，同样主打自然健康。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>「产地故事」是最强品牌护城河：巴西热带=天然能量，通喜可借力</li>
+        <li><span class="wi-ref-arrow">→</span>8年700店的扩张节奏参考：前3年精品化，后5年特许快速复制</li>
+        <li><span class="wi-ref-arrow">→</span>把单一食材做成全球 IP 的路径，通喜「鲜果」同样可以 IP 化</li>
+      </ul>
     </div>
-    <div class="wi-analysis">从三个大学生用 500 英镑起步，成长为欧洲最大天然果汁品牌，最终被可口可乐战略投资。核心武器是极具感染力的品牌人格——包装上的文案幽默、真诚、有温度，成为教科书级别的品牌叙事案例。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>品牌人格化：把「无添加、纯天然」讲成有趣的故事而非枯燥标签</li>
-      <li><span class="wi-ref-arrow">→</span>包装即媒体：每个瓶子都是品牌沟通的界面</li>
-      <li><span class="wi-ref-arrow">→</span>小众到国民品牌的升级路径：真诚 + 坚持 + 口碑裂变</li>
-    </ul>
-    <a class="wi-brand-link" href="https://www.innocentdrinks.com" target="_blank" rel="noopener">Visit innocentdrinks.com ↗</a>
-
+    <a class="wi-brand-link" href="https://www.oakberry.com" target="_blank" rel="noopener">Visit oakberry.com ↗</a>
   </div>
-</div>
-
-<!-- BRAND 03: Boost Juice -->
-<div class="wi-brand">
   <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=900&q=85" alt="Boost Juice">
-  </div>
-  <div class="wi-brand-info">
-    <div class="wi-brand-num">03</div>
-    <div class="wi-brand-category">鲜果汁连锁 · 最像通喜</div>
-    <div class="wi-brand-name">Boost Juice</div>
-    <div class="wi-brand-flag">🇦🇺 澳洲 · 全球 600+ 门店 · 14 国</div>
-    <div class="wi-brand-like">"澳洲版通喜果汁"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Fresh Juice</span>
-      <span class="wi-brand-tag">Smoothie</span>
-      <span class="wi-brand-tag">Franchise</span>
-      <span class="wi-brand-tag">Healthy</span>
-    </div>
-    <div class="wi-analysis">澳洲最大鲜果汁连锁，从一家店成长到全球 600+ 门店，核心是标准化的新鲜现榨模型。门店小、翻台快、产品简洁——是目前全球最接近通喜现有门店模型的标杆品牌。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>小门店高翻台的鲜果汁连锁扩张模型，直接参考价值最高</li>
-      <li><span class="wi-ref-arrow">→</span>菜单精简策略：爆款 SKU 集中，减少复杂度提升效率</li>
-      <li><span class="wi-ref-arrow">→</span>从本地品牌到国际特许经营的品牌升级路径</li>
-    </ul>
-    <a class="wi-brand-link" href="https://www.boostjuice.com.au" target="_blank" rel="noopener">Visit boostjuice.com.au ↗</a>
-
+    <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=900&q=85" alt="Oakberry">
   </div>
 </div>
 
-<!-- PULL QUOTE 01 -->
-<div class="wi-pull">
-  <p>这五个鲜果汁品牌从不同角度共同证明：<strong>「新鲜、纯粹、有功能」是鲜果汁品牌升级的三个核心锚点</strong>——不是口味更多，而是目的更清晰。这是通喜能量需要讲述的核心故事。</p>
-</div>
-
-<!-- ══ CHAPTER 02 ══ -->
-<div class="wi-chapter">
-  <div class="wi-ch-line"></div>
-  <div class="wi-ch-label">02 · 品牌升级参考 — 视觉 &amp; 定位</div>
-  <div class="wi-ch-line"></div>
-</div>
-
-<!-- BRAND 04: Pressed Juicery -->
-<div class="wi-brand">
+<!-- BRAND 05: Pressed Juicery -->
+<div class="wi-brand wi-brand-ltr">
   <div class="wi-brand-img">
     <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=900&q=85" alt="Pressed Juicery">
   </div>
   <div class="wi-brand-info">
-    <div class="wi-brand-num">04</div>
-    <div class="wi-brand-category">极简主义 · 高端健康</div>
-    <div class="wi-brand-name">Pressed Juicery</div>
-    <div class="wi-brand-flag">🇺🇸 LA · 冷压果汁连锁</div>
-    <div class="wi-brand-like">"Aesop + 果汁店"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Cold Pressed</span>
-      <span class="wi-brand-tag">Detox</span>
-      <span class="wi-brand-tag">Minimalism</span>
+    <div>
+      <div class="wi-brand-num">05</div>
+      <div class="wi-brand-category">冷压鲜果汁 · 高端升级路径</div>
+      <div class="wi-brand-name">Pressed Juicery</div>
+      <div class="wi-brand-flag">🇺🇸 美国 · 100+ 门店 · 冷压技术壁垒</div>
+      <div class="wi-brand-like">"把一杯果汁卖出精品护肤品的感觉"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Cold Press</span>
+        <span class="wi-brand-tag">Cleanse</span>
+        <span class="wi-brand-tag">Premium</span>
+        <span class="wi-brand-tag">Wellness</span>
+      </div>
+      <div class="wi-analysis">用冷压技术（HPP）保留更多营养素，将普通果汁升级为「功能性健康产品」。产品按「净化方案」销售（如3日断食果汁套餐），大幅提升客单价和复购黏性。证明「技术壁垒」可以成为鲜果汁品牌的定价权来源。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>套餐化销售：「7天TORCE能量计划」比单杯销售客单价高3-5倍</li>
+        <li><span class="wi-ref-arrow">→</span>技术可视化：「冷压」「现榨」「零添加」等工艺标签是溢价依据</li>
+        <li><span class="wi-ref-arrow">→</span>健康方案销售思维：卖结果（变美/减脂/增肌）而非卖产品</li>
+      </ul>
     </div>
-    <div class="wi-analysis">LA 白领女性的健康 lifestyle 品牌代表。极简到极致的视觉系统（全白 + 细线 + 草写字体），把冷压果汁从饮品升维成了生活方式宣言。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>极简视觉语言：白色 + 细字体 + 大留白传递高端感</li>
-      <li><span class="wi-ref-arrow">→</span>「Detox」概念包装，把产品功能转化为情绪价值</li>
-      <li><span class="wi-ref-arrow">→</span>女性高消费白领精准定位策略</li>
-    </ul>
     <a class="wi-brand-link" href="https://www.pressedjuicery.com" target="_blank" rel="noopener">Visit pressedjuicery.com ↗</a>
-
   </div>
 </div>
 
-<!-- BRAND 05: Jamba -->
-<div class="wi-brand">
+<div class="wi-pull">
+  这三个扩张型品牌的共同密码：<strong>把「健康」从模糊概念变成具体的可购买体验</strong>——增肌的、减脂的、净化的、恢复的。用户需要的不是一杯好喝的果汁，而是一个对自己身体的承诺。
+</div>
+
+<!-- CHAPTER 03 -->
+<div class="wi-ch">
+  <div class="wi-ch-label">03 · 门店效率与破圈 — 运营模型</div>
+  <div class="wi-ch-title">The Disruptors</div>
+  <div class="wi-ch-desc">小门店大营收，用效率和跨界重新定义健康饮品</div>
+</div>
+
+<!-- BRAND 06: Blank Street Coffee -->
+<div class="wi-brand wi-brand-rtl">
+  <div class="wi-brand-info" style="border-right:1px solid #f5f5f5;">
+    <div>
+      <div class="wi-brand-num">06</div>
+      <div class="wi-brand-category">小门店高效率 · 咖啡×健康破圈</div>
+      <div class="wi-brand-name">Blank Street Coffee</div>
+      <div class="wi-brand-flag">🇺🇸 美国纽约 · 极小门店模型 · 快速扩张</div>
+      <div class="wi-brand-like">"10㎡的店，做出精品咖啡馆的体验"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Micro Store</span>
+        <span class="wi-brand-tag">Coffee</span>
+        <span class="wi-brand-tag">Matcha</span>
+        <span class="wi-brand-tag">Efficiency</span>
+      </div>
+      <div class="wi-analysis">纽约最火的精品咖啡新势力，门店仅10-15㎡，用极简菜单+极高坪效颠覆传统咖啡馆。核心产品除咖啡外，大力推抹茶昔、草莓昔等功能性饮品。「晨间唤醒杯」（咖啡+果昔）的跨品类创新与通喜能量高度一致，证明健康果昔可以切入咖啡消费场景。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>极简菜单策略：3-5款核心产品做到极致，比大而全更有效</li>
+        <li><span class="wi-ref-arrow">→</span>早市咖啡场景切入：「晨间唤醒杯」是从咖啡客群抢流量的最佳入口</li>
+        <li><span class="wi-ref-arrow">→</span>小门面高坪效：通喜现有门店模型天然具备这个优势</li>
+      </ul>
+    </div>
+    <a class="wi-brand-link" href="https://www.blankstreet.com" target="_blank" rel="noopener">Visit blankstreet.com ↗</a>
+  </div>
   <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=900&q=80" alt="Jamba">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=85" alt="Blank Street Coffee">
+  </div>
+</div>
+
+<!-- BRAND 07: Boost Juice -->
+<div class="wi-brand wi-brand-ltr">
+  <div class="wi-brand-img">
+    <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=900&q=85" alt="Boost Juice">
   </div>
   <div class="wi-brand-info">
-    <div class="wi-brand-num">05</div>
-    <div class="wi-brand-category">年轻化 · 社交传播</div>
-    <div class="wi-brand-name">Jamba</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 年轻化健康果昔</div>
-    <div class="wi-brand-like">"健康版喜茶"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Smoothie</span>
-      <span class="wi-brand-tag">Wellness</span>
-      <span class="wi-brand-tag">Young</span>
+    <div>
+      <div class="wi-brand-num">07</div>
+      <div class="wi-brand-category">鲜果汁连锁 · 最像通喜的门店模型</div>
+      <div class="wi-brand-name">Boost Juice</div>
+      <div class="wi-brand-flag">🇦🇺 澳洲 · 全球 600+ 门店 · 14 国特许经营</div>
+      <div class="wi-brand-like">"澳洲版通喜果汁"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Fresh Juice</span>
+        <span class="wi-brand-tag">Smoothie</span>
+        <span class="wi-brand-tag">Franchise</span>
+        <span class="wi-brand-tag">Healthy</span>
+      </div>
+      <div class="wi-analysis">澳洲最大鲜果汁连锁，从一家店成长到全球600+门店，靠的是高度标准化的鲜榨模型。门店小、翻台快、菜单精简——是目前全球在门店形态上最接近通喜的品牌。创始人 Janine Allis 一人白手起家的故事也是绝佳的品牌叙事素材。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>标准化是规模化的前提：每一杯都一模一样，才能放心开加盟</li>
+        <li><span class="wi-ref-arrow">→</span>菜单精简降低训练成本：员工3天上手，是通喜能量推广的关键</li>
+        <li><span class="wi-ref-arrow">→</span>创始人故事即品牌故事：通喜的「无水无糖」初心是最好的 IP 素材</li>
+      </ul>
     </div>
-    <div class="wi-analysis">把「健康」包装得像「喝奶茶一样有趣」，打破了健康饮品「苦大仇深」的刻板印象。美国最具社交媒体影响力的果昔品牌之一，年轻用户复购率极高。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>健康奶茶化：让健康变得「好玩」而非「自律痛苦」</li>
-      <li><span class="wi-ref-arrow">→</span>UGC 内容策略：产品颜值驱动用户自发分享</li>
-      <li><span class="wi-ref-arrow">→</span>年轻用户（18-30岁）社交圈层裂变传播</li>
-    </ul>
-    <a class="wi-brand-link" href="https://www.jamba.com" target="_blank" rel="noopener">Visit jamba.com ↗</a>
-
+    <a class="wi-brand-link" href="https://www.boostjuice.com.au" target="_blank" rel="noopener">Visit boostjuice.com.au ↗</a>
   </div>
 </div>
 
-<!-- ══ CHAPTER 03 ══ -->
-<div class="wi-chapter">
-  <div class="wi-ch-line"></div>
-  <div class="wi-ch-label">03 · 功能能量饮料 — 趋势前沿</div>
-  <div class="wi-ch-line"></div>
-</div>
-
-<!-- BRAND 06: Celsius -->
-<div class="wi-brand">
+<!-- BRAND 08: Celsius -->
+<div class="wi-brand wi-brand-rtl">
+  <div class="wi-brand-info" style="border-right:1px solid #f5f5f5;">
+    <div>
+      <div class="wi-brand-num">08</div>
+      <div class="wi-brand-category">功能能量饮 · 0糖女性市场</div>
+      <div class="wi-brand-name">Celsius</div>
+      <div class="wi-brand-flag">🇺🇸 美国 · 纳斯达克上市 · 年营收 $10 亿+</div>
+      <div class="wi-brand-like">"0糖健身能量饮第一品牌"</div>
+      <div class="wi-brand-tags">
+        <span class="wi-brand-tag">Zero Sugar</span>
+        <span class="wi-brand-tag">Thermogenic</span>
+        <span class="wi-brand-tag">Fitness</span>
+        <span class="wi-brand-tag">Female</span>
+      </div>
+      <div class="wi-analysis">从小众功能饮料逆袭成美国便利店货架霸主。核心武器：0糖+燃脂成分（Thermogenic）+女性健身社群。2023年营收超 $10 亿，上市市值一度超 $50 亿，证明功能能量饮的女性市场远比想象大。</div>
+      <div class="wi-refs-title">对通喜的启示</div>
+      <ul class="wi-refs">
+        <li><span class="wi-ref-arrow">→</span>0糖定位：消除女性健身人群最大的消费顾虑</li>
+        <li><span class="wi-ref-arrow">→</span>Thermogenic（燃脂加速）概念为产品注入科学背书</li>
+        <li><span class="wi-ref-arrow">→</span>健身房渠道深度渗透，从圈内口碑向外破圈的路径</li>
+      </ul>
+    </div>
+    <a class="wi-brand-link" href="https://www.celsius.com" target="_blank" rel="noopener">Visit celsius.com ↗</a>
+  </div>
   <div class="wi-brand-img">
     <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=900&q=85" alt="Celsius">
   </div>
-  <div class="wi-brand-info">
-    <div class="wi-brand-num">06</div>
-    <div class="wi-brand-category">功能饮料 · 0糖健身</div>
-    <div class="wi-brand-name">Celsius</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 健身能量饮料</div>
-    <div class="wi-brand-like">"0糖健身能量饮第一品牌"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Zero Sugar</span>
-      <span class="wi-brand-tag">Thermogenic</span>
-      <span class="wi-brand-tag">Fitness</span>
-    </div>
-    <div class="wi-analysis">从小众功能饮料逆袭为美国便利店货架霸主。核心武器：0糖 + 燃脂成分 + 女性健身社群。2023年营收超过 $10亿美元，证明功能能量饮的女性市场远比想象大。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→0糖定位：消除女性健身人群最大的消费顾虑</li>
-      <li><span class="wi-ref-arrow">→</span>Thermogenic（燃脂加速）概念为产品注入科学背书</li>
-      <li><span class="wi-ref-arrow">→</span>健身房渠道深度渗透，从圈内口碑向外破圈</li>
-    </ul>
-    <a class="wi-brand-link" href="https://www.celsius.com" target="_blank" rel="noopener">Visit celsius.com ↗</a>
-
-  </div>
 </div>
 
-<!-- BRAND 07: Natalie's Orchid Island Juice -->
-<div class="wi-brand">
-  <div class="wi-brand-img">
-    <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?w=900&q=85" alt="Natalie's Juice">
-  </div>
-  <div class="wi-brand-info">
-    <div class="wi-brand-num">07</div>
-    <div class="wi-brand-category">高端鲜榨 · 无防腐剂</div>
-    <div class="wi-brand-name">Natalie's</div>
-    <div class="wi-brand-flag">🇺🇸 美国 · 高端鲜榨果汁 · 家族品牌</div>
-    <div class="wi-brand-like">"美国最纯粹的鲜榨果汁"</div>
-    <div class="wi-brand-tags">
-      <span class="wi-brand-tag">Fresh Squeezed</span>
-      <span class="wi-brand-tag">No Preservatives</span>
-      <span class="wi-brand-tag">Premium</span>
-      <span class="wi-brand-tag">Clean Label</span>
-    </div>
-    <div class="wi-analysis">佛罗里达家族果园直接榨汁，零添加、无防腐剂、不调配。用极度克制的「纯粹」定位，在高端超市和米其林餐厅站稳脚跟。证明了「什么都不加」本身就是最强的品牌主张。</div>
-    <div class="wi-refs-title">参考点</div>
-    <ul class="wi-refs">
-      <li><span class="wi-ref-arrow">→</span>「零添加」作为核心品牌主张，反向建立高端信任感</li>
-      <li><span class="wi-ref-arrow">→</span>从果园到杯子的溯源故事，构建产品透明度护城河</li>
-      <li><span class="wi-ref-arrow">→</span>高端渠道（精品超市/餐厅）优先，再向大众市场扩展</li>
-    </ul>
-    <a class="wi-brand-link" href="https://www.nataliespureoj.com" target="_blank" rel="noopener">Visit nataliespureoj.com ↗</a>
-
-  </div>
-</div>
-
-<!-- PULL QUOTE 02 -->
 <div class="wi-pull">
-  <p>Celsius 和 GHOST 共同指向同一个结论：<strong>功能饮品的下一个战场是文化认同，而非成分配方</strong>。用户选择一款能量饮，不只是选口味，是在宣告自己的生活方式。</p>
+  这8个品牌共同描绘了一幅清晰的图景：<strong>健康饮品的下一个十年，属于那些能同时做到「功能可信」「品牌可感」「运营可复制」的品牌</strong>。通喜果汁已有60+门店和真实的产品力——TORCE ENERGY 就是那把打开这扇门的钥匙。
 </div>
 
-<!-- ══ PRIORITY ══ -->
-<div class="wi-priority">
-  <div class="wi-priority-h">研究优先级</div>
-  <div class="wi-priority-sub">按「最值得研究 × 最接近通喜当前方向」综合排序</div>
+<!-- PRIORITY RANKING -->
+<section class="wi-priority">
+  <div class="wi-priority-title">研究优先级</div>
+  <div class="wi-priority-sub">按对通喜能量的直接参考价值排序</div>
   <div class="wi-rank-grid">
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">第一梯队 · 强烈建议</div>
-      <div class="wi-rank-item"><div class="wi-rank-num">1</div><div><div class="wi-rank-name">Smoothie King</div><div class="wi-rank-desc">功能菜单 · 健身版星巴克</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">2</div><div><div class="wi-rank-name">Boost Juice</div><div class="wi-rank-desc">门店模型 · 最像通喜</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">3</div><div><div class="wi-rank-name">Celsius</div><div class="wi-rank-desc">0糖女性市场 · 功能定位</div></div></div>
+      <div class="wi-rank-tier">🔴 必须深度研究</div>
+      <div class="wi-rank-item"><div class="wi-rank-num">1</div><div><div class="wi-rank-name">Erewhon</div><div class="wi-rank-desc">品牌天花板 · 联名策略</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">2</div><div><div class="wi-rank-name">Joe & The Juice</div><div class="wi-rank-desc">门店美学 · 产品结构</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">3</div><div><div class="wi-rank-name">Oakberry</div><div class="wi-rank-desc">巴西基因 · 扩张路径</div></div></div>
     </div>
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">第二梯队 · 品牌升级</div>
-      <div class="wi-rank-item"><div class="wi-rank-num">4</div><div><div class="wi-rank-name">innocent drinks</div><div class="wi-rank-desc">品牌人格化 · 故事驱动</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">5</div><div><div class="wi-rank-name">Natalie's</div><div class="wi-rank-desc">零添加 · 高端鲜榨</div></div></div>
+      <div class="wi-rank-tier">🟡 重点参考</div>
+      <div class="wi-rank-item"><div class="wi-rank-num">4</div><div><div class="wi-rank-name">Smoothie King</div><div class="wi-rank-desc">健身场景 · 选址策略</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">5</div><div><div class="wi-rank-name">Blank Street</div><div class="wi-rank-desc">小门店效率 · 早市破圈</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">6</div><div><div class="wi-rank-name">Celsius</div><div class="wi-rank-desc">0糖定位 · 女性市场</div></div></div>
     </div>
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">第三梯队 · 视觉参考</div>
-      <div class="wi-rank-item"><div class="wi-rank-num">6</div><div><div class="wi-rank-name">Pressed Juicery</div><div class="wi-rank-desc">极简高端视觉</div></div></div>
-      <div class="wi-rank-item"><div class="wi-rank-num">7</div><div><div class="wi-rank-name">Jamba</div><div class="wi-rank-desc">年轻化 · 健康奶茶化</div></div></div>
+      <div class="wi-rank-tier">🟢 选择性参考</div>
+      <div class="wi-rank-item"><div class="wi-rank-num">7</div><div><div class="wi-rank-name">Pressed Juicery</div><div class="wi-rank-desc">套餐化 · 技术背书</div></div></div>
+      <div class="wi-rank-item"><div class="wi-rank-num">8</div><div><div class="wi-rank-name">Boost Juice</div><div class="wi-rank-desc">门店标准化 · 特许模型</div></div></div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ══ TREND TABLE ══ -->
-<div class="wi-trend">
-  <div class="wi-trend-h">你真正应该研究的核心</div>
+<!-- TREND TABLE -->
+<section class="wi-trend">
+  <div class="wi-trend-title">行业趋势对比</div>
+  <div class="wi-trend-sub">旧逻辑 vs. 8个品牌共同印证的新逻辑</div>
   <table class="wi-trend-table">
     <thead>
       <tr><th>维度</th><th>旧逻辑</th><th>新趋势</th></tr>
     </thead>
     <tbody>
-      <tr><td>用户需求</td><td class="old">解渴 · 好喝</td><td class="new">提升身体状态 · 管理健康</td></tr>
-      <tr><td>消费场景</td><td class="old">路边随手买</td><td class="new">健身前后 · 工作续命 · 社交打卡</td></tr>
-      <tr><td>核心成分</td><td class="old">水果 · 糖分</td><td class="new">蛋白 + 能量 + 0糖 + 超级食物</td></tr>
-      <tr><td>品牌视觉</td><td class="old">鲜艳卡通 · 促销感</td><td class="new">科技感 + 高级感 + 极简主义</td></tr>
-      <tr><td>情绪价值</td><td class="old">便宜 · 方便</td><td class="new">自律 · 高能量 · 对自己的投资</td></tr>
-      <tr><td>商业模式</td><td class="old">单杯低毛利</td><td class="new">健康版 Starbucks · 高客单 · 会员订阅</td></tr>
+      <tr><td>卖点</td><td class="wi-trend-old">好喝、新鲜、便宜</td><td class="wi-trend-new">功能性 · 目标导向 · 身体投资</td></tr>
+      <tr><td>定价</td><td class="wi-trend-old">¥15-20 大众价位</td><td class="wi-trend-new">¥28-50 高溢价功能昔</td></tr>
+      <tr><td>用户</td><td class="wi-trend-old">口渴的路人</td><td class="wi-trend-new">有健康意识的主动消费者</td></tr>
+      <tr><td>传播</td><td class="wi-trend-old">促销海报、折扣券</td><td class="wi-trend-new">KOL联名 · 社媒打卡 · 文化事件</td></tr>
+      <tr><td>门店</td><td class="wi-trend-old">越大越好</td><td class="wi-trend-new">小而精 · 高坪效 · 场景感</td></tr>
+      <tr><td>产品</td><td class="wi-trend-old">口味分类</td><td class="wi-trend-new">功能分类（增肌/燃脂/修复/唤醒）</td></tr>
     </tbody>
   </table>
-</div>
+</section>
 
-<!-- ══ CONCLUSION ══ -->
-<div class="wi-conclusion">
-  <div class="wi-con-card">
-    <div class="wi-con-label">市场规模</div>
-    <div class="wi-con-title">全球年轻人<br>身体状态消费化</div>
-    <div class="wi-con-desc">功能饮品市场全球复合增速 &gt;8%，健身群体年轻化趋势明确。未来 10 年非常大的赛道。</div>
+<!-- CONCLUSION -->
+<section class="wi-conclusion">
+  <div class="wi-conclusion-title">对通喜的三点结论</div>
+  <div class="wi-conclusion-sub">基于8个全球品牌的综合研究</div>
+  <div class="wi-conclusion-grid">
+    <div class="wi-conclusion-card">
+      <div class="wi-conclusion-num">01</div>
+      <div class="wi-conclusion-label">品牌升维先于产品升维</div>
+      <div class="wi-conclusion-desc">Erewhon 和 Joe & The Juice 证明：先建立品牌文化认同，定价权自然随之而来。TORCE ENERGY 的品牌感投入是最高ROI的前期投资。</div>
+    </div>
+    <div class="wi-conclusion-card">
+      <div class="wi-conclusion-num">02</div>
+      <div class="wi-conclusion-label">功能性是护城河</div>
+      <div class="wi-conclusion-desc">Celsius、Smoothie King、Pressed Juicery 都用「功能标签」把自己和普通饮料彻底区隔。通喜能量的蛋白/肌酸/胶原蛋白线就是这道护城河。</div>
+    </div>
+    <div class="wi-conclusion-card">
+      <div class="wi-conclusion-num">03</div>
+      <div class="wi-conclusion-label">标准化决定扩张速度</div>
+      <div class="wi-conclusion-desc">Oakberry 8年700店、Boost Juice 14国扩张，背后都是极高的操作标准化程度。TORCE ENERGY ≤90秒操作规范，是日后快速复制的底层基础。</div>
+    </div>
   </div>
-  <div class="wi-con-card">
-    <div class="wi-con-label">通喜机会</div>
-    <div class="wi-con-title">现有 60+ 门店<br>即是最大护城河</div>
-    <div class="wi-con-desc">无需新开店即可触达健身人群。品牌升级 + 功能菜单重构，直接复制 Smoothie King 的增长路径。</div>
-  </div>
-  <div class="wi-con-card">
-    <div class="wi-con-label">核心动作</div>
-    <div class="wi-con-title">菜单即品牌<br>功能即信任</div>
-    <div class="wi-con-desc">每杯都要有「为什么喝这杯」的理由——增肌、减脂、恢复、能量。菜单结构决定品牌定位。</div>
-  </div>
-</div>
+</section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer class="wi-footer">
-  <div class="wi-footer-l">通喜果汁 · Global Intelligence</div>
-  <div class="wi-footer-r">Market Research · Internal Reference · 2026</div>
+  <div style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;font-style:italic;margin-bottom:6px;">全球鲜果汁 · 能量饮品全景洞察</div>
+  <div style="font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:0.1em;">Global Fresh Juice & Energy Drinks · Market Intelligence · 通喜果汁出品 · 2026</div>
 </footer>
 
 </div><!-- /page-insights -->
