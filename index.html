@@ -482,6 +482,326 @@ svg.chart{display:block;overflow:visible;}
   .wi-rank-grid,.wi-conclusion-grid { grid-template-columns: 1fr; }
 }
 </style>
+<style>
+/* ── TORCE Page Tokens ── */
+:root {
+  --tc-black: #0A0A0A;
+  --tc-white: #FFFFFF;
+  --tc-green: #8DC63F;
+  --tc-darkgreen: #2D6A2D;
+  --tc-gray: #f5f5f5;
+  --tc-text: #1a1a1a;
+  --tc-muted: #666;
+}
+
+/* ── Hero ── */
+.tc-hero {
+  position: relative; overflow: hidden;
+  background: #fff;
+  min-height: 520px;
+  display: flex; align-items: center;
+}
+.tc-hero-bg {
+  position: absolute; inset: 0;
+  background: url('assets/torce_hero.png') center/cover no-repeat;
+  opacity: 0.06;
+}
+.tc-hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 80px;
+}
+.tc-hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--tc-green); margin-bottom: 20px; font-weight: 500;
+}
+.tc-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 900; color: #0F0F0F;
+  line-height: 1.05; letter-spacing: -1px;
+  margin: 0 0 12px;
+}
+.tc-hero-title span { color: var(--tc-green); }
+.tc-hero-subtitle {
+  font-size: 13px; font-style: italic; color: var(--tc-green);
+  letter-spacing: 0.04em; margin-bottom: 20px;
+}
+.tc-hero-desc {
+  font-size: 16px; color: #555;
+  max-width: 560px; line-height: 1.8; margin: 0;
+}
+.tc-hero-stats {
+  display: flex; gap: 48px; margin-top: 48px;
+}
+.tc-hero-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px; font-weight: 900; color: var(--tc-green);
+  line-height: 1;
+}
+.tc-hero-stat-label {
+  font-size: 12px; color: #999;
+  letter-spacing: 0.05em; margin-top: 4px;
+}
+
+/* ── Section ── */
+.tc-section {
+  max-width: 1200px; margin: 0 auto;
+  padding: 80px 80px;
+}
+.tc-section-eyebrow {
+  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--tc-green); margin-bottom: 12px; font-weight: 500;
+}
+.tc-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 900; color: var(--tc-black);
+  line-height: 1.1; margin: 0 0 40px;
+}
+.tc-divider {
+  border: none; border-top: 1px solid #e8e8e8; margin: 0;
+}
+
+/* ── Design Principles ── */
+.tc-principles {
+  background: #fff;
+  padding: 72px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.tc-principles .tc-section-title { color: #0F0F0F; }
+.tc-principles .tc-section-eyebrow { color: var(--tc-green); }
+.tc-princ-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 2px;
+  margin-top: 40px;
+}
+.tc-princ-card {
+  background: #fafafa; padding: 32px 28px;
+  border-top: 3px solid var(--tc-green);
+}
+.tc-princ-icon { font-size: 28px; margin-bottom: 16px; }
+.tc-princ-title {
+  font-size: 15px; font-weight: 700; color: #0F0F0F;
+  margin-bottom: 8px; letter-spacing: 0.01em;
+}
+.tc-princ-desc { font-size: 13px; color: #666; line-height: 1.7; }
+
+/* ── Products ── */
+.tc-products-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
+  margin-top: 0;
+}
+.tc-product-card {
+  display: grid; grid-template-columns: 420px 1fr;
+  min-height: 480px; overflow: hidden;
+}
+.tc-product-card:nth-child(even) {
+  grid-template-columns: 1fr 420px;
+}
+.tc-product-card:nth-child(even) .tc-product-img { order: 2; }
+.tc-product-card:nth-child(even) .tc-product-info { order: 1; }
+.tc-product-img {
+  position: relative; overflow: hidden;
+  background: #f0f0f0;
+}
+.tc-product-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 0.6s ease;
+}
+.tc-product-card:hover .tc-product-img img { transform: scale(1.04); }
+.tc-product-badge {
+  position: absolute; top: 20px; left: 20px;
+  background: var(--tc-green); color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 5px 10px; border-radius: 2px;
+}
+.tc-product-info {
+  padding: 40px 44px;
+  background: #fff;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border: 1px solid #f0f0f0;
+}
+.tc-product-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px; font-weight: 900;
+  color: #f0f0f0; line-height: 1;
+  margin-bottom: -12px;
+}
+.tc-product-category {
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--tc-green); font-weight: 600; margin-bottom: 6px;
+}
+.tc-product-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900; color: var(--tc-black);
+  margin-bottom: 4px; line-height: 1.1;
+}
+.tc-product-english {
+  font-size: 12px; color: var(--tc-muted); letter-spacing: 0.05em;
+  margin-bottom: 16px; font-style: italic;
+}
+.tc-product-tags {
+  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
+}
+.tc-product-tag {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 4px 10px;
+  border: 1px solid #ddd; border-radius: 2px; color: #555;
+}
+.tc-product-desc {
+  font-size: 13px; color: var(--tc-muted); line-height: 1.75;
+  margin-bottom: 20px; border-left: 2px solid var(--tc-green);
+  padding-left: 12px;
+}
+
+/* Recipe + Steps */
+.tc-recipe-title {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #999; font-weight: 600; margin-bottom: 8px;
+}
+.tc-recipe-list {
+  list-style: none; padding: 0; margin: 0 0 16px;
+}
+.tc-recipe-list li {
+  font-size: 12px; color: var(--tc-text);
+  padding: 4px 0; border-bottom: 1px solid #f5f5f5;
+  display: flex; justify-content: space-between;
+}
+.tc-recipe-list li span { color: var(--tc-muted); }
+.tc-steps {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.tc-step {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--tc-muted);
+}
+.tc-step-num {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--tc-green); color: #fff;
+  font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Price + Strategy row */
+.tc-product-footer {
+  display: flex; align-items: center; gap: 0;
+  border-top: 1px solid #f0f0f0; padding-top: 16px;
+  margin-top: auto;
+}
+.tc-price-box {
+  flex: 1; text-align: center; padding: 12px;
+  border-right: 1px solid #f0f0f0;
+}
+.tc-price-box:last-child { border-right: none; }
+.tc-price-label {
+  font-size: 10px; color: #999; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 4px;
+}
+.tc-price-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 900; color: var(--tc-darkgreen);
+}
+.tc-price-sub { font-size: 11px; color: var(--tc-muted); margin-top: 2px; }
+.tc-strategy-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: 2px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.tc-strategy-引流 { background: #FFF3E0; color: #E65100; }
+.tc-strategy-利润 { background: #E8F5E9; color: #2E7D32; }
+.tc-strategy-爆款 { background: #E3F2FD; color: #1565C0; }
+.tc-strategy-破圈 { background: #F3E5F5; color: #6A1B9A; }
+.tc-strategy-差异 { background: #FCE4EC; color: #AD1457; }
+.tc-strategy-专业 { background: #EDE7F6; color: #4527A0; }
+
+/* ── Strategy Matrix ── */
+.tc-matrix {
+  background: #fafafa; padding: 72px 0;
+  border-top: 1px solid #eee;
+}
+.tc-matrix .tc-section-title { color: #0F0F0F; }
+.tc-matrix .tc-section-eyebrow { color: var(--tc-green); }
+.tc-matrix-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+  margin-top: 40px;
+}
+.tc-matrix-cell {
+  background: #fff; padding: 32px 28px;
+  border: 1px solid #eee;
+}
+.tc-matrix-role {
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--tc-green); font-weight: 600; margin-bottom: 8px;
+}
+.tc-matrix-products {
+  margin-bottom: 12px;
+}
+.tc-matrix-product-name {
+  font-size: 15px; font-weight: 700; color: #0F0F0F; margin-bottom: 2px;
+}
+.tc-matrix-product-desc { font-size: 12px; color: #999; }
+.tc-matrix-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 900; color: var(--tc-green);
+  margin-top: 16px;
+}
+.tc-matrix-value-label { font-size: 11px; color: #999; }
+
+/* ── Launch Timeline ── */
+.tc-timeline {
+  padding: 72px 0; background: #fafafa;
+}
+.tc-timeline-track {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; margin-top: 48px; position: relative;
+}
+.tc-timeline-track::before {
+  content: ''; position: absolute;
+  top: 28px; left: 10%; right: 10%;
+  height: 1px; background: var(--tc-green); opacity: 0.3;
+}
+.tc-tl-item { text-align: center; padding: 0 20px; }
+.tc-tl-dot {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--tc-green); color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px;
+}
+.tc-tl-month {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--tc-muted); margin-bottom: 8px;
+}
+.tc-tl-products {
+  font-size: 13px; font-weight: 600; color: var(--tc-black);
+  line-height: 1.6; margin-bottom: 8px;
+}
+.tc-tl-desc { font-size: 12px; color: var(--tc-muted); line-height: 1.6; }
+
+/* ── Full-width product section ── */
+.tc-products-section {
+  background: #fff;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .tc-hero-inner,.tc-section { padding: 48px 24px; }
+  .tc-products-grid { grid-template-columns: 1fr; }
+  .tc-product-card, .tc-product-card:nth-child(even) {
+    grid-template-columns: 1fr; grid-template-rows: 280px auto;
+  }
+  .tc-product-card:nth-child(even) .tc-product-img { order: 1; }
+  .tc-product-card:nth-child(even) .tc-product-info { order: 2; }
+  .tc-princ-grid, .tc-matrix-grid { grid-template-columns: 1fr 1fr; }
+  .tc-timeline-track { grid-template-columns: 1fr 1fr; }
+  .tc-hero-stats { gap: 24px; flex-wrap: wrap; }
+}
+</style>
 </head>
 <body>
 
@@ -1171,19 +1491,19 @@ function switchTab(tab){
   <div class="wi-priority-sub">按对通喜能量的直接参考价值排序</div>
   <div class="wi-rank-grid">
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">🔴 必须深度研究</div>
+      <div class="wi-rank-tier">必须深度研究</div>
       <div class="wi-rank-item"><div class="wi-rank-num">1</div><div><div class="wi-rank-name">Erewhon</div><div class="wi-rank-desc">品牌天花板 · 联名策略</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">2</div><div><div class="wi-rank-name">Joe & The Juice</div><div class="wi-rank-desc">门店美学 · 产品结构</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">3</div><div><div class="wi-rank-name">Oakberry</div><div class="wi-rank-desc">巴西基因 · 扩张路径</div></div></div>
     </div>
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">🟡 重点参考</div>
+      <div class="wi-rank-tier">重点参考</div>
       <div class="wi-rank-item"><div class="wi-rank-num">4</div><div><div class="wi-rank-name">Smoothie King</div><div class="wi-rank-desc">健身场景 · 选址策略</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">5</div><div><div class="wi-rank-name">Blank Street</div><div class="wi-rank-desc">小门店效率 · 早市破圈</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">6</div><div><div class="wi-rank-name">Celsius</div><div class="wi-rank-desc">0糖定位 · 女性市场</div></div></div>
     </div>
     <div class="wi-rank-col">
-      <div class="wi-rank-tier">🟢 选择性参考</div>
+      <div class="wi-rank-tier">选择性参考</div>
       <div class="wi-rank-item"><div class="wi-rank-num">7</div><div><div class="wi-rank-name">Pressed Juicery</div><div class="wi-rank-desc">套餐化 · 技术背书</div></div></div>
       <div class="wi-rank-item"><div class="wi-rank-num">8</div><div><div class="wi-rank-name">Boost Juice</div><div class="wi-rank-desc">门店标准化 · 特许模型</div></div></div>
     </div>
@@ -1245,323 +1565,6 @@ function switchTab(tab){
 ══════════════════════════════════════════ -->
 <div id="page-products" style="display:none; padding-top:56px; background:#fff; font-family:'Inter',sans-serif;">
 
-<style>
-/* ── TORCE Page Tokens ── */
-:root {
-  --tc-black: #0A0A0A;
-  --tc-white: #FFFFFF;
-  --tc-green: #8DC63F;
-  --tc-darkgreen: #2D6A2D;
-  --tc-gray: #f5f5f5;
-  --tc-text: #1a1a1a;
-  --tc-muted: #666;
-}
-
-/* ── Hero ── */
-.tc-hero {
-  position: relative; overflow: hidden;
-  background: #0A0A0A;
-  min-height: 520px;
-  display: flex; align-items: center;
-}
-.tc-hero-bg {
-  position: absolute; inset: 0;
-  background: url('assets/torce_hero.png') center/cover no-repeat;
-  opacity: 0.35;
-}
-.tc-hero-inner {
-  position: relative; z-index: 2;
-  max-width: 1200px; margin: 0 auto;
-  padding: 80px 80px;
-}
-.tc-hero-eyebrow {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--tc-green); margin-bottom: 20px; font-weight: 500;
-}
-.tc-hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(40px, 5vw, 72px);
-  font-weight: 900; color: #fff;
-  line-height: 1.05; letter-spacing: -1px;
-  margin: 0 0 12px;
-}
-.tc-hero-title span { color: var(--tc-green); }
-.tc-hero-subtitle {
-  font-size: 13px; font-style: italic; color: var(--tc-green);
-  letter-spacing: 0.04em; margin-bottom: 20px;
-}
-.tc-hero-desc {
-  font-size: 16px; color: rgba(255,255,255,0.7);
-  max-width: 560px; line-height: 1.8; margin: 0;
-}
-.tc-hero-stats {
-  display: flex; gap: 48px; margin-top: 48px;
-}
-.tc-hero-stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px; font-weight: 900; color: var(--tc-green);
-  line-height: 1;
-}
-.tc-hero-stat-label {
-  font-size: 12px; color: rgba(255,255,255,0.5);
-  letter-spacing: 0.05em; margin-top: 4px;
-}
-
-/* ── Section ── */
-.tc-section {
-  max-width: 1200px; margin: 0 auto;
-  padding: 80px 80px;
-}
-.tc-section-eyebrow {
-  font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
-  color: var(--tc-green); margin-bottom: 12px; font-weight: 500;
-}
-.tc-section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(28px, 3vw, 44px);
-  font-weight: 900; color: var(--tc-black);
-  line-height: 1.1; margin: 0 0 40px;
-}
-.tc-divider {
-  border: none; border-top: 1px solid #e8e8e8; margin: 0;
-}
-
-/* ── Design Principles ── */
-.tc-principles {
-  background: var(--tc-black);
-  padding: 72px 0;
-}
-.tc-principles .tc-section-title { color: #fff; }
-.tc-principles .tc-section-eyebrow { color: var(--tc-green); }
-.tc-princ-grid {
-  display: grid; grid-template-columns: repeat(4,1fr); gap: 2px;
-  margin-top: 40px;
-}
-.tc-princ-card {
-  background: #161616; padding: 32px 28px;
-  border-top: 3px solid var(--tc-green);
-}
-.tc-princ-icon { font-size: 28px; margin-bottom: 16px; }
-.tc-princ-title {
-  font-size: 15px; font-weight: 700; color: #fff;
-  margin-bottom: 8px; letter-spacing: 0.01em;
-}
-.tc-princ-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.7; }
-
-/* ── Products ── */
-.tc-products-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-  margin-top: 0;
-}
-.tc-product-card {
-  display: grid; grid-template-columns: 420px 1fr;
-  min-height: 480px; overflow: hidden;
-}
-.tc-product-card:nth-child(even) {
-  grid-template-columns: 1fr 420px;
-}
-.tc-product-card:nth-child(even) .tc-product-img { order: 2; }
-.tc-product-card:nth-child(even) .tc-product-info { order: 1; }
-.tc-product-img {
-  position: relative; overflow: hidden;
-  background: #f0f0f0;
-}
-.tc-product-img img {
-  width: 100%; height: 100%;
-  object-fit: cover; display: block;
-  transition: transform 0.6s ease;
-}
-.tc-product-card:hover .tc-product-img img { transform: scale(1.04); }
-.tc-product-badge {
-  position: absolute; top: 20px; left: 20px;
-  background: var(--tc-green); color: #fff;
-  font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
-  text-transform: uppercase; padding: 5px 10px; border-radius: 2px;
-}
-.tc-product-info {
-  padding: 40px 44px;
-  background: #fff;
-  display: flex; flex-direction: column; justify-content: space-between;
-  border: 1px solid #f0f0f0;
-}
-.tc-product-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px; font-weight: 900;
-  color: #f0f0f0; line-height: 1;
-  margin-bottom: -12px;
-}
-.tc-product-category {
-  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--tc-green); font-weight: 600; margin-bottom: 6px;
-}
-.tc-product-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px; font-weight: 900; color: var(--tc-black);
-  margin-bottom: 4px; line-height: 1.1;
-}
-.tc-product-english {
-  font-size: 12px; color: var(--tc-muted); letter-spacing: 0.05em;
-  margin-bottom: 16px; font-style: italic;
-}
-.tc-product-tags {
-  display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
-}
-.tc-product-tag {
-  font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; padding: 4px 10px;
-  border: 1px solid #ddd; border-radius: 2px; color: #555;
-}
-.tc-product-desc {
-  font-size: 13px; color: var(--tc-muted); line-height: 1.75;
-  margin-bottom: 20px; border-left: 2px solid var(--tc-green);
-  padding-left: 12px;
-}
-
-/* Recipe + Steps */
-.tc-recipe-title {
-  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: #999; font-weight: 600; margin-bottom: 8px;
-}
-.tc-recipe-list {
-  list-style: none; padding: 0; margin: 0 0 16px;
-}
-.tc-recipe-list li {
-  font-size: 12px; color: var(--tc-text);
-  padding: 4px 0; border-bottom: 1px solid #f5f5f5;
-  display: flex; justify-content: space-between;
-}
-.tc-recipe-list li span { color: var(--tc-muted); }
-.tc-steps {
-  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
-}
-.tc-step {
-  display: flex; align-items: center; gap: 6px;
-  font-size: 11px; color: var(--tc-muted);
-}
-.tc-step-num {
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--tc-green); color: #fff;
-  font-size: 10px; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-}
-
-/* Price + Strategy row */
-.tc-product-footer {
-  display: flex; align-items: center; gap: 0;
-  border-top: 1px solid #f0f0f0; padding-top: 16px;
-  margin-top: auto;
-}
-.tc-price-box {
-  flex: 1; text-align: center; padding: 12px;
-  border-right: 1px solid #f0f0f0;
-}
-.tc-price-box:last-child { border-right: none; }
-.tc-price-label {
-  font-size: 10px; color: #999; letter-spacing: 0.08em;
-  text-transform: uppercase; margin-bottom: 4px;
-}
-.tc-price-val {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px; font-weight: 900; color: var(--tc-darkgreen);
-}
-.tc-price-sub { font-size: 11px; color: var(--tc-muted); margin-top: 2px; }
-.tc-strategy-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 12px; border-radius: 2px;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-.tc-strategy-引流 { background: #FFF3E0; color: #E65100; }
-.tc-strategy-利润 { background: #E8F5E9; color: #2E7D32; }
-.tc-strategy-爆款 { background: #E3F2FD; color: #1565C0; }
-.tc-strategy-破圈 { background: #F3E5F5; color: #6A1B9A; }
-.tc-strategy-差异 { background: #FCE4EC; color: #AD1457; }
-.tc-strategy-专业 { background: #1a1a1a; color: var(--tc-green); }
-
-/* ── Strategy Matrix ── */
-.tc-matrix {
-  background: var(--tc-black); padding: 72px 0;
-}
-.tc-matrix .tc-section-title { color: #fff; }
-.tc-matrix .tc-section-eyebrow { color: var(--tc-green); }
-.tc-matrix-grid {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
-  margin-top: 40px;
-}
-.tc-matrix-cell {
-  background: #161616; padding: 32px 28px;
-}
-.tc-matrix-role {
-  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--tc-green); font-weight: 600; margin-bottom: 8px;
-}
-.tc-matrix-products {
-  margin-bottom: 12px;
-}
-.tc-matrix-product-name {
-  font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 2px;
-}
-.tc-matrix-product-desc { font-size: 12px; color: rgba(255,255,255,0.4); }
-.tc-matrix-value {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px; font-weight: 900; color: var(--tc-green);
-  margin-top: 16px;
-}
-.tc-matrix-value-label { font-size: 11px; color: rgba(255,255,255,0.4); }
-
-/* ── Launch Timeline ── */
-.tc-timeline {
-  padding: 72px 0; background: #fafafa;
-}
-.tc-timeline-track {
-  display: grid; grid-template-columns: repeat(4,1fr);
-  gap: 0; margin-top: 48px; position: relative;
-}
-.tc-timeline-track::before {
-  content: ''; position: absolute;
-  top: 28px; left: 10%; right: 10%;
-  height: 1px; background: var(--tc-green); opacity: 0.3;
-}
-.tc-tl-item { text-align: center; padding: 0 20px; }
-.tc-tl-dot {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--tc-green); color: #fff;
-  font-family: 'Playfair Display', serif;
-  font-size: 18px; font-weight: 900;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px;
-}
-.tc-tl-month {
-  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--tc-muted); margin-bottom: 8px;
-}
-.tc-tl-products {
-  font-size: 13px; font-weight: 600; color: var(--tc-black);
-  line-height: 1.6; margin-bottom: 8px;
-}
-.tc-tl-desc { font-size: 12px; color: var(--tc-muted); line-height: 1.6; }
-
-/* ── Full-width product section ── */
-.tc-products-section {
-  background: #fff;
-}
-
-/* Responsive */
-@media(max-width:900px){
-  .tc-hero-inner,.tc-section { padding: 48px 24px; }
-  .tc-products-grid { grid-template-columns: 1fr; }
-  .tc-product-card, .tc-product-card:nth-child(even) {
-    grid-template-columns: 1fr; grid-template-rows: 280px auto;
-  }
-  .tc-product-card:nth-child(even) .tc-product-img { order: 1; }
-  .tc-product-card:nth-child(even) .tc-product-info { order: 2; }
-  .tc-princ-grid, .tc-matrix-grid { grid-template-columns: 1fr 1fr; }
-  .tc-timeline-track { grid-template-columns: 1fr 1fr; }
-  .tc-hero-stats { gap: 24px; flex-wrap: wrap; }
-}
-</style>
-
 <!-- HERO -->
 <section class="tc-hero">
   <div class="tc-hero-bg"></div>
@@ -1598,22 +1601,22 @@ function switchTab(tab){
     <div class="tc-section-title">选品四原则<br><span style="font-size:0.5em;color:rgba(255,255,255,0.4);font-family:'Inter',sans-serif;font-weight:400;letter-spacing:0.02em;">每一款都必须同时满足</span></div>
     <div class="tc-princ-grid">
       <div class="tc-princ-card">
-        <div class="tc-princ-icon">🌿</div>
+        
         <div class="tc-princ-title">鲜果基因不离</div>
         <div class="tc-princ-desc">所有产品以真实水果为基底，不使用人工香精，延续通喜「无水无糖自然甜」核心 DNA</div>
       </div>
       <div class="tc-princ-card">
-        <div class="tc-princ-icon">⚡</div>
+        
         <div class="tc-princ-title">操作 ≤ 90 秒</div>
         <div class="tc-princ-desc">所有产品在高峰期出杯不超过90秒，使用现有榨汁+搅拌设备，不增加任何新采购</div>
       </div>
       <div class="tc-princ-card">
-        <div class="tc-princ-icon">💰</div>
+        
         <div class="tc-princ-title">客单价 ¥18–36</div>
         <div class="tc-princ-desc">覆盖引流低价款（¥18）到高端专业款（¥36），单杯毛利率不低于65%</div>
       </div>
       <div class="tc-princ-card">
-        <div class="tc-princ-icon">🎯</div>
+        
         <div class="tc-princ-title">场景不重叠</div>
         <div class="tc-princ-desc">7款产品各覆盖独立场景与人群，内部不互相竞争，形成完整的产品矩阵护城河</div>
       </div>
@@ -1670,7 +1673,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥6.5</div></div>
         <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">70%</div></div>
         <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">25%</div><div class="tc-price-sub">日均30杯</div></div>
-        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-引流">🔥 引流锚</span></div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-引流">引流锚</span></div></div>
       </div>
     </div>
   </div>
@@ -1711,7 +1714,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥9.5</div></div>
         <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">70%</div></div>
         <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">20%</div><div class="tc-price-sub">日均24杯</div></div>
-        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-利润">💚 利润牛</span></div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-利润">利润牛</span></div></div>
       </div>
     </div>
     <div style="position:relative;overflow:hidden;background:#f8f8f8;">
@@ -1803,7 +1806,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥10</div></div>
         <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">71%</div></div>
         <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">15%</div><div class="tc-price-sub">日均18杯</div></div>
-        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-利润">💚 利润牛</span></div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-利润">利润牛</span></div></div>
       </div>
     </div>
     <div style="position:relative;overflow:hidden;background:#f8f8f8;">
@@ -1852,7 +1855,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥8</div></div>
         <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">69%</div></div>
         <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">12%</div><div class="tc-price-sub">日均14杯</div></div>
-        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-破圈">🔵 破圈品</span></div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-破圈">破圈品</span></div></div>
       </div>
     </div>
   </div>
@@ -1893,7 +1896,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥5</div></div>
         <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">72%</div></div>
         <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">5%</div><div class="tc-price-sub">日均6杯</div></div>
-        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-差异">🌸 差异锚</span></div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-差异">差异锚</span></div></div>
       </div>
     </div>
     <div style="position:relative;overflow:hidden;background:#f8f8f8;">
@@ -1904,45 +1907,45 @@ function switchTab(tab){
 
   <!-- P7: 力量肌酸昔 -->
   <div style="display:grid;grid-template-columns:480px 1fr;min-height:500px;border-bottom:1px solid #f0f0f0;">
-    <div style="position:relative;overflow:hidden;background:#0a0a0a;">
-      <img src="assets/torce_p7.png" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.9;">
-      <div class="tc-product-badge" style="background:#0a0a0a;color:#8DC63F;border:1px solid #8DC63F;">专业款</div>
+    <div style="position:relative;overflow:hidden;background:#f0f0f0;">
+      <img src="assets/torce_p7.png" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div class="tc-product-badge">专业款</div>
     </div>
-    <div class="tc-product-info" style="background:#0a0a0a;border:1px solid #1a1a1a;">
+    <div class="tc-product-info">
       <div>
-        <div class="tc-product-num" style="color:#1e1e1e;">07</div>
-        <div class="tc-product-category" style="color:#8DC63F;">Creatine · Whey Protein · Strength</div>
-        <div class="tc-product-name" style="color:#fff;">力量肌酸昔</div>
-        <div class="tc-product-english" style="color:rgba(255,255,255,0.4);">TORCE Power Creatine · Cacao Banana Strength Fuel</div>
+        <div class="tc-product-num">07</div>
+        <div class="tc-product-category">Creatine · Whey Protein · Strength</div>
+        <div class="tc-product-name">力量肌酸昔</div>
+        <div class="tc-product-english">TORCE Power Creatine · Cacao Banana Strength Fuel</div>
         <div class="tc-product-tags">
-          <span class="tc-product-tag" style="border-color:#333;color:#aaa;">专业</span>
-          <span class="tc-product-tag" style="border-color:#333;color:#aaa;">肌酸</span>
-          <span class="tc-product-tag" style="border-color:#333;color:#aaa;">力量训练</span>
-          <span class="tc-product-tag" style="border-color:#333;color:#aaa;">高蛋白</span>
+          <span class="tc-product-tag">专业</span>
+          <span class="tc-product-tag">肌酸</span>
+          <span class="tc-product-tag">力量训练</span>
+          <span class="tc-product-tag">高蛋白</span>
         </div>
-        <div class="tc-product-desc" style="border-color:#8DC63F;color:rgba(255,255,255,0.6);">可可+香蕉+肌酸一水化合物+乳清蛋白。全球证据最充分的运动补剂，可可+香蕉完美掩盖肌酸轻微苦味。目标用户：力量训练、增肌期健身爱好者。战略价值：厦门市场稀缺品，先发优势强，纯利润款。</div>
-        <div class="tc-recipe-title" style="color:#555;">配方 · Formula</div>
-        <ul class="tc-recipe-list" style="border-color:#1a1a1a;">
-          <li style="color:#ccc;border-color:#1a1a1a;">可可粉（无糖天然）<span style="color:#666;">15g</span></li>
-          <li style="color:#ccc;border-color:#1a1a1a;">冷冻香蕉<span style="color:#666;">150g</span></li>
-          <li style="color:#ccc;border-color:#1a1a1a;">肌酸一水化合物（微粉化）<span style="color:#666;">5g</span></li>
-          <li style="color:#ccc;border-color:#1a1a1a;">乳清蛋白粉（巧克力）<span style="color:#666;">30g</span></li>
-          <li style="color:#ccc;border-color:#1a1a1a;">全脂牛奶<span style="color:#666;">200ml</span></li>
+        <div class="tc-product-desc">可可+香蕉+肌酸一水化合物+乳清蛋白。全球证据最充分的运动补剂，可可+香蕉完美掩盖肌酸轻微苦味。目标用户：力量训练、增肌期健身爱好者。战略价值：厦门市场稀缺品，先发优势强，纯利润款。</div>
+        <div class="tc-recipe-title">配方 · Formula</div>
+        <ul class="tc-recipe-list">
+          <li>可可粉（无糖天然）<span>15g</span></li>
+          <li>冷冻香蕉<span>150g</span></li>
+          <li>肌酸一水化合物（微粉化）<span>5g</span></li>
+          <li>乳清蛋白粉（巧克力）<span>30g</span></li>
+          <li>全脂牛奶<span>200ml</span></li>
         </ul>
-        <div class="tc-recipe-title" style="color:#555;">操作流程 · Steps（约 80 秒）</div>
+        <div class="tc-recipe-title">操作流程 · Steps（约 80 秒）</div>
         <div class="tc-steps">
-          <div class="tc-step" style="color:#666;"><div class="tc-step-num">1</div>香蕉+牛奶入破壁机（10s）</div>
-          <div class="tc-step" style="color:#666;"><div class="tc-step-num">2</div>加可可粉+肌酸+蛋白粉（10s）</div>
-          <div class="tc-step" style="color:#666;"><div class="tc-step-num">3</div>高速搅打顺滑（45s）</div>
-          <div class="tc-step" style="color:#666;"><div class="tc-step-num">4</div>装杯封盖（15s）</div>
+          <div class="tc-step"><div class="tc-step-num">1</div>香蕉+牛奶入破壁机（10s）</div>
+          <div class="tc-step"><div class="tc-step-num">2</div>加可可粉+肌酸+蛋白粉（10s）</div>
+          <div class="tc-step"><div class="tc-step-num">3</div>高速搅打顺滑（45s）</div>
+          <div class="tc-step"><div class="tc-step-num">4</div>装杯封盖（15s）</div>
         </div>
       </div>
-      <div class="tc-product-footer" style="border-color:#1a1a1a;">
-        <div class="tc-price-box" style="border-color:#1a1a1a;"><div class="tc-price-label">建议零售价</div><div class="tc-price-val">¥36</div></div>
-        <div class="tc-price-box" style="border-color:#1a1a1a;"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥10</div></div>
-        <div class="tc-price-box" style="border-color:#1a1a1a;"><div class="tc-price-label">毛利率</div><div class="tc-price-val">72%</div></div>
-        <div class="tc-price-box" style="border-color:#1a1a1a;"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">5%</div><div class="tc-price-sub" style="color:#555;">日均6杯</div></div>
-        <div class="tc-price-box" style="border-color:#1a1a1a;"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-专业">💪 专业锚</span></div></div>
+      <div class="tc-product-footer">
+        <div class="tc-price-box"><div class="tc-price-label">建议零售价</div><div class="tc-price-val">¥36</div></div>
+        <div class="tc-price-box"><div class="tc-price-label">单杯成本</div><div class="tc-price-val" style="font-size:18px;color:#666;">¥10</div></div>
+        <div class="tc-price-box"><div class="tc-price-label">毛利率</div><div class="tc-price-val">72%</div></div>
+        <div class="tc-price-box"><div class="tc-price-label">预计销占比</div><div class="tc-price-val" style="font-size:18px;">5%</div><div class="tc-price-sub">日均6杯</div></div>
+        <div class="tc-price-box"><div class="tc-price-label">战略角色</div><div style="margin-top:6px;"><span class="tc-strategy-badge tc-strategy-专业">专业锚</span></div></div>
       </div>
     </div>
   </div>
@@ -1957,7 +1960,7 @@ function switchTab(tab){
     <div class="tc-section-title">产品组合战略</div>
     <div class="tc-matrix-grid">
       <div class="tc-matrix-cell">
-        <div class="tc-matrix-role">🔥 引流锚 — 拉新获客</div>
+        <div class="tc-matrix-role">引流锚 — 拉新获客</div>
         <div class="tc-matrix-products">
           <div class="tc-matrix-product-name">鲜榨C能量 ¥22</div>
           <div class="tc-matrix-product-desc">低价高频，门店曝光利器</div>
@@ -1968,7 +1971,7 @@ function switchTab(tab){
         <div class="tc-matrix-value-label">预计销量占比</div>
       </div>
       <div class="tc-matrix-cell">
-        <div class="tc-matrix-role">💚 利润牛 — 稳定现金流</div>
+        <div class="tc-matrix-role">利润牛 — 稳定现金流</div>
         <div class="tc-matrix-products">
           <div class="tc-matrix-product-name">绿野蛋白昔 ¥32</div>
           <div class="tc-matrix-product-desc">健身人群复购率最高</div>
@@ -1979,7 +1982,7 @@ function switchTab(tab){
         <div class="tc-matrix-value-label">预计销量占比</div>
       </div>
       <div class="tc-matrix-cell">
-        <div class="tc-matrix-role">⭐ 明星品 — 传播破圈</div>
+        <div class="tc-matrix-role">明星品 — 传播破圈</div>
         <div class="tc-matrix-products">
           <div class="tc-matrix-product-name">热带燃脂弹 ¥28</div>
           <div class="tc-matrix-product-desc">社媒打卡爆款，带店曝光</div>
@@ -1990,18 +1993,18 @@ function switchTab(tab){
         <div class="tc-matrix-value-label">预计销量占比</div>
       </div>
       <div class="tc-matrix-cell">
-        <div class="tc-matrix-role">💪 专业锚 — 高端形象</div>
+        <div class="tc-matrix-role">专业锚 — 高端形象</div>
         <div class="tc-matrix-products">
           <div class="tc-matrix-product-name">力量肌酸昔 ¥36</div>
           <div class="tc-matrix-product-desc">厦门市场稀缺，先发优势</div>
-          <div class="tc-matrix-product-name" style="margin-top:8px;color:rgba(255,255,255,0.3);">+ 未来专业系列</div>
+          <div class="tc-matrix-product-name" style="margin-top:8px;color:#ccc;">+ 未来专业系列</div>
           <div class="tc-matrix-product-desc">持续扩展高端线</div>
         </div>
         <div class="tc-matrix-value">~4%</div>
         <div class="tc-matrix-value-label">销量占比（高客单利润高）</div>
       </div>
-      <div class="tc-matrix-cell" style="grid-column:1/-1;background:#111;margin-top:2px;">
-        <div class="tc-matrix-role">📊 综合测算 — 单店日均120杯基础上叠加TORCE系列</div>
+      <div class="tc-matrix-cell" style="grid-column:1/-1;background:#f0f7e6;border-top:3px solid #8DC63F;margin-top:2px;">
+        <div class="tc-matrix-role">综合测算 — 单店日均120杯基础上叠加TORCE系列</div>
         <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:24px;margin-top:16px;">
           <div><div class="tc-matrix-value" style="font-size:20px;">120杯</div><div class="tc-matrix-value-label">TORCE日均预计</div></div>
           <div><div class="tc-matrix-value" style="font-size:20px;">¥26.8</div><div class="tc-matrix-value-label">加权平均客单价</div></div>
