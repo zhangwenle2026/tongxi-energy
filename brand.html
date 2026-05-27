@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TORCE ENERGY — Brand Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',-apple-system,sans-serif;background:#f7f7f5;color:#111;-webkit-font-smoothing:antialiased;}
+
+/* ── TOKENS ── */
+:root{
+  --p1:#763AA2; --p2:#F7B200; --p3:#888; --p4:#00FF66; --p5:#FF2665; --p6:#A8B8AA;
+  --ink:#111; --sub:#666; --faint:#bbb; --line:#e8e8e0; --bg:#fff;
+}
+
+/* ── WRAPPER ── */
+.page{width:1400px;margin:0 auto;background:#fff;}
+
+/* ══════════════════════════════════
+   SECTION 1 — HERO HEADER
+══════════════════════════════════ */
+.s1{padding:60px 80px 0;background:#fff;}
+.s1-logo{display:flex;align-items:flex-end;gap:32px;margin-bottom:8px;}
+.s1-wordmark{font-size:48px;font-weight:900;letter-spacing:-0.04em;line-height:1;}
+.s1-wordmark span{display:block;font-size:18px;font-weight:400;letter-spacing:0.18em;color:var(--sub);}
+.s1-divider{width:1px;height:48px;background:var(--line);}
+.s1-tagline{font-size:11px;font-weight:400;letter-spacing:0.16em;color:var(--sub);line-height:1.8;text-transform:uppercase;}
+.s1-badges{display:flex;gap:32px;margin:24px 0 40px;}
+.s1-badge{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--sub);letter-spacing:0.08em;text-transform:uppercase;}
+.s1-badge-icon{width:28px;height:28px;border:1.5px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
+
+/* ══════════════════════════════════
+   SECTION 2 — PRODUCT LINEUP
+══════════════════════════════════ */
+.s2{display:grid;grid-template-columns:1fr 480px;gap:0;border-top:1px solid var(--line);}
+.s2-cups{padding:40px 80px 0;display:flex;gap:20px;align-items:flex-end;}
+.s2-cup{flex:1;display:flex;flex-direction:column;align-items:center;gap:12px;}
+.cup-visual{
+  width:100%;aspect-ratio:0.55;border-radius:8px 8px 12px 12px;
+  position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:flex-end;
+}
+.cup-body{flex:1;display:flex;align-items:center;justify-content:center;}
+.cup-bolt{font-size:20px;opacity:0.9;filter:drop-shadow(0 0 6px currentColor);}
+.cup-label-area{padding:8px;text-align:center;}
+.cup-num{font-size:10px;font-weight:700;letter-spacing:0.12em;margin-bottom:2px;}
+.cup-name-en{font-size:11px;font-weight:800;letter-spacing:0.06em;margin-bottom:1px;}
+.cup-name-zh{font-size:9px;font-weight:400;color:var(--sub);}
+.cup-sub{font-size:8px;color:var(--faint);letter-spacing:0.04em;}
+
+/* ingredients panel */
+.s2-ingredients{padding:40px 48px;border-left:1px solid var(--line);}
+.s2-ing-title{font-size:18px;font-weight:800;letter-spacing:-0.02em;margin-bottom:4px;}
+.s2-ing-sub{font-size:11px;color:var(--sub);margin-bottom:28px;}
+.ing-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;}
+.ing-col{display:flex;flex-direction:column;}
+.ing-col-head{padding:10px 8px;text-align:center;border-bottom:1px solid var(--line);}
+.ing-col-num{font-size:18px;font-weight:900;}
+.ing-col-name{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-top:2px;}
+.ing-col-zh{font-size:8px;color:var(--sub);margin-top:1px;}
+.ing-col + .ing-col{border-left:1px solid var(--line);}
+.ing-row{padding:8px;border-bottom:1px solid var(--line);display:flex;align-items:flex-start;gap:5px;}
+.ing-row:last-child{border-bottom:none;}
+.ing-row-icon{font-size:10px;flex-shrink:0;margin-top:1px;}
+.ing-row-text{font-size:8.5px;line-height:1.4;color:var(--sub);}
+.ing-row-val{font-size:9px;font-weight:700;color:var(--ink);display:block;}
+.ing-zero{font-size:8.5px;color:#aaa;text-align:center;padding:8px;}
+
+/* benefits strip */
+.s2-benefits{grid-column:1/-1;display:flex;gap:0;border-top:1px solid var(--line);}
+.s2-benefit{flex:1;padding:20px 24px;display:flex;align-items:center;gap:12px;}
+.s2-benefit + .s2-benefit{border-left:1px solid var(--line);}
+.s2-benefit-icon{font-size:20px;}
+.s2-benefit-title{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;}
+.s2-benefit-zh{font-size:9px;color:var(--sub);margin-top:2px;}
+
+/* ══════════════════════════════════
+   SECTION 3 — FUNCTION STACK + SIGNATURE + COLOR
+══════════════════════════════════ */
+.s3{display:grid;grid-template-columns:300px 1fr 260px;gap:0;border-top:1px solid var(--line);}
+
+/* function stack */
+.s3-stack{padding:40px 40px;border-right:1px solid var(--line);}
+.s3-eyebrow{font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;}
+.s3-title{font-size:16px;font-weight:800;margin-bottom:20px;letter-spacing:-0.02em;}
+.stack-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);}
+.stack-item:last-child{border-bottom:none;}
+.stack-dot{width:6px;height:6px;border-radius:50%;background:#8DC63F;flex-shrink:0;}
+.stack-label{font-size:10px;color:var(--sub);flex:1;}
+.stack-val{font-size:10px;font-weight:700;color:var(--ink);}
+.stack-note{font-size:8px;color:var(--faint);margin-top:12px;line-height:1.6;}
+
+/* signature elements */
+.s3-sig{padding:40px 40px;border-right:1px solid var(--line);}
+.s3-sig-title{font-size:16px;font-weight:800;margin-bottom:6px;letter-spacing:-0.02em;}
+.s3-sig-sub{font-size:9px;color:var(--sub);margin-bottom:24px;letter-spacing:0.04em;}
+.sig-products{display:flex;gap:16px;margin-bottom:32px;}
+.sig-product{flex:1;text-align:center;}
+.sig-bolt-wrap{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:20px;}
+.sig-product-name{font-size:8.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2px;}
+.sig-product-zh{font-size:8px;color:var(--sub);}
+/* material */
+.mat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px;}
+.mat-eyebrow{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;}
+.mat-item{text-align:center;}
+.mat-cup{width:36px;height:48px;border-radius:4px 4px 6px 6px;margin:0 auto 6px;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.mat-label{font-size:8px;font-weight:600;color:var(--ink);margin-bottom:2px;}
+.mat-sub{font-size:7.5px;color:var(--sub);}
+
+/* layer diagram */
+.layer-diagram{margin-bottom:24px;}
+.layer-eyebrow{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);margin-bottom:12px;}
+.layer-wrap{display:flex;gap:16px;align-items:stretch;}
+.layer-cup-vis{width:60px;flex-shrink:0;}
+.layer-cup-body{width:50px;height:120px;border-radius:4px 4px 8px 8px;overflow:hidden;margin:0 auto;border:1.5px solid #ddd;display:flex;flex-direction:column;}
+.layer-top{flex:1.2;background:linear-gradient(180deg,#f0d080 0%,#e8c060 100%);display:flex;align-items:center;justify-content:center;font-size:9px;color:#7a5500;font-weight:600;}
+.layer-mid{flex:1;background:linear-gradient(180deg,#d0e8a0 0%,#b8d880 100%);display:flex;align-items:center;justify-content:center;font-size:9px;color:#3a6010;font-weight:600;}
+.layer-bot{flex:1.5;background:linear-gradient(180deg,#a0c8f0 0%,#70a8e0 100%);display:flex;align-items:center;justify-content:center;font-size:9px;color:#1a4880;font-weight:600;}
+.layer-labels{flex:1;display:flex;flex-direction:column;justify-content:space-around;}
+.layer-label{font-size:9px;font-weight:600;color:var(--ink);}
+.layer-label-sub{font-size:8px;color:var(--sub);}
+
+/* color identity */
+.s3-color{padding:40px 32px;}
+.s3-color-title{font-size:16px;font-weight:800;margin-bottom:6px;letter-spacing:-0.02em;}
+.s3-color-sub{font-size:9px;color:var(--sub);margin-bottom:20px;}
+.color-items{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+.color-item{display:flex;align-items:center;gap:10px;}
+.color-swatch{width:28px;height:28px;border-radius:50%;flex-shrink:0;}
+.color-info{flex:1;}
+.color-name{font-size:10px;font-weight:700;}
+.color-hex{font-size:9px;color:var(--sub);font-family:monospace;}
+/* detox spotlight */
+.detox-spot{border:1.5px solid #00FF66;border-radius:8px;padding:16px;margin-top:8px;background:#f0fff4;}
+.detox-spot-title{font-size:11px;font-weight:800;color:#00aa44;margin-bottom:8px;letter-spacing:0.04em;}
+.detox-spot-bolt{font-size:32px;color:#00FF66;text-shadow:0 0 20px #00FF66;display:block;margin-bottom:8px;}
+.detox-spot-items{display:flex;flex-direction:column;gap:4px;}
+.detox-spot-item{display:flex;align-items:center;gap:6px;font-size:9px;color:#337733;}
+.detox-spot-item::before{content:'✓';font-weight:700;color:#00aa44;}
+.detox-slogan{font-size:10px;font-weight:700;color:#00aa44;margin-top:10px;line-height:1.5;}
+.detox-slogan-zh{font-size:9px;color:#55aa55;}
+
+/* ══════════════════════════════════
+   SECTION 4 — SCENES
+══════════════════════════════════ */
+.s4{border-top:1px solid var(--line);padding:40px 80px;}
+.s4-eyebrow{font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);margin-bottom:6px;}
+.s4-title{font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:28px;}
+.s4-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
+.s4-scene{border-radius:8px;overflow:hidden;background:#f5f5f0;}
+.s4-scene-img{width:100%;aspect-ratio:0.85;background:var(--bg-c);display:flex;align-items:center;justify-content:center;font-size:32px;}
+.s4-scene-label{padding:8px 10px;}
+.s4-scene-en{font-size:8.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sub);}
+.s4-scene-zh{font-size:10px;font-weight:600;color:var(--ink);}
+
+/* ══════════════════════════════════
+   SECTION 5 — BRAND PHILOSOPHY + BAG
+══════════════════════════════════ */
+.s5{display:grid;grid-template-columns:1fr 320px;border-top:1px solid var(--line);}
+.s5-phil{padding:48px 80px;}
+.s5-eyebrow{font-size:9px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;}
+.s5-title{font-size:20px;font-weight:800;letter-spacing:-0.02em;margin-bottom:20px;}
+.s5-body{font-size:12px;color:var(--sub);line-height:1.9;max-width:540px;margin-bottom:24px;}
+.s5-slogan{font-size:22px;font-weight:900;letter-spacing:-0.02em;color:var(--ink);}
+.s5-slogan-zh{font-size:13px;color:var(--sub);margin-top:6px;}
+.s5-bag{padding:48px 40px;border-left:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+.bag-visual{width:180px;height:220px;background:#f0f0ec;border-radius:4px;border:1.5px solid #e0e0d8;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;}
+.bag-handles{display:flex;gap:40px;margin-bottom:16px;}
+.bag-handle{width:24px;height:32px;border:2px solid #8DC63F;border-radius:20px 20px 0 0;border-bottom:none;}
+.bag-logo{text-align:center;}
+.bag-logo-bolt{font-size:28px;color:#8DC63F;display:block;margin-bottom:4px;}
+.bag-logo-name{font-size:14px;font-weight:900;letter-spacing:0.08em;color:var(--ink);}
+.bag-logo-sub{font-size:8px;letter-spacing:0.1em;color:var(--sub);}
+
+/* ══════════════════════════════════
+   RESPONSIVE / PRINT
+══════════════════════════════════ */
+@media(max-width:1440px){.page{width:100%;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ══ S1: HEADER ══ -->
+<div class="s1">
+  <div class="s1-logo">
+    <div class="s1-wordmark">TORCE<span>ENERGY</span></div>
+    <div class="s1-divider"></div>
+    <div class="s1-tagline">Natural Clean Energy<br>Powered by Fruits</div>
+  </div>
+  <div class="s1-badges">
+    <div class="s1-badge"><div class="s1-badge-icon">⊘</div>NO ADDED SUGAR<br><span style="font-size:9px;color:#aaa;">0 添加糖</span></div>
+    <div class="s1-badge"><div class="s1-badge-icon">🌿</div>PLANT PROTEIN<br><span style="font-size:9px;color:#aaa;">植物蛋白</span></div>
+    <div class="s1-badge"><div class="s1-badge-icon">⚡</div>NATURAL ENERGY<br><span style="font-size:9px;color:#aaa;">天然能量</span></div>
+    <div class="s1-badge"><div class="s1-badge-icon">✓</div>CLEAN LABEL<br><span style="font-size:9px;color:#aaa;">干净配方</span></div>
+  </div>
+</div>
+
+<!-- ══ S2: PRODUCT LINEUP + INGREDIENTS ══ -->
+<div class="s2">
+  <!-- cups row -->
+  <div style="padding:0 80px 40px;border-right:1px solid var(--line);">
+    <div style="display:flex;gap:16px;align-items:flex-end;">
+
+      <!-- P1 RECOVERY -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#5a1a8a 0%,#3a0a60 100%);height:200px;">
+          <div class="cup-body"><span class="cup-bolt" style="color:var(--p1);">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:var(--p1);">01</div>
+          <div class="cup-name-en" style="color:var(--p1);">RECOVERY</div>
+          <div class="cup-sub">ACAI BLUEBERRY</div>
+          <div class="cup-name-zh">巴西莓蓝莓能量</div>
+        </div>
+      </div>
+
+      <!-- P2 PERFORMANCE -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#f5a800 0%,#e08000 100%);height:200px;">
+          <div class="cup-body"><span class="cup-bolt" style="color:#fff8e0;">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:var(--p2);">02</div>
+          <div class="cup-name-en" style="color:var(--p2);">PERFORMANCE</div>
+          <div class="cup-sub">MANGO BANANA</div>
+          <div class="cup-name-zh">芒果香蕉能量</div>
+        </div>
+      </div>
+
+      <!-- P3 PROTEIN -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#f8f4ee 0%,#ede8e0 100%);height:200px;border:1px solid #e8e0d8;">
+          <div class="cup-body"><span class="cup-bolt" style="color:#8a6040;">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:#888;">03</div>
+          <div class="cup-name-en" style="color:#555;">PROTEIN</div>
+          <div class="cup-sub">VANILLA COCONUT</div>
+          <div class="cup-name-zh">香草椰子蛋白</div>
+        </div>
+      </div>
+
+      <!-- P4 DETOX -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#004020 0%,#002010 100%);height:200px;">
+          <div class="cup-body"><span class="cup-bolt" style="color:#00FF66;text-shadow:0 0 16px #00FF66;font-size:24px;">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:var(--p4);">04</div>
+          <div class="cup-name-en" style="color:#00aa44;">DETOX</div>
+          <div class="cup-sub">GREEN APPLE</div>
+          <div class="cup-name-zh">青苹果螺旋藻排毒</div>
+        </div>
+      </div>
+
+      <!-- P5 ENERGY -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#ff4060 0%,#e01040 100%);height:200px;">
+          <div class="cup-body"><span class="cup-bolt" style="color:#ffe0e8;">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:var(--p5);">05</div>
+          <div class="cup-name-en" style="color:var(--p5);">ENERGY</div>
+          <div class="cup-sub">MANGO PINEAPPLE</div>
+          <div class="cup-name-zh">芒果菠萝能量</div>
+        </div>
+      </div>
+
+      <!-- P6 L-CARNITINE -->
+      <div class="s2-cup">
+        <div class="cup-visual" style="background:linear-gradient(180deg,#c8d8c0 0%,#a8c0a0 100%);height:200px;">
+          <div class="cup-body"><span class="cup-bolt" style="color:#5a7a50;">⚡</span></div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <div class="cup-num" style="color:var(--p6);">06</div>
+          <div class="cup-name-en" style="color:#5a7a50;">L-CARNITINE</div>
+          <div class="cup-sub">MATCHA L-CARNITINE</div>
+          <div class="cup-name-zh">左旋肉碱燃脂能量</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ingredients panel -->
+  <div class="s2-ingredients">
+    <div class="s2-ing-title">FUNCTIONAL INGREDIENTS. REAL RESULTS.</div>
+    <div class="s2-ing-sub">功能成分，真实有效。</div>
+    <div class="ing-grid">
+      <!-- headers -->
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#f3eaff;">
+          <div class="ing-col-num" style="color:var(--p1);">01</div>
+          <div class="ing-col-name" style="color:var(--p1);">RECOVERY</div>
+          <div class="ing-col-zh">巴西莓蓝莓能量</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">💪</span><span class="ing-row-text"><span class="ing-row-val">WHEY PROTEIN 20g</span>乳清蛋白</span></div>
+        <div class="ing-row"><span class="ing-row-icon">⚗️</span><span class="ing-row-text"><span class="ing-row-val">BCAA 3g</span>支链氨基酸</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🫐</span><span class="ing-row-text"><span class="ing-row-val">ANTIOXIDANTS 100mg+</span>抗氧化合物</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🌊</span><span class="ing-row-text"><span class="ing-row-val">REAL FRUITS 100%</span>真实水果</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#fff8e0;">
+          <div class="ing-col-num" style="color:var(--p2);">02</div>
+          <div class="ing-col-name" style="color:var(--p2);">PERFORMANCE</div>
+          <div class="ing-col-zh">芒果香蕉能量</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">💪</span><span class="ing-row-text"><span class="ing-row-val">WHEY PROTEIN 20g</span>乳清蛋白</span></div>
+        <div class="ing-row"><span class="ing-row-icon">⚡</span><span class="ing-row-text"><span class="ing-row-val">CREATINE 3g</span>肌酸</span></div>
+        <div class="ing-row"><span class="ing-row-icon">💧</span><span class="ing-row-text"><span class="ing-row-val">ELECTROLYTES 500mg+</span>电解质</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🥭</span><span class="ing-row-text"><span class="ing-row-val">NO ADDED SUGAR</span>0 添加糖</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#f5f0ea;">
+          <div class="ing-col-num" style="color:#888;">03</div>
+          <div class="ing-col-name" style="color:#666;">PROTEIN</div>
+          <div class="ing-col-zh">香草椰子蛋白</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">💪</span><span class="ing-row-text"><span class="ing-row-val">WHEY PROTEIN 25g</span>乳清蛋白</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🥥</span><span class="ing-row-text"><span class="ing-row-val">BCAA 支链氨基酸</span>支链氨基酸</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🌿</span><span class="ing-row-text"><span class="ing-row-val">COCONUT MCT 1000mg</span>椰子 MCT</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🌾</span><span class="ing-row-text"><span class="ing-row-val">CHIA SEEDS 5g</span>奇亚籽</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#e6fff0;">
+          <div class="ing-col-num" style="color:#00aa44;">04</div>
+          <div class="ing-col-name" style="color:#00aa44;">DETOX</div>
+          <div class="ing-col-zh">青苹果螺旋藻排毒</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">🌀</span><span class="ing-row-text"><span class="ing-row-val">SPIRULINA 1g</span>螺旋藻</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍃</span><span class="ing-row-text"><span class="ing-row-val">CHLOROPHYLL 120mg+</span>叶绿素</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🧹</span><span class="ing-row-text"><span class="ing-row-val">CLEANSE BLEND 1000mg</span>净化复合物</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍏</span><span class="ing-row-text"><span class="ing-row-val">NO ADDED SUGAR</span>0 添加糖</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#fff0f4;">
+          <div class="ing-col-num" style="color:var(--p5);">05</div>
+          <div class="ing-col-name" style="color:var(--p5);">ENERGY</div>
+          <div class="ing-col-zh">芒果菠萝能量</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">☕</span><span class="ing-row-text"><span class="ing-row-val">NATURAL CAFFEINE 150mg</span>天然咖啡因</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍊</span><span class="ing-row-text"><span class="ing-row-val">ELECTROLYTES 500mg+</span>电解质</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍋</span><span class="ing-row-text"><span class="ing-row-val">VITAMIN C 100% DV</span>维生素C</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍍</span><span class="ing-row-text"><span class="ing-row-val">NO ADDED SUGAR</span>0 添加糖</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+      <div class="ing-col">
+        <div class="ing-col-head" style="background:#f0f4f0;">
+          <div class="ing-col-num" style="color:#5a7a50;">06</div>
+          <div class="ing-col-name" style="color:#5a7a50;">L-CARNITINE</div>
+          <div class="ing-col-zh">左旋肉碱燃脂</div>
+        </div>
+        <div class="ing-row"><span class="ing-row-icon">🔥</span><span class="ing-row-text"><span class="ing-row-val">L-CARNITINE 1500mg</span>左旋肉碱</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🍵</span><span class="ing-row-text"><span class="ing-row-val">GREEN TEA EXTRACT 100mg+</span>绿茶提取物</span></div>
+        <div class="ing-row"><span class="ing-row-icon">💧</span><span class="ing-row-text"><span class="ing-row-val">ELECTROLYTES 500mg+</span>电解质</span></div>
+        <div class="ing-row"><span class="ing-row-icon">🌿</span><span class="ing-row-text"><span class="ing-row-val">NO ADDED SUGAR</span>0 添加糖</span></div>
+        <div class="ing-zero">0 添加糖</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits strip -->
+  <div class="s2-benefits">
+    <div class="s2-benefit"><div class="s2-benefit-icon">⚡</div><div><div class="s2-benefit-title">CLEAN ENERGY</div><div class="s2-benefit-zh">干净能量</div></div></div>
+    <div class="s2-benefit"><div class="s2-benefit-icon">💪</div><div><div class="s2-benefit-title">BUILD &amp; RECOVER</div><div class="s2-benefit-zh">强化与恢复</div></div></div>
+    <div class="s2-benefit"><div class="s2-benefit-icon">🏃</div><div><div class="s2-benefit-title">PERFORMANCE</div><div class="s2-benefit-zh">运动表现</div></div></div>
+    <div class="s2-benefit"><div class="s2-benefit-icon">🧠</div><div><div class="s2-benefit-title">FOCUS &amp; CLARITY</div><div class="s2-benefit-zh">专注清晰</div></div></div>
+    <div class="s2-benefit"><div class="s2-benefit-icon">🌿</div><div><div class="s2-benefit-title">HEALTHY LIFESTYLE</div><div class="s2-benefit-zh">健康生活</div></div></div>
+  </div>
+</div>
+
+<!-- ══ S3: FUNCTION STACK + SIGNATURE + COLOR ══ -->
+<div class="s3">
+  <!-- Function Stack -->
+  <div class="s3-stack">
+    <div class="s3-eyebrow">Function Stack</div>
+    <div class="s3-title">功能配方</div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">乳清蛋白 WHEY PROTEIN</div><div class="stack-val">20–25g</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">肌酸 CREATINE</div><div class="stack-val">3g</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">支链氨基酸 BCAA</div><div class="stack-val">3g</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">左旋肉碱 L-CARNITINE</div><div class="stack-val">1000–1500mg</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">天然咖啡因 NATURAL CAFFEINE</div><div class="stack-val">80–150mg</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">电解质 ELECTROLYTES</div><div class="stack-val">500mg+</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">抗氧化物 ANTIOXIDANTS</div><div class="stack-val">100mg+</div></div>
+    <div class="stack-item"><div class="stack-dot"></div><div class="stack-label">添加糖 ADDED SUGAR</div><div class="stack-val" style="color:#8DC63F;">0g</div></div>
+    <div class="stack-note">*每杯含量 (PER 350ml)</div>
+
+    <!-- Layer diagram -->
+    <div style="margin-top:28px;">
+      <div class="layer-eyebrow">Energy Boost Layer 能量层次</div>
+      <div class="layer-wrap">
+        <div class="layer-cup-vis">
+          <div class="layer-cup-body">
+            <div class="layer-top">能量层</div>
+            <div class="layer-mid">营养层</div>
+            <div class="layer-bot">基底层</div>
+          </div>
+        </div>
+        <div class="layer-labels">
+          <div><div class="layer-label">ENERGY BOOST LAYER</div><div class="layer-label-sub">能量激活层</div></div>
+          <div><div class="layer-label">FUNCTIONAL NUTRITION LAYER</div><div class="layer-label-sub">功能营养层</div></div>
+          <div><div class="layer-label">FRUIT ENERGY BASE</div><div class="layer-label-sub">水果能量基底层</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signature Elements -->
+  <div class="s3-sig">
+    <div class="s3-eyebrow">Signature Elements</div>
+    <div class="s3-sig-title">每款产品的专属符号</div>
+    <div class="s3-sig-sub">Each product has a unique lightning icon system</div>
+    <div class="sig-products">
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#f3eaff;"><span style="color:var(--p1);font-size:22px;">⚡</span></div>
+        <div class="sig-product-name" style="color:var(--p1);">RECOVERY</div>
+        <div class="sig-product-zh">恢复能量</div>
+      </div>
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#fff8e0;"><span style="color:var(--p2);font-size:22px;">⚡</span></div>
+        <div class="sig-product-name" style="color:var(--p2);">PERFORMANCE</div>
+        <div class="sig-product-zh">性能强化</div>
+      </div>
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#f5f0ea;"><span style="color:#8a6040;font-size:22px;">⚡</span></div>
+        <div class="sig-product-name" style="color:#888;">PROTEIN</div>
+        <div class="sig-product-zh">蛋白补给</div>
+      </div>
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#e6fff0;"><span style="color:#00FF66;font-size:22px;text-shadow:0 0 8px #00FF66;">⚡</span></div>
+        <div class="sig-product-name" style="color:#00aa44;">DETOX</div>
+        <div class="sig-product-zh">净化排毒</div>
+      </div>
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#fff0f4;"><span style="color:var(--p5);font-size:22px;">⚡</span></div>
+        <div class="sig-product-name" style="color:var(--p5);">ENERGY</div>
+        <div class="sig-product-zh">能量激活</div>
+      </div>
+      <div class="sig-product">
+        <div class="sig-bolt-wrap" style="background:#f0f4f0;"><span style="color:#5a7a50;font-size:22px;">⚡</span></div>
+        <div class="sig-product-name" style="color:#5a7a50;">L-CARNITINE</div>
+        <div class="sig-product-zh">燃脂塑形</div>
+      </div>
+    </div>
+
+    <!-- Material & Finish -->
+    <div class="mat-eyebrow">Material &amp; Finish 材质与质感</div>
+    <div class="mat-grid">
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#5a1a8a,#3a0a60);"></div>
+        <div class="mat-label">CLEAR GLOSSY</div><div class="mat-sub">高透光泽</div>
+      </div>
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#f5a800,#e08000);border:1px solid #e0e0d8;"></div>
+        <div class="mat-label">CLEAR SPARKLING</div><div class="mat-sub">气泡透感</div>
+      </div>
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#f8f4ee,#ede8e0);border:1px solid #d8d0c8;"></div>
+        <div class="mat-label">SOFT TRANSLUCENT</div><div class="mat-sub">柔光半透</div>
+      </div>
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#004020,#002010);box-shadow:0 0 10px rgba(0,255,102,0.3);"></div>
+        <div class="mat-label">NEON GLOW</div><div class="mat-sub">荧光能量</div>
+      </div>
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#ff4060,#e01040);"></div>
+        <div class="mat-label">CLEAR GLOSSY</div><div class="mat-sub">气泡透感</div>
+      </div>
+      <div class="mat-item">
+        <div class="mat-cup" style="background:linear-gradient(180deg,#c8d8c0,#a8c0a0);filter:contrast(0.9);"></div>
+        <div class="mat-label">MATTE FROSTED</div><div class="mat-sub">磨砂质感</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Color Identity -->
+  <div class="s3-color">
+    <div class="s3-eyebrow">Color Identity</div>
+    <div class="s3-color-title">色彩识别体系</div>
+    <div class="s3-color-sub">Brand Color System</div>
+    <div class="color-items">
+      <div class="color-item"><div class="color-swatch" style="background:#763AA2;"></div><div class="color-info"><div class="color-name">RECOVERY</div><div class="color-hex">#763AA2</div></div></div>
+      <div class="color-item"><div class="color-swatch" style="background:#F7B200;"></div><div class="color-info"><div class="color-name">PERFORMANCE</div><div class="color-hex">#F7B200</div></div></div>
+      <div class="color-item"><div class="color-swatch" style="background:#e8e0d8;border:1px solid #ccc;"></div><div class="color-info"><div class="color-name">PROTEIN</div><div class="color-hex">#FFFFFF</div></div></div>
+      <div class="color-item"><div class="color-swatch" style="background:#00FF66;box-shadow:0 0 8px #00FF66;"></div><div class="color-info"><div class="color-name" style="color:#00aa44;">DETOX</div><div class="color-hex">#00FF66</div></div></div>
+      <div class="color-item"><div class="color-swatch" style="background:#FF2665;"></div><div class="color-info"><div class="color-name">ENERGY</div><div class="color-hex">#FF2665</div></div></div>
+      <div class="color-item"><div class="color-swatch" style="background:#A8B8AA;"></div><div class="color-info"><div class="color-name">L-CARNITINE</div><div class="color-hex">#A8B8AA</div></div></div>
+    </div>
+
+    <!-- Detox spotlight -->
+    <div class="detox-spot">
+      <div class="detox-spot-title">ICONIC GREEN DETOX<br>标志性绿色排毒系列</div>
+      <span class="detox-spot-bolt">⚡</span>
+      <div class="detox-spot-items">
+        <div class="detox-spot-item">Spirulina 1g · 螺旋藻</div>
+        <div class="detox-spot-item">Chlorophyll · 叶绿素</div>
+        <div class="detox-spot-item">Cleanse &amp; Detox · 净化排毒</div>
+      </div>
+      <div class="detox-slogan">CLEAN INSIDE. STRONG OUTSIDE.</div>
+      <div class="detox-slogan-zh">由内净化，由外强大。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ S4: SCENE APPLICATION ══ -->
+<div class="s4">
+  <div class="s4-eyebrow">Scene Application</div>
+  <div class="s4-title">场景应用</div>
+  <div class="s4-grid">
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#1a1a2e,#2a2a4e);">🏋️</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">GYM</div><div class="s4-scene-zh">健身训练</div></div>
+    </div>
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#0a2a0a,#1a4a1a);">🎾</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">TENNIS</div><div class="s4-scene-zh">网球运动</div></div>
+    </div>
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#1a1a3e,#2a2a5e);">💻</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">OFFICE</div><div class="s4-scene-zh">办公提神</div></div>
+    </div>
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#0a2a1a,#1a5a2a);">🌳</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">OUTDOOR</div><div class="s4-scene-zh">户外活力</div></div>
+    </div>
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#2a1a0a,#4a2a0a);">☕</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">CAFE</div><div class="s4-scene-zh">咖啡时光</div></div>
+    </div>
+    <div class="s4-scene">
+      <div class="s4-scene-img" style="background:linear-gradient(135deg,#1a0a2e,#3a1a5e);">🏃</div>
+      <div class="s4-scene-label"><div class="s4-scene-en">ACTIVE</div><div class="s4-scene-zh">跑步燃脂</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ S5: BRAND PHILOSOPHY + BAG ══ -->
+<div class="s5">
+  <div class="s5-phil">
+    <div class="s5-eyebrow">Brand Philosophy</div>
+    <div class="s5-title">品牌理念</div>
+    <div class="s5-body">TORCE ENERGY 相信，真正的能量源于自然。我们通过天然水果，优质的营养素和科学的配方，为每一个追求更好自己的人，提供干净、有效、可持续的能量补充。</div>
+    <div class="s5-slogan">FUEL YOUR BETTER SELF.</div>
+    <div class="s5-slogan-zh">为更好的自己，注入能量。</div>
+  </div>
+  <div class="s5-bag">
+    <div>
+      <div class="bag-visual">
+        <div class="bag-handles">
+          <div class="bag-handle"></div>
+          <div class="bag-handle"></div>
+        </div>
+        <div class="bag-logo">
+          <span class="bag-logo-bolt">⚡</span>
+          <div class="bag-logo-name">TORCE</div>
+          <div class="bag-logo-sub">ENERGY</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /page -->
+</body>
+</html>
