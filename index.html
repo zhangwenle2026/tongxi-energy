@@ -880,9 +880,9 @@ svg.chart{display:block;overflow:visible;}
   </div>
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="switchTab('bp')">商业计划书</button>
-    <button class="nav-tab" onclick="switchTab('insights')">全球鲜果&能量饮品全景洞察</button>
     <button class="nav-tab" onclick="switchTab('products')">通喜能量饮品计划</button>
     <button class="nav-tab" onclick="switchTab('ue')">单店UE增长计划</button>
+    <button class="nav-tab" onclick="switchTab('insights')">全球鲜果&能量饮品全景洞察</button>
   </div>
 </nav>
 
@@ -894,292 +894,405 @@ function switchTab(tab){
   document.getElementById('page-ue').style.display = tab==='ue' ? 'block' : 'none';
   document.querySelectorAll('.nav-tab').forEach((el,i)=>{
     el.classList.toggle('active',
-      (tab==='bp' && i===0)||(tab==='insights' && i===1)||
-      (tab==='products' && i===2)||(tab==='ue' && i===3));
+      (tab==='bp' && i===0)||(tab==='products' && i===1)||
+      (tab==='ue' && i===2)||(tab==='insights' && i===3));
   });
-  window.scrollTo(0,0);
-}
-</script>
-
 <!-- ══ PAGE: 商业计划书 ══ -->
 <div id="page-bp">
 
 <!-- COVER -->
 <div style="padding-top:56px;">
   <div class="s" style="padding-top:100px;padding-bottom:72px;">
-    <div class="eye">商业分析与落地计划书 · 2026</div>
+    <div class="eye">投资人商业计划书 · 2026 · 保密文件</div>
     <div style="margin-bottom:52px;">
       <div class="hero-num">通喜果汁</div>
-      <div class="hero-num"><span class="g">能量进化</span></div>
+      <div class="hero-num"><span class="g">第二增长曲线</span></div>
     </div>
-    <div class="hero-cap">全系列能量饮品牌扩张计划 · <strong>Full Energy Drink Brand Expansion</strong></div>
+    <div class="hero-cap">TORCE ENERGY — 从鲜果汁门店到功能性健康饮品平台</div>
+    <div class="stat-row" style="margin-top:64px;">
+      <div class="stat-col"><span class="stat-n">¥11,500</span><div class="stat-l">启动成本</div><div class="stat-s">新增固定成本¥0</div></div>
+      <div class="stat-col"><span class="stat-n">13天</span><div class="stat-l">回本周期</div><div class="stat-s">月净利新增¥44,640</div></div>
+      <div class="stat-col"><span class="stat-n">×5.6</span><div class="stat-l">净利率倍增</div><div class="stat-s">5.5%→31%</div></div>
+    </div>
   </div>
 </div>
 
+<!-- 01 PROBLEM -->
 <hr class="hr">
-<div class="ch-div">01 · 核心结论</div>
+<div class="ch-div">01 · 痛点 — The Problem</div>
 
-<!-- 01 CONCLUSION -->
 <div class="s s-tight">
-  <div style="margin-bottom:56px;">
-    <div class="hero-num"><span class="g">5.5%</span></div>
-    <div class="hero-num">→ <span class="g">31%</span></div>
-  </div>
+  <div class="s-title">13年护城河<br><span class="g">遭遇盈利天花板</span></div>
 
   <div class="mag-pull">
-    净利率的质变——<strong>不是改良，是重构盈利模型。</strong><br>
-    单店投入 ¥11,500，13天回本，<em>100% 复用现有门店资源，无需新增固定成本</em>。
-  </div>
-
-  <div class="inline-pull">
-    依托 60+ 厦门门店与「0糖鲜榨」品牌心智，打造果汁+能量饮集合店，开辟<span class="g">第二增长曲线</span>。<br>
-    3个月完成门店复制；「通喜能量」作为通喜品牌新产品系列，12个月内在全网络落地。
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">02 · 行业机会与品牌壁垒</div>
-
-<!-- 02 MARKET -->
-<div class="s s-tight">
-  <div class="s-title">厦门是<span class="g">最优起点</span><br>通喜已有护城河</div>
-
-  <div class="stat-row">
-    <div class="stat-col"><span class="stat-n">¥380亿</span><div class="stat-l">健身营养饮品市场</div><div class="stat-s">年增速 13.7%</div></div>
-    <div class="stat-col"><span class="stat-n">43.1%</span><div class="stat-l">厦门健身人群占比</div><div class="stat-s">全国前五</div></div>
-    <div class="stat-col"><span class="stat-n">¥3,640</span><div class="stat-l">厦门人均体育消费</div><div class="stat-s">消费基础优质</div></div>
-    <div class="stat-col"><span class="stat-n dk">蓝海</span><div class="stat-l">现制功能饮品赛道</div><div class="stat-s">无头部连锁品牌</div></div>
+    通喜做了13年，60+ 家门店，是厦门最大的健康饮品网络。但鲜榨果汁是一门<strong>高营收、低净利、高损耗</strong>的生意——用现在的模型扩张100家店，净利率不会本质改变。
   </div>
 
   <div class="two">
     <div>
-      <div class="label">业务痛点</div>
+      <div class="label">门店盈利现状</div>
       <div class="dl">
         <div class="dr"><span class="dk-">月固定成本</span><span class="dv">¥60,000</span></div>
-        <div class="dr"><span class="dk-">水果损耗率</span><span class="dv">15—20%</span></div>
-        <div class="dr"><span class="dk-">当前净利率</span><span class="dv">5.5%</span></div>
+        <div class="dr"><span class="dk-">水果损耗率</span><span class="dv">15—20%（每月白扔¥1-1.5万）</span></div>
+        <div class="dr"><span class="dk-">当前净利率</span><span class="dv">5.5%（行业均值6-8%，无优势）</span></div>
         <div class="dr"><span class="dk-">回本周期</span><span class="dv">18—24个月</span></div>
-        <div class="dr"><span class="dk-">营收时段覆盖</span><span class="dv">午后为主</span></div>
+        <div class="dr"><span class="dk-">营收时段</span><span class="dv">午后为主，早高峰覆盖率低</span></div>
       </div>
     </div>
     <div>
-      <div class="label">通喜四大壁垒</div>
+      <div class="label">结构性困境</div>
       <div class="dl">
-        <div class="dr"><span class="dk-">品牌口碑</span><span class="dv g">13年「0糖鲜榨」心智</span></div>
-        <div class="dr"><span class="dk-">门店网络</span><span class="dv g">60+ 商场覆盖，零选址成本</span></div>
-        <div class="dr"><span class="dk-">供应链</span><span class="dv g">本土化采购，成本可控</span></div>
-        <div class="dr"><span class="dk-">存量客群</span><span class="dv g">健康意识强，天然接受</span></div>
+        <div class="dr"><span class="dk-">规模扩张</span><span class="dv">开更多店 ≠ 净利大幅提升</span></div>
+        <div class="dr"><span class="dk-">提价空间</span><span class="dv">消费者对鲜榨果汁价格敏感</span></div>
+        <div class="dr"><span class="dk-">品类天花板</span><span class="dv">纯果汁场景单一，复购有上限</span></div>
+        <div class="dr"><span class="dk-">竞争压力</span><span class="dv">连锁奶茶/咖啡持续蚕食流量</span></div>
+        <div class="dr"><span class="dk-">核心矛盾</span><span class="dv"><span style="color:var(--g);font-weight:700;">固定成本刚性 + 毛利有限 = 净利被压缩</span></span></div>
       </div>
     </div>
   </div>
 
-  <div class="mag-pull" style="font-size:clamp(1.3rem,2.2vw,1.75rem);">
-    60+ 家门店，已是厦门最大的健康饮品渠道网络。<br>
-    <strong>能量饮不是新赛道，是现有流量的二次变现。</strong>"
+  <div class="band">
+    <div class="band-inner">
+      <div class="band-eyebrow">核心痛点</div>
+      <div class="band-text">通喜不缺门店，不缺品牌，不缺客流。<strong>缺的是一条能把现有资产变现效率提升5倍的产品线。</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 MARKET -->
+<hr class="hr">
+<div class="ch-div">02 · 市场机会 — The Market</div>
+
+<div class="s s-tight">
+  <div class="s-title">¥800亿+<br><span class="g">功能性饮品 · 最后未被占位的赛道</span></div>
+
+  <div class="stat-row">
+    <div class="stat-col"><span class="stat-n">¥800亿+</span><div class="stat-l">中国功能性饮料市场</div><div class="stat-s">含能量饮/电解质水</div></div>
+    <div class="stat-col"><span class="stat-n">18%</span><div class="stat-l">运动营养食品年增速</div><div class="stat-s">CAGR 2023-2027</div></div>
+    <div class="stat-col"><span class="stat-n">80万人</span><div class="stat-l">厦门潜在目标客群</div><div class="stat-s">含健身/跑步/轻运动人群</div></div>
+    <div class="stat-col"><span class="stat-n dk">蓝海</span><div class="stat-l">现制功能饮品连锁</div><div class="stat-s">厦门市场空白，无头部品牌</div></div>
   </div>
 
-  <div class="label">对标 · 巴西 Energy Bar</div>
+  <div class="two">
+    <div>
+      <div class="label">厦门市场</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">厦门健身房会员</span><span class="dv">~35-40万人</span></div>
+        <div class="dr"><span class="dk-">健身人口渗透率</span><span class="dv">43.1%，全国前五</span></div>
+        <div class="dr"><span class="dk-">人均体育消费</span><span class="dv">¥3,640/年</span></div>
+        <div class="dr"><span class="dk-">潜在目标客群</span><span class="dv">80万+（含轻运动人群）</span></div>
+        <div class="dr"><span class="dk-">现制功能饮品潜力</span><span class="dv">年消费¥2-3亿（估算）</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="label">福建/全国</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">福建健身人口</span><span class="dv">~450万人（渗透率约11%）</span></div>
+        <div class="dr"><span class="dk-">全国运动营养市场</span><span class="dv">¥380亿（2024），增速18%</span></div>
+        <div class="dr"><span class="dk-">功能性饮料市场</span><span class="dv">¥800亿+，年增速13.7%</span></div>
+        <div class="dr"><span class="dk-">赛道空白</span><span class="dv">全国无头部现制功能饮品连锁</span></div>
+        <div class="dr"><span class="dk-">通喜路径</span><span class="dv g">厦门验证 → 福建复制 → 全国布局</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="inline-pull">
+    厦门是微缩版的中国健康消费市场——<strong>福建人有钱、爱运动、愿意为健康付费。</strong> 这里是最优的商业模式验证地。如果能在厦门跑通，就能在全国复制。
+  </div>
+
+  <div class="label">对标 · 全球功能饮品连锁</div>
   <table class="t">
-    <thead><tr><th style="width:18%">维度</th><th>巴西 Energy Bar</th><th>通喜能量饮</th></tr></thead>
+    <thead><tr><th>品牌</th><th>国家</th><th>模式</th><th>规模</th><th>对通喜的启示</th></tr></thead>
     <tbody>
-      <tr><td class="str">配方</td><td class="sub">天然水果+蜂蜜，部分含添加糖</td><td class="g">100% 水果天然，0 添加糖</td></tr>
-      <tr><td class="str">供应链</td><td class="sub">进口原料，成本较高</td><td class="g">本土供应链，成本更低</td></tr>
-      <tr><td class="str">渠道</td><td class="sub">健身房单一渠道</td><td class="g">商场 + 写字楼 + 健身房</td></tr>
-      <tr><td class="str">启动成本</td><td class="sub">独立选址装修，投入大</td><td class="g">嵌入现有门店，¥11,500 启动</td></tr>
+      <tr><td class="str">Celsius</td><td>美国</td><td>瓶装功能饮料</td><td class="g">市值$160亿（5年增80×）</td><td class="sub">功能=日常消费品的巨大市场</td></tr>
+      <tr><td class="str">Smoothie King</td><td>美国</td><td>现制健身果昔</td><td class="g">全球1,400+门店</td><td class="sub">健身场景捆绑+按目标分类产品</td></tr>
+      <tr><td class="str">Oakberry</td><td>巴西</td><td>巴西莓超级食物</td><td class="g">8年700+门店40国</td><td class="sub">天然食材IP化+快速复制</td></tr>
+      <tr><td class="str">Joe &amp; The Juice</td><td>丹麦</td><td>鲜果汁+蛋白昔</td><td class="g">350+门店</td><td class="sub">品牌美学+鲜榨与功能双线并行</td></tr>
     </tbody>
   </table>
 </div>
 
+<!-- 03 TREND -->
 <hr class="hr">
-<div class="ch-div">03 · 产品体系</div>
+<div class="ch-div">03 · 趋势洞察 — Why Now</div>
 
-<!-- 03 PRODUCT -->
+<div class="s s-tight">
+  <div class="s-title">消费者正在发生<br><span class="g">一次关键的品类迁移</span></div>
+
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:56px;">
+    <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);">
+      <div style="font-size:clamp(2.5rem,4vw,3.8rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">200%+</div>
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">肌酸品类2024抖音电商增速</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.75;font-weight:300;">从健身硬核圈层快速破圈，进入大众消费视野</div>
+    </div>
+    <div style="padding:36px 32px;border-right:1px solid var(--line);">
+      <div style="font-size:clamp(2.5rem,4vw,3.8rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">35%+</div>
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">天猫京东运动营养类目年增速</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.75;font-weight:300;">蛋白粉用户从健身房扩散至普通上班族和减肥女性</div>
+    </div>
+    <div style="padding:36px 0 36px 32px;">
+      <div style="font-size:clamp(2.5rem,4vw,3.8rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">5×</div>
+      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">小红书"运动补剂"搜索量3年增长</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.75;font-weight:300;">从小众词到破亿次搜索的大众健康关键词</div>
+    </div>
+  </div>
+
+  <div class="label">消费者画像 · 2020→2025 迁移</div>
+  <table class="t">
+    <thead><tr><th>维度</th><th>2020年</th><th>2025年（现在）</th><th>迁移方向</th></tr></thead>
+    <tbody>
+      <tr><td>主力人群</td><td class="sub">健身硬核男性</td><td>25-35岁都市健康人群（男+女）</td><td class="g">泛化↗</td></tr>
+      <tr><td>消费场景</td><td class="sub">健身房</td><td>办公室/早餐/下午茶/运动后全场景</td><td class="g">泛化↗</td></tr>
+      <tr><td>产品认知</td><td class="sub">运动补剂=专业/复杂</td><td>功能饮料=日常/健康</td><td class="g">大众化↗</td></tr>
+      <tr><td>价格接受</td><td class="sub">¥15以下</td><td>¥25-35健康溢价认可</td><td class="g">升级↗</td></tr>
+      <tr><td>购买渠道</td><td class="sub">电商批量购买</td><td>即买即喝，实体门店便利性</td><td class="g">即时化↗</td></tr>
+    </tbody>
+  </table>
+
+  <div class="mag-pull">
+    运动补品正在从"健身房货架"走向"日常消费品"——<strong>这是一次品类迁移的窗口期。</strong> 通喜的门店网络+品牌信任，恰好可以做这个「最后一公里」的现制落地渠道。<strong>这个窗口，只有先占位的人才能吃到。</strong>
+  </div>
+</div>
+
+<!-- 04 SOLUTION -->
+<hr class="hr">
+<div class="ch-div">04 · 解决方案 — The Solution</div>
+
+<div class="s s-tight">
+  <div class="s-title">TORCE ENERGY<br><span class="g">不是新产品线——是盈利模型的重构</span></div>
+
+  <div class="inline-pull">
+    TORCE ENERGY 的核心逻辑：<strong>用现有固定成本，叠加高毛利新产品，让每一家门店的盈利效率提升5倍。</strong> 无需新店、无需装修、无需招人。
+  </div>
+
+  <div class="label" style="margin-bottom:0;">逻辑链</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">STEP 01</div>
+      <div class="step-title">现有门店流量</div>
+      <div class="step-desc">存量资产·60+门店日均客流</div>
+      <div class="step-day">今日起点</div>
+    </div>
+    <div class="step">
+      <div class="step-n">STEP 02</div>
+      <div class="step-title">叠加TORCE ENERGY</div>
+      <div class="step-desc">增量变现·¥11,500启动成本</div>
+      <div class="step-day">Day 1</div>
+    </div>
+    <div class="step">
+      <div class="step-n">STEP 03</div>
+      <div class="step-title">客单价提升</div>
+      <div class="step-desc">¥28→¥36·+28.6%</div>
+      <div class="step-day">立竿见影</div>
+    </div>
+    <div class="step">
+      <div class="step-n">STEP 04</div>
+      <div class="step-title">净利率跃升</div>
+      <div class="step-desc">5.5%→31%·×5.6倍</div>
+      <div class="step-day">第13天回本</div>
+    </div>
+    <div class="step">
+      <div class="step-n">STEP 05</div>
+      <div class="step-title">全网络复制</div>
+      <div class="step-desc">第二增长曲线正式建立</div>
+      <div class="step-day">12个月目标</div>
+    </div>
+  </div>
+
+  <div class="two">
+    <div>
+      <div class="label">通喜现有资产</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">门店网络</span><span class="dv">60+ 商场门店（零选址成本）</span></div>
+        <div class="dr"><span class="dk-">品牌认知</span><span class="dv">13年「0糖鲜榨」心智</span></div>
+        <div class="dr"><span class="dk-">供应链</span><span class="dv">本土化鲜果，成本可控</span></div>
+        <div class="dr"><span class="dk-">存量客群</span><span class="dv">35-40万健康消费者</span></div>
+        <div class="dr"><span class="dk-">运营能力</span><span class="dv">训练有素的门店团队</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="label">TORCE ENERGY新增</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">产品线</span><span class="dv g">6款功能性鲜果昔（全场景覆盖）</span></div>
+        <div class="dr"><span class="dk-">原料成本</span><span class="dv g">每杯¥3-5（国产GMP供应链）</span></div>
+        <div class="dr"><span class="dk-">操作效率</span><span class="dv g">≤90秒出杯，无需额外培训</span></div>
+        <div class="dr"><span class="dk-">单杯毛利</span><span class="dv g">69.6%（高于鲜榨果汁4.6pts）</span></div>
+        <div class="dr"><span class="dk-">市场空白</span><span class="dv g">无直接竞争对手，蓝海赛道</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 PRODUCT -->
+<hr class="hr">
+<div class="ch-div">05 · 产品体系 — Product</div>
+
 <div class="s s-tight">
   <div class="s-title">TORCE ENERGY<br><span class="g">6款核心产品 · 全场景覆盖</span></div>
 
   <div class="inline-pull">
-    所有产品以<strong>真实水果为基底</strong>，操作 ≤ 90 秒，无需新增设备，单杯毛利率 <span class="g">65%+</span>。<br>
-    6款产品各覆盖独立场景，内部不互相竞争，形成完整产品矩阵护城河。
+    所有产品以<strong>真实水果为基底</strong>，操作 ≤ 90 秒，无需新增设备，单杯毛利率 65%+。6款产品各覆盖独立场景，内部不互相竞争，形成完整产品矩阵护城河。
   </div>
 
-  <!-- 6款产品网格：3列2行 -->
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:64px;">
-
-    <!-- 01 RECOVERY -->
+    <!-- RECOVERY -->
     <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>01</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">运动后 · 恢复</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#5B3FA0;padding:3px 10px;border-radius:3px;">01</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#5B3FA0;">RECOVERY</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#5B3FA0;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">RECOVERY</div>
-      <div class="prod-name" style="font-size:16px;">巴西莓蓝莓恢复昔</div>
-      <div class="prod-price">¥28 — 30</div>
-      <div class="prod-items">
-        <div class="prod-item">巴西莓浆 60g · 蓝莓 50g · 香蕉 100g</div>
-        <div class="prod-item">椰子水 120ml · 分离乳清蛋白 20g · BCAA 3g</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 抗氧化 · 肌肉修复 · 运动后黄金窗口</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">巴西莓蓝莓恢复昔</div>
+      <div style="font-size:18px;font-weight:900;color:#5B3FA0;margin-bottom:14px;">¥28-30</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">巴西莓浆60g · 蓝莓50g · 香蕉100g · 椰子水120ml · 乳清蛋白20g · BCAA 3g</div>
+      <div style="font-size:12px;color:#5B3FA0;font-weight:600;">→ 抗氧化 · 肌肉修复 · 运动后黄金窗口</div>
     </div>
-
-    <!-- 02 PERFORMANCE -->
+    <!-- PERFORMANCE -->
     <div style="padding:36px 32px;border-right:1px solid var(--line);">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>02</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">健身前 · 爆发</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#E07B00;padding:3px 10px;border-radius:3px;">02</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#E07B00;">PERFORMANCE</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#E07B00;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">PERFORMANCE</div>
-      <div class="prod-name" style="font-size:16px;">芒果香蕉爆发力</div>
-      <div class="prod-price">¥28 — 32</div>
-      <div class="prod-items">
-        <div class="prod-item">芒果 120g · 香蕉 100g · 橙汁 100ml</div>
-        <div class="prod-item">分离乳清蛋白 20g · 肌酸 3g · 电解质粉 2g</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 提升爆发力 · 肌酸增强力量 · 电解质补充</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">芒果香蕉爆发力</div>
+      <div style="font-size:18px;font-weight:900;color:#E07B00;margin-bottom:14px;">¥28-32</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">芒果120g · 香蕉100g · 橙汁100ml · 乳清蛋白20g · 肌酸3g · 电解质粉2g</div>
+      <div style="font-size:12px;color:#E07B00;font-weight:600;">→ 爆发力 · 肌酸增强力量 · 电解质补充</div>
     </div>
-
-    <!-- 03 PROTEIN -->
+    <!-- PROTEIN -->
     <div style="padding:36px 0 36px 32px;">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>03</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">早餐 · 代餐</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#888;padding:3px 10px;border-radius:3px;">03</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#888;">PROTEIN</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#888;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">PROTEIN</div>
-      <div class="prod-name" style="font-size:16px;">香草椰子蛋白昔</div>
-      <div class="prod-price">¥28 — 32</div>
-      <div class="prod-items">
-        <div class="prod-item">椰奶 180ml · 香蕉 80g · 香草乳清蛋白 25g</div>
-        <div class="prod-item">燕麦奶 80ml · 奇亚籽 5g</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 高蛋白代餐 · 饱腹持久 · 奇亚籽缓释能量</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">香草椰子蛋白昔</div>
+      <div style="font-size:18px;font-weight:900;color:#888;margin-bottom:14px;">¥28-32</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">椰奶180ml · 香蕉80g · 香草乳清蛋白25g · 燕麦奶80ml · 奇亚籽5g</div>
+      <div style="font-size:12px;color:#888;font-weight:600;">→ 高蛋白代餐 · 饱腹持久 · 奇亚籽缓释能量</div>
     </div>
-
-    <!-- 04 DETOX -->
+    <!-- DETOX -->
     <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);border-top:1px solid var(--line);">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>04</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">下午茶 · 净化 ⭐</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#1A7A2E;padding:3px 10px;border-radius:3px;">04</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#1A7A2E;">DETOX ⭐</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#1A7A2E;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">DETOX</div>
-      <div class="prod-name" style="font-size:16px;">螺旋藻青苹果净化饮</div>
-      <div class="prod-price">¥26 — 28</div>
-      <div class="prod-items">
-        <div class="prod-item">青苹果 120g · 黄瓜 80g · 菠菜 30g</div>
-        <div class="prod-item">螺旋藻 1g · 椰子水 120ml · 柠檬汁 10ml</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 标志产品 · 视觉冲击力极强 · Detox净化</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">螺旋藻青苹果净化饮</div>
+      <div style="font-size:18px;font-weight:900;color:#1A7A2E;margin-bottom:14px;">¥26-28</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">青苹果120g · 黄瓜80g · 菠菜30g · 螺旋藻1g · 椰子水120ml · 柠檬汁10ml</div>
+      <div style="font-size:12px;color:#1A7A2E;font-weight:600;">→ 标志产品 · 视觉冲击力极强 · Detox净化</div>
     </div>
-
-    <!-- 05 ENERGY -->
+    <!-- ENERGY -->
     <div style="padding:36px 32px;border-right:1px solid var(--line);border-top:1px solid var(--line);">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>05</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">工作 · 提神</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#C0392B;padding:3px 10px;border-radius:3px;">05</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#C0392B;">ENERGY</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#C0392B;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">ENERGY</div>
-      <div class="prod-name" style="font-size:16px;">热带芒果菠萝提神饮</div>
-      <div class="prod-price">¥24 — 28</div>
-      <div class="prod-items">
-        <div class="prod-item">菠萝 100g · 芒果 100g · 草莓 50g</div>
-        <div class="prod-item">天然咖啡因 80mg · 电解质粉 2g</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 天然咖啡因提神 · 增强专注 · 下午无崩感</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">热带芒果菠萝提神饮</div>
+      <div style="font-size:18px;font-weight:900;color:#C0392B;margin-bottom:14px;">¥24-28</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">菠萝100g · 芒果100g · 草莓50g · 天然咖啡因80mg · 电解质粉2g</div>
+      <div style="font-size:12px;color:#C0392B;font-weight:600;">→ 天然咖啡因提神 · 增强专注 · 下午无崩感</div>
     </div>
-
-    <!-- 06 L-CARNITINE -->
+    <!-- L-CARNITINE -->
     <div style="padding:36px 0 36px 32px;border-top:1px solid var(--line);">
-      <div class="prod-idx" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;">
-        <span>06</span><span style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.12em;">有氧 · 燃脂</span>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="font-size:10px;font-weight:400;letter-spacing:0.14em;color:rgba(255,255,255,0.9);background:#3A7A5A;padding:3px 10px;border-radius:3px;">06</span>
+        <span style="font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3A7A5A;">L-CARNITINE</span>
       </div>
-      <div style="font-size:11px;font-weight:700;color:#3A7A5A;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;">L-CARNITINE</div>
-      <div class="prod-name" style="font-size:16px;">抹茶燕麦燃脂昔</div>
-      <div class="prod-price">¥28 — 32</div>
-      <div class="prod-items">
-        <div class="prod-item">抹茶粉 3g · 左旋肉碱 1500mg · 香蕉 80g</div>
-        <div class="prod-item">燕麦奶 150ml · 椰奶 80ml</div>
-        <div class="prod-item" style="margin-top:6px;color:var(--g);font-weight:600;font-size:11px;">→ 左旋肉碱辅助燃脂 · 有氧支持 · 低热量焦虑</div>
-      </div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px;">抹茶燕麦燃脂昔</div>
+      <div style="font-size:18px;font-weight:900;color:#3A7A5A;margin-bottom:14px;">¥28-32</div>
+      <div style="font-size:12px;color:var(--sub);line-height:1.8;font-weight:300;margin-bottom:12px;">抹茶粉3g · 左旋肉碱1500mg · 香蕉80g · 燕麦奶150ml · 椰奶80ml</div>
+      <div style="font-size:12px;color:#3A7A5A;font-weight:600;">→ 左旋肉碱辅助燃脂 · 有氧支持 · 低热量焦虑</div>
     </div>
-
   </div>
 
-  <!-- 产品矩阵 — 3组场景 -->
-  <div class="label">产品组合战略 — 三大场景矩阵</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:64px;">
+  <div class="label">原材料策略 · 国内供应链成本分析</div>
+  <table class="t">
+    <thead><tr><th>原料</th><th>国内供应渠道</th><th class="r">采购单价</th><th class="r">单杯成本</th></tr></thead>
+    <tbody>
+      <tr><td class="str">乳清蛋白</td><td class="sub">完达山/国产OEM；进口优选澳洲WPC</td><td class="r">¥60-80/kg</td><td class="r g">¥1.5-2</td></tr>
+      <tr><td class="str">肌酸</td><td class="sub">山东阿尔法·中国全球最大肌酸生产国</td><td class="r">¥30-40/kg</td><td class="r g">¥0.1</td></tr>
+      <tr><td class="str">BCAA</td><td class="sub">国内多家GMP认证工厂</td><td class="r">¥80-120/kg</td><td class="r g">¥0.24</td></tr>
+      <tr><td class="str">螺旋藻</td><td class="sub">云南程海基地·中国产量占全球60%+</td><td class="r">¥50-80/kg</td><td class="r g">&lt;¥0.1</td></tr>
+      <tr><td class="str">左旋肉碱</td><td class="sub">浙江/河南大厂供应</td><td class="r">¥120-150/kg</td><td class="r g">¥0.3</td></tr>
+      <tr><td class="str">天然咖啡因</td><td class="sub">云南茶叶提取·国内供应链成熟</td><td class="r">¥200-300/kg</td><td class="r g">¥0.16</td></tr>
+    </tbody>
+  </table>
 
-    <div style="padding:32px 28px 32px 0;border-right:1px solid var(--line);">
-      <div style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;">恢复系 — 运动场景</div>
-      <div style="margin-bottom:12px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">RECOVERY</div>
-        <div style="font-size:12px;color:var(--sub);">巴西莓蓝莓 · 高抗氧化恢复</div>
-      </div>
-      <div style="margin-bottom:20px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">PERFORMANCE</div>
-        <div style="font-size:12px;color:var(--sub);">芒果香蕉 · 肌酸爆发力</div>
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--dg);">目标人群：运动健身人群</div>
-      <div style="font-size:11px;color:var(--faint);">健身房 / 运动后场景</div>
-    </div>
-
-    <div style="padding:32px 28px;border-right:1px solid var(--line);">
-      <div style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;">代餐系 — 日常营养</div>
-      <div style="margin-bottom:12px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">PROTEIN</div>
-        <div style="font-size:12px;color:var(--sub);">香草椰子 · 高蛋白代餐</div>
-      </div>
-      <div style="margin-bottom:20px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">L-CARNITINE</div>
-        <div style="font-size:12px;color:var(--sub);">抹茶燕麦 · 燃脂辅助</div>
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--dg);">目标人群：健康生活方式人群</div>
-      <div style="font-size:11px;color:var(--faint);">早餐 / 办公室 / 有氧运动</div>
-    </div>
-
-    <div style="padding:32px 0 32px 28px;">
-      <div style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:16px;">净化系 — 轻体场景</div>
-      <div style="margin-bottom:12px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">DETOX ⭐</div>
-        <div style="font-size:12px;color:var(--sub);">螺旋藻绿 · 标志性产品</div>
-      </div>
-      <div style="margin-bottom:20px;">
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">ENERGY</div>
-        <div style="font-size:12px;color:var(--sub);">热带红 · 天然咖啡因提神</div>
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--dg);">目标人群：轻健康消费者</div>
-      <div style="font-size:11px;color:var(--faint);">下午茶 / 工作 / 学习场景</div>
-    </div>
-
-  </div>
-
-  <!-- 产品矩阵优势 -->
-  <div class="stat-row" style="margin-bottom:0;">
-    <div class="stat-col"><span class="stat-n">6款</span><div class="stat-l">覆盖全场景</div><div class="stat-s">无内部竞争</div></div>
-    <div class="stat-col"><span class="stat-n">≤90s</span><div class="stat-l">操作时间</div><div class="stat-s">现有设备，零新增</div></div>
-    <div class="stat-col"><span class="stat-n">¥0</span><div class="stat-l">新设备投入</div><div class="stat-s">全量复用现有产线</div></div>
-    <div class="stat-col"><span class="stat-n">65%+</span><div class="stat-l">综合毛利率</div><div class="stat-s">高于鲜榨果汁</div></div>
+  <div class="inline-pull">
+    中国是全球最大的运动营养原料生产国。<strong>所有功能性原料在国内均有稳定GMP认证供应商，综合原料成本控制在每杯 ¥3-5 以内。</strong> 这是海外竞争对手无法复制的成本优势。
   </div>
 </div>
 
+<!-- 06 MOAT -->
 <hr class="hr">
-<div class="ch-div">04 · 单店 UE 模型</div>
+<div class="ch-div">06 · 竞争壁垒 — Moat</div>
 
-<!-- 04 UE -->
+<div class="s s-tight">
+  <div class="s-title">为什么是通喜<br><span class="g">护城河不是建的——是13年积累的</span></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:64px;">
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">🏪</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">渠道壁垒</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">60+ 商场门店是13年选址积累，不是¥11,500能买来的。厦门优质商场位置已被占据，新竞争者进入的边际成本远高于通喜扩张成本。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">🧠</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">品牌信任</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">「0糖鲜榨」≈通喜，是厦门消费者13年的心智认知。新品牌从零建立同等信任度需要3-5年和数千万营销投入。通喜推出功能饮品，消费者天然信任。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">⚙️</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">供应链整合</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">既有鲜果供应链（本土采购，成本可控），叠加功能性粉类原料（国内GMP供应商），形成复合供应链体系。竞争对手很难同时具备两种供应链的运营能力。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">📊</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">数据与洞察</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">13年积累了厦门最完整的健康消费者数据：口味偏好、消费时段、价格敏感点、复购规律。这些数据是产品开发和精准营销的核心资产，不可复制。</div>
+    </div>
+  </div>
+
+  <div class="label">竞争格局分析</div>
+  <table class="t">
+    <thead><tr><th>维度</th><th>新品牌进入</th><th>连锁奶茶升级</th><th>通喜 TORCE</th></tr></thead>
+    <tbody>
+      <tr><td>启动成本</td><td class="sub">¥30-50万（独立装修）</td><td class="sub">¥20-30万（门店改造）</td><td class="g str">¥1.15万（嵌入现有）</td></tr>
+      <tr><td>品牌信任</td><td class="sub">从零建立3-5年</td><td class="sub">奶茶认知存在冲突</td><td class="g str">13年健康心智直接继承</td></tr>
+      <tr><td>渠道</td><td class="sub">需重新选址</td><td class="sub">现有奶茶选址</td><td class="g str">60+优质商场门店现成</td></tr>
+      <tr><td>客群匹配度</td><td class="sub">需重新教育市场</td><td class="sub">客群与健康饮品不完全重合</td><td class="g str">现有客群天然接受</td></tr>
+      <tr class="hl"><td>综合竞争壁垒</td><td>低（容易被复制）</td><td>中（受品牌认知限制）</td><td class="g big">高（四重壁垒叠加）</td></tr>
+    </tbody>
+  </table>
+
+  <div class="mag-pull">
+    60+ 家门店，已是厦门最大的健康饮品渠道网络。<strong>能量饮不是新赛道，是现有流量的二次变现。竞争优势不在于产品，而在于这张无法复制的渠道网络。</strong>
+  </div>
+</div>
+
+<!-- 07 FINANCIALS -->
+<hr class="hr">
+<div class="ch-div">07 · 财务模型 — Financials</div>
+
 <div class="s s-tight">
   <div style="margin-bottom:52px;">
     <div class="hero-num">+<span class="g">809%</span></div>
   </div>
 
   <div class="mag-pull">
-    月净利 <strong>¥5,520 → ¥50,160</strong>。<br>
-    能量饮 100% 复用现有固定成本，<em>新增收入几乎全部转化为净利润</em>。
+    月净利 <strong>¥5,520 → ¥50,160</strong>。能量饮 100% 复用现有固定成本，<strong>新增收入几乎全部转化为净利润。</strong>
   </div>
 
   <div class="two">
     <div>
-      <div class="label">单店 UE 对比</div>
+      <div class="label">单店UE对比</div>
       <table class="t" style="margin-bottom:0;">
         <thead><tr><th>指标</th><th class="r">上线前</th><th class="r">上线后</th><th class="r">变化</th></tr></thead>
         <tbody>
-          <tr><td>日均出杯</td><td class="r sub">120 杯</td><td class="r">150 杯</td><td class="r g">+25%</td></tr>
+          <tr><td>日均出杯</td><td class="r sub">120杯</td><td class="r">150杯</td><td class="r g">+25%</td></tr>
           <tr><td>平均客单价</td><td class="r sub">¥28</td><td class="r">¥36</td><td class="r g">+28.6%</td></tr>
           <tr><td>月营收</td><td class="r sub">¥100,800</td><td class="r">¥162,000</td><td class="r g">+60.7%</td></tr>
           <tr><td>综合毛利率</td><td class="r sub">65%</td><td class="r">68%</td><td class="r g">+3pts</td></tr>
-          <tr class="hl"><td>月净利润</td><td class="r sub">¥5,520</td><td class="r big">¥50,160</td><td class="r big">+809%</td></tr>
-          <tr class="hl"><td>净利润率</td><td class="r sub">5.5%</td><td class="r big">31%</td><td class="r big">↑25.5pts</td></tr>
+          <tr class="hl"><td>月净利润</td><td class="r sub">¥5,520</td><td class="r big">¥50,160</td><td class="r big g">+809%</td></tr>
+          <tr class="hl"><td>净利润率</td><td class="r sub">5.5%</td><td class="r big">31%</td><td class="r big g">↑25.5pts</td></tr>
         </tbody>
       </table>
     </div>
@@ -1190,65 +1303,35 @@ function switchTab(tab){
         <tbody>
           <tr><td>售价</td><td class="r">¥28</td><td class="r sub">¥28</td></tr>
           <tr><td>原料成本</td><td class="r g">¥8.5</td><td class="r sub">¥9.8</td></tr>
-          <tr><td>水果损耗</td><td class="r g">0%</td><td class="r sub">15—20%</td></tr>
-          <tr><td>制作时间</td><td class="r g">60—90秒</td><td class="r sub">120—180秒</td></tr>
+          <tr><td>水果损耗</td><td class="r g">0%</td><td class="r sub">15-20%</td></tr>
+          <tr><td>制作时间</td><td class="r g">60-90秒</td><td class="r sub">120-180秒</td></tr>
           <tr class="hl"><td>单杯毛利率</td><td class="r big">69.6%</td><td class="r sub">65.0%</td></tr>
         </tbody>
       </table>
       <div style="margin-bottom:10px;">
-        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:12px;color:var(--sub);font-weight:300;">原料成本 ¥8.5</span><span style="font-size:12px;color:var(--faint);">30.4%</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:12px;color:var(--sub);font-weight:300;">原料成本 30.4%</span><span style="font-size:12px;color:var(--faint);">30.4%</span></div>
         <div style="height:3px;background:var(--line);border-radius:2px;"><div style="height:3px;width:30.4%;background:var(--faint);border-radius:2px;"></div></div>
       </div>
       <div>
-        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:12px;color:var(--sub);font-weight:300;">单杯净利 ¥19.5</span><span style="font-size:12px;color:var(--g);font-weight:700;">69.6%</span></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:12px;color:var(--sub);font-weight:300;">单杯净利 69.6%</span><span style="font-size:12px;color:var(--g);font-weight:700;">69.6%</span></div>
         <div style="height:3px;background:var(--line);border-radius:2px;"><div style="height:3px;width:69.6%;background:var(--g);border-radius:2px;"></div></div>
       </div>
       <div style="font-size:11px;color:var(--faint);margin-top:12px;font-weight:300;">* 固定成本已被原有业务覆盖</div>
     </div>
   </div>
-</div>
 
-<!-- BAND -->
-<div class="band">
-  <div class="band-inner">
-    <div class="band-eyebrow">关键洞察</div>
-    <div class="band-text">每日多卖 <strong>30 杯</strong>能量饮，等同于新建一家高利润率业务单元。<br>固定成本已经存在——<strong>新增收入几乎全部是净利润。</strong></div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">05 · 落地执行与财务预测</div>
-
-<!-- 05 EXECUTION + FINANCE -->
-<div class="s s-tight">
-  <div style="margin-bottom:52px;">
-    <div class="hero-num">¥<span class="g">11,500</span></div>
-    <div class="s-title" style="margin-top:16px;margin-bottom:0;">启动 · <span class="g">12个月 ¥654万</span></div>
+  <div class="label">关键投资指标</div>
+  <div class="stat-row">
+    <div class="stat-col"><span class="stat-n">13天</span><div class="stat-l">单店回本周期</div><div class="stat-s">月净利新增¥44,640</div></div>
+    <div class="stat-col"><span class="stat-n">300%+</span><div class="stat-l">门店级12个月IRR</div><div class="stat-s">极低风险极高回报</div></div>
+    <div class="stat-col"><span class="stat-n dk">≈¥0</span><div class="stat-l">失败成本</div><div class="stat-s">功能性粉类原料可转售</div></div>
+    <div class="stat-col"><span class="stat-n">7天</span><div class="stat-l">试点上线时间</div><div class="stat-s">从决策到开卖</div></div>
   </div>
 
-  <div class="inline-pull">
-    <strong>7天完成试点上线。</strong><br>
-    每一步都有清单，每一天都有验收标准。
-  </div>
-
-  <div class="label" style="margin-bottom:0;">7天上线 SOP</div>
-  <div class="steps">
-    <div class="step"><div class="step-n">STEP 01</div><div class="step-title">项目立项</div><div class="step-desc">确认启动，选定 JFC 品尚中心，指定负责人</div><div class="step-day">Day 1</div></div>
-    <div class="step"><div class="step-n">STEP 02</div><div class="step-title">原料采购</div><div class="step-desc">采购功能性粉类原料，制作菜单物料 ≤ ¥11,500</div><div class="step-day">Day 1—3</div></div>
-    <div class="step"><div class="step-n">STEP 03</div><div class="step-title">员工培训</div><div class="step-desc">SOP 培训，口味测试，单杯 ≤ 90秒</div><div class="step-day">Day 3—5</div></div>
-    <div class="step"><div class="step-n">STEP 04</div><div class="step-title">菜单上架</div><div class="step-desc">更新物料，配合 KOL 预热，引爆首周流量</div><div class="step-day">Day 5—7</div></div>
-    <div class="step"><div class="step-n">STEP 05</div><div class="step-title">正式开卖</div><div class="step-desc">全系列上线，数据监测，30天评估复制</div><div class="step-day">Day 7 →</div></div>
-  </div>
-
-  <div class="pilot">
-    <div class="pilot-tag">First Pilot Store</div>
-    <div class="pilot-name">JFC 品尚中心店</div>
-    <div class="pilot-sub">观音山国际商务区</div>
-    <div class="pilot-dl">
-      <div class="pilot-dr"><span class="pilot-dk">客群</span><span class="pilot-dv">写字楼白领 + 健身房会员</span></div>
-      <div class="pilot-dr"><span class="pilot-dk">消费力</span><span class="pilot-dv g">客单价 ¥28—45 接受度高</span></div>
-      <div class="pilot-dr"><span class="pilot-dk">启动投入</span><span class="pilot-dv g">¥11,500</span></div>
-      <div class="pilot-dr"><span class="pilot-dk">新增固定成本</span><span class="pilot-dv g">¥0</span></div>
+  <div class="band">
+    <div class="band-inner">
+      <div class="band-eyebrow">关键洞察</div>
+      <div class="band-text">每日多卖 <strong>30杯</strong> 能量饮，等同于新建一家高利润率业务单元。固定成本已经存在——<strong>新增收入几乎全部是净利润。</strong></div>
     </div>
   </div>
 
@@ -1282,86 +1365,168 @@ function switchTab(tab){
   <table class="t">
     <thead><tr><th>时间节点</th><th class="r">门店数</th><th class="r">月新增净利</th><th class="r">累计净利</th><th>里程碑</th></tr></thead>
     <tbody>
-      <tr><td>第 1 个月</td><td class="r">1 家</td><td class="r">¥4.46 万</td><td class="r">¥4.4 万</td><td class="sub">JFC 品尚中心试点验证</td></tr>
-      <tr><td>第 3 个月</td><td class="r">3 家</td><td class="r">¥13.4 万</td><td class="r g">¥31 万</td><td class="sub">第二增长曲线正式成立</td></tr>
-      <tr><td>第 6 个月</td><td class="r">10 家</td><td class="r">¥44.6 万</td><td class="r g">¥165 万</td><td class="sub">「通喜能量」系列全网络铺开</td></tr>
-      <tr class="hl"><td>第 12 个月</td><td class="r big">30 家</td><td class="r big">¥133.9 万</td><td class="r big">¥654 万</td><td class="g">全面收割 · 评估下一阶段战略</td></tr>
+      <tr><td>第1个月</td><td class="r">1家</td><td class="r">¥4.46万</td><td class="r">¥4.4万</td><td class="sub">JFC品尚中心试点验证</td></tr>
+      <tr><td>第3个月</td><td class="r">3家</td><td class="r">¥13.4万</td><td class="r g">¥31万</td><td class="sub">第二增长曲线正式成立</td></tr>
+      <tr><td>第6个月</td><td class="r">10家</td><td class="r">¥44.6万</td><td class="r g">¥165万</td><td class="sub">TORCE ENERGY全网络铺开</td></tr>
+      <tr class="hl"><td>第12个月</td><td class="r big">30家</td><td class="r big">¥133.9万</td><td class="r big g">¥654万</td><td class="g">全面收割 · 评估下一阶段战略</td></tr>
     </tbody>
   </table>
 </div>
 
+<!-- 08 EXECUTION -->
 <hr class="hr">
-<div class="ch-div">06 · 下一步行动</div>
+<div class="ch-div">08 · 执行计划 — Execution</div>
 
-<!-- 06 ACTION -->
 <div class="s s-tight">
-  <div style="margin-bottom:52px;">
-    <div class="hero-num">7<span class="g">天</span></div>
+  <div class="s-title">7天试点<br><span class="g">12个月全网络落地</span></div>
+
+  <div class="inline-pull">
+    <strong>7天完成试点上线。</strong> 每一步都有清单，每一天都有验收标准。
   </div>
 
-  <div class="mag-pull">
-    无需新增固定成本。无需改造门店。无需招聘员工。<br>
-    <strong>所有条件已经具备——唯一需要的，是一个开始的决定。</strong>"
-  </div>
-
-  <div>
-    <div class="act-row">
-      <div class="act-idx">01</div>
-      <div>
-        <div class="act-title">项目立项 <span class="g">&amp;</span> 团队确认</div>
-        <div class="act-desc">今日确认项目启动，选定 JFC 品尚中心店为首家试点，指定项目负责人，明确考核指标与数据追踪机制。</div>
-      </div>
-      <div><span class="act-day">Day 1</span><div class="act-note">今日可执行 · 零成本启动</div></div>
+  <div class="label" style="margin-bottom:0;">7天上线 SOP</div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-n">STEP 01</div>
+      <div class="step-title">项目立项</div>
+      <div class="step-desc">确认启动，选定 JFC 品尚中心，指定负责人，明确考核指标</div>
+      <div class="step-day">Day 1</div>
     </div>
-    <div class="act-row">
-      <div class="act-idx">02</div>
-      <div>
-        <div class="act-title">原料 <span class="g">&amp;</span> 物料采购</div>
-        <div class="act-desc">采购乳清蛋白、BCAA、肌酸、螺旋藻等功能性原料，制作菜单物料。总预算 ≤ ¥11,500，无固定成本新增。</div>
-      </div>
-      <div><span class="act-day">Day 1—3</span><div class="act-note">预算 ¥11,500 · 保质期 12月+</div></div>
+    <div class="step">
+      <div class="step-n">STEP 02</div>
+      <div class="step-title">原料采购</div>
+      <div class="step-desc">采购功能性粉类原料，制作菜单物料 ≤ ¥11,500</div>
+      <div class="step-day">Day 1-3</div>
     </div>
-    <div class="act-row">
-      <div class="act-idx">03</div>
-      <div>
-        <div class="act-title">全员培训 <span class="g">&amp;</span> 内测</div>
-        <div class="act-desc">完成全员 SOP 培训，口味测试与优化，确保单杯制作 ≤ 90 秒，统一宣传话术，严禁保健/医疗功效宣传。</div>
-      </div>
-      <div><span class="act-day">Day 3—5</span><div class="act-note">内部口味验证 · SOP 标准化</div></div>
+    <div class="step">
+      <div class="step-n">STEP 03</div>
+      <div class="step-title">员工培训</div>
+      <div class="step-desc">全员 SOP 培训，口味测试，单杯 ≤ 90秒，统一话术</div>
+      <div class="step-day">Day 3-5</div>
     </div>
-    <div class="act-row">
-      <div class="act-idx">04</div>
-      <div>
-        <div class="act-title"><span class="g">正式上线</span> · 数据驱动扩张</div>
-        <div class="act-desc">全系列产品正式上架，配合 KOL 推广，开始数据监测（日销量/品类结构/客单价）。30天后评估复制至下一家门店。</div>
-      </div>
-      <div><span class="act-day">Day 7 →</span><div class="act-note">数据监测启动 · 30天评估复制</div></div>
+    <div class="step">
+      <div class="step-n">STEP 04</div>
+      <div class="step-title">菜单上架</div>
+      <div class="step-desc">更新菜单物料，配合 KOL 预热，引爆首周流量</div>
+      <div class="step-day">Day 5-7</div>
+    </div>
+    <div class="step">
+      <div class="step-n">STEP 05</div>
+      <div class="step-title">正式开卖</div>
+      <div class="step-desc">全系列上线，数据监测，30天评估复制</div>
+      <div class="step-day">Day 7 →</div>
     </div>
   </div>
 
-  <div class="stat-row" style="margin-top:72px;margin-bottom:0;">
-    <div class="stat-col"><span class="stat-n">¥11,500</span><div class="stat-l">总启动成本</div><div class="stat-s">新增固定成本 +¥0</div></div>
-    <div class="stat-col"><span class="stat-n">13天</span><div class="stat-l">回本周期</div><div class="stat-s">月净利 ¥5,520 → ¥50,160</div></div>
-    <div class="stat-col"><span class="stat-n dk">≈¥0</span><div class="stat-l">失败成本</div><div class="stat-s">粉类原料可转售</div></div>
-    <div class="stat-col"><span class="stat-n">7天</span><div class="stat-l">上线所需时间</div><div class="stat-s">从决策到开卖</div></div>
+  <div class="pilot">
+    <div class="pilot-tag">First Pilot Store</div>
+    <div class="pilot-name">JFC 品尚中心店</div>
+    <div class="pilot-sub">观音山国际商务区</div>
+    <div class="pilot-dl">
+      <div class="pilot-dr"><span class="pilot-dk">客群</span><span class="pilot-dv">写字楼白领 + 健身房会员</span></div>
+      <div class="pilot-dr"><span class="pilot-dk">消费力</span><span class="pilot-dv g">客单价 ¥28—45 接受度高</span></div>
+      <div class="pilot-dr"><span class="pilot-dk">启动投入</span><span class="pilot-dv g">¥11,500</span></div>
+      <div class="pilot-dr"><span class="pilot-dk">新增固定成本</span><span class="pilot-dv g">¥0</span></div>
+    </div>
   </div>
+
+  <div class="label">阶段性里程碑与验收标准</div>
+  <table class="t">
+    <thead><tr><th>阶段</th><th class="r">时间</th><th class="r">门店数</th><th>关键指标</th><th>验收标准</th></tr></thead>
+    <tbody>
+      <tr><td>试点验证</td><td class="r sub">M1</td><td class="r sub">1家</td><td class="sub">日均能量饮出杯量</td><td class="g">≥30杯/天</td></tr>
+      <tr><td>小范围复制</td><td class="r sub">M3</td><td class="r sub">3家</td><td class="sub">月净利增量</td><td class="g">每店≥¥4万/月</td></tr>
+      <tr><td>批量扩张</td><td class="r sub">M6</td><td class="r sub">10家</td><td class="sub">综合毛利率</td><td class="g">稳定≥68%</td></tr>
+      <tr class="hl"><td>全网络落地</td><td class="r big">M12</td><td class="r big">30家</td><td>年净利增量</td><td class="g big">¥654万+</td></tr>
+    </tbody>
+  </table>
 </div>
 
-<!-- CLOSING BAND -->
-<div class="band">
-  <div class="band-inner">
-    <div class="band-eyebrow">结语</div>
-    <div class="band-text">
-      通喜已经拥有一切：<strong>品牌口碑、60+ 门店、成熟供应链、存量客群。</strong><br>
-      ¥11,500 的试错成本，验证一条<strong>净利率提升 5 倍的第二增长曲线。</strong><br>
-      <span class="g">这是通喜迄今最低风险、最高回报、最快落地的增长机会。</span>
+<!-- 09 FUNDING -->
+<hr class="hr">
+<div class="ch-div">09 · 融资需求 — Funding Ask</div>
+
+<div class="s s-tight">
+  <div class="s-title">我们在寻找<br><span class="g">一位战略级合伙人</span></div>
+
+  <div class="inline-pull">
+    TORCE ENERGY 当前阶段<strong>不需要大量外部资金</strong>——单店¥11,500即可完成试点。此轮融资的战略意义在于：加速规模扩张，锁定全国现制功能饮品连锁的先发优势。
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-col"><span class="stat-n">¥300万</span><div class="stat-l">本轮融资规模</div><div class="stat-s">Pre-A / 战略轮</div></div>
+    <div class="stat-col"><span class="stat-n">30家</span><div class="stat-l">目标覆盖门店</div><div class="stat-s">12个月全网络铺开</div></div>
+    <div class="stat-col"><span class="stat-n g">¥654万</span><div class="stat-l">12个月累计净利</div><div class="stat-s">ROI 218%</div></div>
+    <div class="stat-col"><span class="stat-n">18个月</span><div class="stat-l">评估下一融资轮</div><div class="stat-s">福建/全国扩张</div></div>
+  </div>
+
+  <div class="two">
+    <div>
+      <div class="label">募资用途</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">原料备货 &amp; 供应链</span><span class="dv g">¥120万（40%）</span></div>
+        <div class="dr"><span class="dk-">门店快速复制（30家）</span><span class="dv g">¥90万（30%）</span></div>
+        <div class="dr"><span class="dk-">品牌营销 &amp; KOL</span><span class="dv g">¥60万（20%）</span></div>
+        <div class="dr"><span class="dk-">研发 &amp; 产品迭代</span><span class="dv g">¥20万（6.7%）</span></div>
+        <div class="dr"><span class="dk-">运营储备</span><span class="dv g">¥10万（3.3%）</span></div>
+      </div>
     </div>
+    <div>
+      <div class="label">投资人所得</div>
+      <div class="dl">
+        <div class="dr"><span class="dk-">股权比例</span><span class="dv">待定（面谈）</span></div>
+        <div class="dr"><span class="dk-">投后估值参考</span><span class="dv">¥1,500-2,000万</span></div>
+        <div class="dr"><span class="dk-">12个月门店级IRR</span><span class="dv g">300%+</span></div>
+        <div class="dr"><span class="dk-">退出路径①</span><span class="dv">福建/全国加盟扩张 → B轮</span></div>
+        <div class="dr"><span class="dk-">退出路径②</span><span class="dv">品牌授权 / 战略并购</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="label">我们寻找的战略伙伴</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:64px;">
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">🤝</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">消费/餐饮赛道投资人</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">有新消费/健康食品投资经验，理解现制饮品连锁的规模化路径，能为供应链、门店扩张提供资源协同。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">🏋️</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">运动健身生态战略方</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">健身房连锁、运动品牌或健康食品企业，通过战略入股实现渠道互通，共同构建「运动后补给」生态闭环。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">🏢</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">福建/全国连锁扩张资源</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">有商场渠道资源或区域加盟管理经验，助力通喜从厦门单点验证，快速复制至全省乃至全国市场。</div>
+    </div>
+    <div style="border-top:3px solid var(--g);padding:32px 28px;background:#fafafa;">
+      <div style="font-size:28px;margin-bottom:16px;">📦</div>
+      <div style="font-size:16px;font-weight:700;color:var(--ink);margin-bottom:10px;">运动营养原料供应链方</div>
+      <div style="font-size:13px;color:var(--sub);line-height:1.8;">GMP认证运动营养原料供应商，以战略入股方式锁定通喜长期采购，同时获得现制渠道的品牌曝光与市场验证。</div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="band-inner">
+      <div class="band-eyebrow">给投资人的话</div>
+      <div class="band-text">
+        通喜13年已经完成了最难的部分：<strong>60+门店、品牌信任、存量客群。</strong><br>
+        现在需要的，是一个合伙人——帮助这张渠道网络，<strong>释放它真正的价值。</strong><br>
+        <span class="g">¥11,500试点，¥300万加速，¥654万年回报——这是一笔不对称的好生意。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="inline-pull" style="margin-top:56px;">
+    联系我们：<strong>通喜果汁 · 战略发展部</strong><br>
+    本文件为保密资料，仅供受邀投资人查阅。未经书面授权，禁止转发或复制。
   </div>
 </div>
 
 <footer>
-  <div class="ft-l">通喜果汁 · Tongxi · 2026</div>
-  <div class="ft-r">保密文件 · Confidential</div>
+  <div class="ft-l">通喜果汁 · Tongxi · TORCE ENERGY · 2026</div>
+  <div class="ft-r">投资人商业计划书 · 保密文件 · Confidential</div>
 </footer>
 </div><!-- /page-bp -->
 
@@ -2256,578 +2421,5 @@ function switchTab(tab){
 </footer>
 
 </div><!-- /page-products -->
-
-<!-- ══ PAGE: 单店UE增长计划 ══ -->
-<div id="page-ue" style="display:none;">
-
-<!-- COVER -->
-<div style="padding-top:56px;">
-  <div class="s" style="padding-top:100px;padding-bottom:72px;">
-    <div class="eye">单店增长作战计划书 · JFC 品尚中心店 · 2026</div>
-    <div style="margin-bottom:40px;">
-      <div class="hero-num">JFC</div>
-      <div class="hero-num"><span class="g">品尚中心</span></div>
-    </div>
-    <div class="hero-cap" style="max-width:680px;">
-      观音山国际商务区 · 首家 TORCE ENERGY 试点门店<br>
-      <strong>6个月能量饮品上新 · 单店 UE 增长计划</strong>
-    </div>
-    <div class="stat-row" style="margin-top:56px;margin-bottom:0;">
-      <div class="stat-col"><span class="stat-n">¥162,000</span><div class="stat-l">目标月营收</div><div class="stat-s">现有¥100,800 · +60.7%</div></div>
-      <div class="stat-col"><span class="stat-n">31%</span><div class="stat-l">目标净利率</div><div class="stat-s">现有5.5% · ↑25.5pts</div></div>
-      <div class="stat-col"><span class="stat-n">≥30杯</span><div class="stat-l">能量饮日均目标</div><div class="stat-s">M1验收基准</div></div>
-      <div class="stat-col"><span class="stat-n">6个月</span><div class="stat-l">全计划周期</div><div class="stat-s">试点→成熟→复制</div></div>
-    </div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">01 · 门店诊断 — 现状与增长空间</div>
-
-<div class="s s-tight">
-  <div class="s-title">JFC品尚中心<br><span class="g">为什么是最优试点</span></div>
-
-  <div class="two" style="margin-bottom:56px;">
-    <div>
-      <div class="label">门店基本信息</div>
-      <div class="dl">
-        <div class="dr"><span class="dk-">位置</span><span class="dv">观音山国际商务区</span></div>
-        <div class="dr"><span class="dk-">周边客群</span><span class="dv">写字楼白领 + 健身房会员</span></div>
-        <div class="dr"><span class="dk-">客单价接受度</span><span class="dv g">¥28—45，健康消费意愿强</span></div>
-        <div class="dr"><span class="dk-">早高峰（8-10点）</span><span class="dv">流量大，能量饮需求强</span></div>
-        <div class="dr"><span class="dk-">午后（14-16点）</span><span class="dv">现有主力时段，提神需求明显</span></div>
-        <div class="dr"><span class="dk-">健身高峰（18-21点）</span><span class="dv g">当前未覆盖，TORCE最大增量时段</span></div>
-      </div>
-    </div>
-    <div>
-      <div class="label">当前 UE 现状</div>
-      <div class="dl">
-        <div class="dr"><span class="dk-">日均出杯</span><span class="dv">120 杯</span></div>
-        <div class="dr"><span class="dk-">平均客单价</span><span class="dv">¥28</span></div>
-        <div class="dr"><span class="dk-">月营收</span><span class="dv">¥100,800</span></div>
-        <div class="dr"><span class="dk-">综合毛利率</span><span class="dv">65%</span></div>
-        <div class="dr"><span class="dk-">月净利润</span><span class="dv">¥5,520</span></div>
-        <div class="dr"><span class="dk-">净利润率</span><span class="dv" style="color:#E07B00;font-weight:700;">5.5% ← 核心痛点</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mag-pull">
-    JFC品尚中心已具备天然优势：<strong>高消费力客群 + 运动场景聚集 + 早高峰流量未变现。</strong><br>
-    TORCE ENERGY 上新，本质是把<em>已有的客流，在已有的门店，用已有的设备，再多变现一次。</em>
-  </div>
-
-  <!-- 增长空间拆解 -->
-  <div class="label">增长空间拆解 — 三大来源</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:64px;">
-    <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);">
-      <div style="font-size:10px;color:var(--faint);letter-spacing:0.1em;margin-bottom:16px;font-weight:300;">增长来源 01</div>
-      <div style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">+30杯/天</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">新增能量饮出杯</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.7;">捕获早高峰（8-10点）和健身高峰（18-21点）两个现有盲区时段的流量，每个时段目标各+15杯</div>
-    </div>
-    <div style="padding:36px 32px;border-right:1px solid var(--line);">
-      <div style="font-size:10px;color:var(--faint);letter-spacing:0.1em;margin-bottom:16px;font-weight:300;">增长来源 02</div>
-      <div style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">¥28→¥36</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">客单价提升</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.7;">能量饮定价¥26-32，高于现有鲜榨均价，带动全店综合客单价自然提升¥8（+28.6%）</div>
-    </div>
-    <div style="padding:36px 0 36px 32px;">
-      <div style="font-size:10px;color:var(--faint);letter-spacing:0.1em;margin-bottom:16px;font-weight:300;">增长来源 03</div>
-      <div style="font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--g);line-height:1;margin-bottom:12px;">65%→68%</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">毛利率结构改善</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.7;">能量饮单杯毛利率69.6%高于鲜榨65%，且零水果损耗，提升全店综合毛利率3个百分点</div>
-    </div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">02 · 门店动线改造 — 空间为产品服务</div>
-
-<div class="s s-tight">
-  <div class="s-title">动线重设计<br><span class="g">让能量饮自然进入客户视野</span></div>
-
-  <div class="inline-pull">
-    <strong>改造原则：零装修费用，最大视觉冲击。</strong><br>
-    利用现有台面、展示位、菜单牌，通过陈列和视觉引导让 TORCE ENERGY 成为进店第一眼看到的产品。
-  </div>
-
-  <!-- 改造动作清单 -->
-  <div class="label">动线改造动作清单（总预算含在¥11,500内）</div>
-  <div class="steps" style="grid-template-columns:none;display:flex;flex-direction:column;gap:0;">
-
-    <div style="display:grid;grid-template-columns:200px 1fr 120px;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start;">
-      <div>
-        <div style="font-size:10px;color:var(--g);font-weight:700;letter-spacing:0.12em;margin-bottom:6px;">ZONE 01 · 入口展示</div>
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">TORCE 视觉墙</div>
-      </div>
-      <div style="font-size:13px;color:var(--sub);line-height:1.8;">
-        门店入口处设置 TORCE ENERGY 专属展示区：6色产品立牌（A4竖版，每款一色）+ 黑板/KT板手写「今日推荐」。确保顾客进门3秒内即看到能量饮品区，形成视觉锚点。
-      </div>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:var(--g);">Day 1-3</div>
-        <div style="font-size:11px;color:var(--faint);">预算 ¥800-1,200</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:200px 1fr 120px;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start;">
-      <div>
-        <div style="font-size:10px;color:var(--g);font-weight:700;letter-spacing:0.12em;margin-bottom:6px;">ZONE 02 · 点单台</div>
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">菜单视觉升级</div>
-      </div>
-      <div style="font-size:13px;color:var(--sub);line-height:1.8;">
-        点单台正面新增 TORCE ENERGY 专属菜单板（独立区块，视觉与现有果汁区区分）。使用彩色产品图卡（6色系）+ 功能标签（「BCAA恢复」「肌酸爆发」等）。菜单排版遵循"贵的放中间、视线高度"原则。
-      </div>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:var(--g);">Day 1-3</div>
-        <div style="font-size:11px;color:var(--faint);">预算 ¥500-800</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:200px 1fr 120px;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start;">
-      <div>
-        <div style="font-size:10px;color:var(--g);font-weight:700;letter-spacing:0.12em;margin-bottom:6px;">ZONE 03 · 制作台</div>
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">原料可视化展示</div>
-      </div>
-      <div style="font-size:13px;color:var(--sub);line-height:1.8;">
-        制作台上将乳清蛋白、肌酸等功能性原料瓶摆放在顾客可见区域（透明玻璃瓶/原装罐）。「看得见的原料 = 信任感」。旁边小标签标注原料名称和功能，强化专业感和透明度。
-      </div>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:var(--g);">Day 1-3</div>
-        <div style="font-size:11px;color:var(--faint);">预算 ¥0（利用现有）</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:200px 1fr 120px;gap:32px;padding:28px 0;border-bottom:1px solid var(--line);align-items:start;">
-      <div>
-        <div style="font-size:10px;color:var(--g);font-weight:700;letter-spacing:0.12em;margin-bottom:6px;">ZONE 04 · 取餐区</div>
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">杯贴 + 二维码</div>
-      </div>
-      <div style="font-size:13px;color:var(--sub);line-height:1.8;">
-        每杯 TORCE ENERGY 产品贴上专属彩色杯贴（产品名+颜色系）。杯贴背面印二维码：① 关注公众号/小红书领优惠；② 扫码查功能成分详情。让产品本身成为传播载体。
-      </div>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:var(--g);">Day 5-7</div>
-        <div style="font-size:11px;color:var(--faint);">预算 ¥300-500</div>
-      </div>
-    </div>
-
-    <div style="display:grid;grid-template-columns:200px 1fr 120px;gap:32px;padding:28px 0;align-items:start;">
-      <div>
-        <div style="font-size:10px;color:var(--g);font-weight:700;letter-spacing:0.12em;margin-bottom:6px;">ZONE 05 · 门口/橱窗</div>
-        <div style="font-size:14px;font-weight:700;color:var(--ink);">上新海报</div>
-      </div>
-      <div style="font-size:13px;color:var(--sub);line-height:1.8;">
-        门口贴「NEW · TORCE ENERGY 能量饮品系列正式上线」竖版海报（A1尺寸，6色产品展示）。橱窗展示区摆放 DETOX 绿色款实物/模型（视觉冲击力最强的标志产品），形成过路客的停留诱因。
-      </div>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:var(--g);">Day 5-7</div>
-        <div style="font-size:11px;color:var(--faint);">预算 ¥400-600</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="band" style="margin-top:56px;">
-    <div class="band-inner">
-      <div class="band-eyebrow">动线改造原则</div>
-      <div class="band-text">好的动线设计让顾客<strong>不需要主动寻找</strong>——产品就在他们应该看到的地方。目标是：进门看到、点单看到、等餐看到、拿杯看到。<strong>每个触点都是一次销售机会。</strong></div>
-    </div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">03 · 原材料准备 — 供应链就绪</div>
-
-<div class="s s-tight">
-  <div class="s-title">¥11,500<br><span class="g">7天备货完成，零库存风险</span></div>
-
-  <div class="inline-pull">
-    功能性粉类原料特点：<strong>保质期12个月+、重量轻、存储简单、可转售。</strong><br>
-    即使产品未能上线，原材料几乎可全额回收——失败成本趋近于零。
-  </div>
-
-  <table class="t">
-    <thead><tr><th>原料</th><th>供应渠道建议</th><th class="r">首批采购量</th><th class="r">单价</th><th class="r">首批成本</th><th>保质期</th></tr></thead>
-    <tbody>
-      <tr><td class="str">分离乳清蛋白 WPI</td><td class="sub">优先国产（完达山/沃隆），或京东国际澳洲进口</td><td class="r">3kg</td><td class="r">¥70/kg</td><td class="r g">¥210</td><td>18-24月</td></tr>
-      <tr><td class="str">肌酸（一水肌酸）</td><td class="sub">淘宝/1688，山东阿尔法等厂家直采，注明99%纯度</td><td class="r">500g</td><td class="r">¥35/kg</td><td class="r g">¥18</td><td>36月+</td></tr>
-      <tr><td class="str">BCAA（2:1:1）</td><td class="sub">1688大厂GMP认证，批量采购更优惠</td><td class="r">1kg</td><td class="r">¥100/kg</td><td class="r g">¥100</td><td>24月</td></tr>
-      <tr><td class="str">螺旋藻粉</td><td class="sub">云南程海螺旋藻（淘宝/拼多多均有认证店铺）</td><td class="r">500g</td><td class="r">¥60/kg</td><td class="r g">¥30</td><td>24月</td></tr>
-      <tr><td class="str">左旋肉碱</td><td class="sub">浙江金华/河南大厂，1688直采</td><td class="r">500g</td><td class="r">¥130/kg</td><td class="r g">¥65</td><td>24月</td></tr>
-      <tr><td class="str">天然咖啡因提取物</td><td class="sub">云南茶叶提取，注明食品级</td><td class="r">100g</td><td class="r">¥250/kg</td><td class="r g">¥25</td><td>24月</td></tr>
-      <tr><td class="str">电解质粉</td><td class="sub">复配电解质（Na/K/Mg），1688食品级供应</td><td class="r">1kg</td><td class="r">¥50/kg</td><td class="r g">¥50</td><td>18月</td></tr>
-      <tr><td class="str">巴西莓浆（冷冻）</td><td class="sub">进口冷冻浆，天猫国际/京东国际，或本地批发市场</td><td class="r">5kg</td><td class="r">¥80/kg</td><td class="r g">¥400</td><td>冷冻12月</td></tr>
-      <tr class="hl"><td class="str" colspan="4">物料费用（菜单牌/杯贴/海报/展示立牌）</td><td class="r big">¥2,500</td><td>—</td></tr>
-      <tr class="hl"><td class="str" colspan="4">预备金（补货/应急）</td><td class="r big">¥8,102</td><td>—</td></tr>
-      <tr class="hl"><td class="str" colspan="4"><strong>合计</strong></td><td class="r big" style="font-size:1.4rem;">¥11,500</td><td>—</td></tr>
-    </tbody>
-  </table>
-
-  <div class="label">备货时间线</div>
-  <div class="steps">
-    <div class="step"><div class="step-n">Day 1</div><div class="step-title">网上下单</div><div class="step-desc">1688/淘宝下单功能性粉类，选次日达/隔日达供应商</div></div>
-    <div class="step"><div class="step-n">Day 1-2</div><div class="step-title">物料设计</div><div class="step-desc">产品图卡、菜单牌、杯贴设计（可用Canva自制）</div></div>
-    <div class="step"><div class="step-n">Day 2-3</div><div class="step-title">原料到货</div><div class="step-desc">验收原料，检查食品级认证/GMP证书，按品类归位存放</div></div>
-    <div class="step"><div class="step-n">Day 3-5</div><div class="step-title">配方测试</div><div class="step-desc">门店实测6款产品，调整配方口感，SOP定稿（出杯≤90秒）</div></div>
-    <div class="step"><div class="step-n">Day 5-7</div><div class="step-title">物料到货布置</div><div class="step-desc">物料印刷完成，完成门店动线改造，拍摄产品宣传图</div></div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">04 · 6个月分阶段计划</div>
-
-<div class="s s-tight">
-  <div class="s-title">三阶段推进<br><span class="g">试点验证 · 深化运营 · 扩张复制</span></div>
-
-  <!-- Phase 1 -->
-  <div style="border-left:4px solid var(--g);padding-left:32px;margin-bottom:64px;">
-    <div style="font-size:10px;font-weight:700;color:var(--g);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;">PHASE 01 · M1-M2</div>
-    <div style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em;">上线与验证</div>
-    <div style="font-size:13px;color:var(--sub);margin-bottom:28px;">目标：快速上线，验证产品市场契合度，建立运营SOP</div>
-
-    <div class="two" style="margin-bottom:32px;">
-      <div>
-        <div class="label">关键目标（M1-M2）</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">能量饮日均出杯</span><span class="dv g">≥ 30 杯/天</span></div>
-          <div class="dr"><span class="dk-">综合客单价</span><span class="dv g">≥ ¥32</span></div>
-          <div class="dr"><span class="dk-">顾客自发分享</span><span class="dv g">≥ 5条/周（小红书/朋友圈）</span></div>
-          <div class="dr"><span class="dk-">爆款产品</span><span class="dv g">识别出1-2款TOP单品</span></div>
-          <div class="dr"><span class="dk-">出杯SOP达标率</span><span class="dv g">≥ 90%（≤90秒）</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="label">核心动作</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">产品上新</span><span class="dv">优先上线 RECOVERY + PROTEIN（最易接受）</span></div>
-          <div class="dr"><span class="dk-">员工话术</span><span class="dv">「今天试试我们的新能量昔？」主动推荐脚本</span></div>
-          <div class="dr"><span class="dk-">首周优惠</span><span class="dv">买果汁+能量饮套餐减¥5（限前100名）</span></div>
-          <div class="dr"><span class="dk-">数据追踪</span><span class="dv">每日记录各款出杯量、客诉、复购情况</span></div>
-          <div class="dr"><span class="dk-">M2新品</span><span class="dv">上线 DETOX（视觉最强，小红书传播利器）</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div style="background:#f8f8f8;padding:28px 32px;border-top:2px solid var(--g);">
-      <div class="label" style="margin-bottom:16px;">M1 验收标准（决定是否继续）</div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-        <div><div style="font-size:1.8rem;font-weight:900;color:var(--g);">30杯</div><div style="font-size:12px;color:var(--sub);">能量饮日均出杯下限</div><div style="font-size:11px;color:var(--faint);">未达标 → 排查：定价/口味/推荐话术</div></div>
-        <div><div style="font-size:1.8rem;font-weight:900;color:var(--g);">¥3万</div><div style="font-size:12px;color:var(--sub);">月净利新增下限</div><div style="font-size:11px;color:var(--faint);">未达标 → 优化：客单价/毛利结构</div></div>
-        <div><div style="font-size:1.8rem;font-weight:900;color:var(--g);">0差评</div><div style="font-size:12px;color:var(--sub);">口感/服务零差评</div><div style="font-size:11px;color:var(--faint);">有差评 → 立即优化配方/培训</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Phase 2 -->
-  <div style="border-left:4px solid var(--dg);padding-left:32px;margin-bottom:64px;">
-    <div style="font-size:10px;font-weight:700;color:var(--dg);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;">PHASE 02 · M3-M4</div>
-    <div style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em;">深化运营 · 品牌破圈</div>
-    <div style="font-size:13px;color:var(--sub);margin-bottom:28px;">目标：完善产品矩阵，建立口碑，扩大用户群体</div>
-
-    <div class="two" style="margin-bottom:32px;">
-      <div>
-        <div class="label">关键目标（M3-M4）</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">能量饮日均出杯</span><span class="dv g">≥ 45 杯/天</span></div>
-          <div class="dr"><span class="dk-">综合客单价</span><span class="dv g">≥ ¥35</span></div>
-          <div class="dr"><span class="dk-">能量饮复购率</span><span class="dv g">≥ 30%（购买过的顾客）</span></div>
-          <div class="dr"><span class="dk-">小红书笔记</span><span class="dv g">≥ 20篇带门店打卡</span></div>
-          <div class="dr"><span class="dk-">月净利</span><span class="dv g">≥ ¥30,000（含能量饮增量）</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="label">核心动作</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">全系列上线</span><span class="dv">M3完成6款全部上线（含PERFORMANCE+L-CARNITINE）</span></div>
-          <div class="dr"><span class="dk-">KOL合作</span><span class="dv">邀请2-3名厦门健身/健康类KOL到店体验拍摄</span></div>
-          <div class="dr"><span class="dk-">会员体系</span><span class="dv">能量饮打卡计划：累计购买5杯送1杯</span></div>
-          <div class="dr"><span class="dk-">场景营销</span><span class="dv">健身房合作：凭健身打卡截图享能量饮9折</span></div>
-          <div class="dr"><span class="dk-">产品迭代</span><span class="dv">基于M1-M2数据优化配方，砍掉低销款，强化爆款</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Phase 3 -->
-  <div style="border-left:4px solid var(--ink);padding-left:32px;margin-bottom:48px;">
-    <div style="font-size:10px;font-weight:700;color:var(--ink);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:8px;">PHASE 03 · M5-M6</div>
-    <div style="font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--ink);margin-bottom:8px;letter-spacing:-0.02em;">成熟固化 · 准备复制</div>
-    <div style="font-size:13px;color:var(--sub);margin-bottom:28px;">目标：达成UE目标，输出可复制的标准化运营手册</div>
-
-    <div class="two" style="margin-bottom:32px;">
-      <div>
-        <div class="label">关键目标（M5-M6）</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">能量饮日均出杯</span><span class="dv g">≥ 60 杯/天（目标上限）</span></div>
-          <div class="dr"><span class="dk-">月营收</span><span class="dv g">≥ ¥162,000</span></div>
-          <div class="dr"><span class="dk-">净利润率</span><span class="dv g">≥ 28%（目标31%）</span></div>
-          <div class="dr"><span class="dk-">月净利润</span><span class="dv g">≥ ¥45,000</span></div>
-          <div class="dr"><span class="dk-">复制就绪</span><span class="dv g">完成SOP手册，可向第2家门店输出</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="label">核心动作</div>
-        <div class="dl">
-          <div class="dr"><span class="dk-">私域沉淀</span><span class="dv">建立「TORCE能量打卡群」，深度维系高频用户</span></div>
-          <div class="dr"><span class="dk-">企业客户</span><span class="dv">开发周边写字楼团购：下午茶定制能量昔套餐</span></div>
-          <div class="dr"><span class="dk-">SOP固化</span><span class="dv">整理配方/话术/动线/营销全套可复制手册</span></div>
-          <div class="dr"><span class="dk-">选品优化</span><span class="dv">保留TOP3爆款，考虑M7推出季节限定新品</span></div>
-          <div class="dr"><span class="dk-">复制评估</span><span class="dv">向管理层汇报6个月数据，申请第2家门店上新授权</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- UE进化路径 -->
-  <div class="label">单店 UE 进化路径 — 6个月目标</div>
-  <table class="t">
-    <thead><tr><th>指标</th><th class="r">现状</th><th class="r">M2目标</th><th class="r">M4目标</th><th class="r">M6目标（满状态）</th></tr></thead>
-    <tbody>
-      <tr><td>能量饮日均出杯</td><td class="r sub">0 杯</td><td class="r">≥30 杯</td><td class="r">≥45 杯</td><td class="r g">≥60 杯</td></tr>
-      <tr><td>综合客单价</td><td class="r sub">¥28</td><td class="r">¥32</td><td class="r">¥35</td><td class="r g">¥36+</td></tr>
-      <tr><td>月总营收</td><td class="r sub">¥100,800</td><td class="r">¥125,000</td><td class="r">¥145,000</td><td class="r g">¥162,000</td></tr>
-      <tr><td>综合毛利率</td><td class="r sub">65%</td><td class="r">66.5%</td><td class="r">67.5%</td><td class="r g">68%</td></tr>
-      <tr class="hl"><td>月净利润</td><td class="r sub">¥5,520</td><td class="r">¥22,000+</td><td class="r">¥36,000+</td><td class="r big">¥50,160</td></tr>
-      <tr class="hl"><td>净利润率</td><td class="r sub">5.5%</td><td class="r">17.6%</td><td class="r">24.8%</td><td class="r big">31%</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<hr class="hr">
-<div class="ch-div">05 · 推广打法 — 线上线下联动</div>
-
-<div class="s s-tight">
-  <div class="s-title">全渠道传播<br><span class="g">让门店成为内容生产机器</span></div>
-
-  <div class="inline-pull">
-    核心理念：<strong>不是做广告，是做内容。</strong><br>
-    让每一杯 TORCE ENERGY 都有「被拍」的理由——颜值即传播，产品即营销。
-  </div>
-
-  <!-- 线上打法 -->
-  <div class="label">线上推广矩阵</div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:56px;">
-
-    <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);">
-      <div style="font-size:24px;margin-bottom:12px;">📕</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">小红书（核心阵地）</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;margin-bottom:16px;">
-        DETOX绿色款天然吸引打卡——「最好看的一杯绿色能量饮」是核心传播钩子。<br><br>
-        • M1：员工自拍+制作过程视频，每周2条<br>
-        • M2：邀请2-3个健身/美食博主探店<br>
-        • M3+：用户打卡UGC引导（拍照送积分）<br>
-        • 关键词：#厦门探店 #健康饮品 #运动营养 #观音山美食
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--g);">目标：M3累计笔记≥30篇</div>
-    </div>
-
-    <div style="padding:36px 32px;border-right:1px solid var(--line);">
-      <div style="font-size:24px;margin-bottom:12px;">🎬</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">抖音/视频号</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;margin-bottom:16px;">
-        制作过程的「满足感视频」（倒粉、搅拌、出杯）天然适合短视频传播。<br><br>
-        • 「每天一杯TORCE，30天健身打卡」挑战话题<br>
-        • 6款产品颜色盲盒开箱（「今天喝哪个颜色？」）<br>
-        • 功能成分科普短视频（肌酸是什么？15秒版）<br>
-        • 与厦门健身房账号互动/合拍
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--g);">目标：M2发布≥8条原创视频</div>
-    </div>
-
-    <div style="padding:36px 0 36px 32px;">
-      <div style="font-size:24px;margin-bottom:12px;">💬</div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:8px;">微信私域</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;margin-bottom:16px;">
-        通过杯贴二维码引流至门店微信/社群，沉淀高价值用户。<br><br>
-        • 「TORCE能量打卡群」：每日分享健身内容+产品优惠<br>
-        • 朋友圈每周2条：产品图+功能科普+顾客打卡晒图<br>
-        • 企业微信1v1服务：写字楼常客定制推荐<br>
-        • 节点营销：健身日/世界营养日等节点发福利
-      </div>
-      <div style="font-size:11px;font-weight:700;color:var(--g);">目标：M4私域社群≥200人</div>
-    </div>
-
-  </div>
-
-  <!-- 线下打法 -->
-  <div class="label">线下营销联动</div>
-  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);margin-bottom:56px;">
-
-    <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);">
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">🏋️ 健身房联动</div>
-      <div style="font-size:11px;color:var(--faint);margin-bottom:16px;">观音山周边健身房 · M1启动</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;">
-        与周边3-5家健身房合作：<br>
-        • 健身房会员凭小票享能量饮9折（带客流）<br>
-        • 在健身房公告栏/前台放 TORCE 宣传单<br>
-        • 健身房教练推荐：「训练后30分钟黄金窗口，RECOVERY款」<br>
-        • 合作形式：互相推荐，无需付费合作费
-      </div>
-    </div>
-
-    <div style="padding:36px 0 36px 32px;">
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">🏢 写字楼企业客户</div>
-      <div style="font-size:11px;color:var(--faint);margin-bottom:16px;">观音山商务区 · M3启动</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;">
-        开发B端团购场景：<br>
-        • 下午茶团购：10杯以上享9折+免费配送到楼层<br>
-        • 企业欢迎套餐：新员工入职礼盒（TORCE定制套装）<br>
-        • 公司健康日活动赞助：提供TORCE试喝体验<br>
-        • 目标：M4锁定3-5家企业长期团购客户
-      </div>
-    </div>
-
-    <div style="padding:36px 32px 36px 0;border-right:1px solid var(--line);border-top:1px solid var(--line);">
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">🎯 门店快闪活动</div>
-      <div style="font-size:11px;color:var(--faint);margin-bottom:16px;">M1上线周 + M3全系列上线周</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;">
-        「TORCE能量周」集中爆破：<br>
-        • Day 1-3：买一送一（限RECOVERY+DETOX两款）<br>
-        • 设置拍照打卡区（6色产品整列摆拍背景）<br>
-        • 现场DIY体验：「自己选能量包」互动活动<br>
-        • 制造首周话题感和FOMO效应
-      </div>
-    </div>
-
-    <div style="padding:36px 0 36px 32px;border-top:1px solid var(--line);">
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;">🏃 跑步/骑行社群</div>
-      <div style="font-size:11px;color:var(--faint);margin-bottom:16px;">厦门户外运动社群 · M2启动</div>
-      <div style="font-size:12px;color:var(--sub);line-height:1.75;">
-        厦门有活跃的跑步/骑行社群（海湾公园等）：<br>
-        • 联系跑团/骑行团，提供赛后补给赞助（小样/折扣券）<br>
-        • 节假日路跑活动摆摊：现场试喝ENERGY+RECOVERY<br>
-        • 运动KOL合作：「跑完5km，TORCE恢复」内容<br>
-        • 切入轻运动人群（最大增量用户群）
-      </div>
-    </div>
-
-  </div>
-
-  <div class="band">
-    <div class="band-inner">
-      <div class="band-eyebrow">推广核心原则</div>
-      <div class="band-text">前3个月不买流量，<strong>只做内容和场景联动。</strong> 让产品颜值和功能性价值驱动自然传播。当小红书开始有稳定UGC后，再考虑投放放大。<strong>口碑是最便宜的广告。</strong></div>
-    </div>
-  </div>
-</div>
-
-<hr class="hr">
-<div class="ch-div">06 · 里程碑总览 与 风险预案</div>
-
-<div class="s s-tight">
-  <div class="s-title">6个月关键<span class="g">里程碑</span></div>
-
-  <!-- 时间轴里程碑 -->
-  <div style="position:relative;margin-bottom:72px;">
-    <!-- 时间轴线 -->
-    <div style="position:absolute;top:28px;left:40px;right:40px;height:2px;background:var(--line);z-index:0;"></div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;z-index:1;">
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--g);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M1</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">试点上线</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">RECOVERY+PROTEIN首发<br>日均出杯≥30杯</div>
-      </div>
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--g);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M2</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">DETOX破圈</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">标志绿色款上线<br>小红书首批UGC</div>
-      </div>
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--dg);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M3</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">全系列齐发</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">6款全线上架<br>健身房联动启动</div>
-      </div>
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--dg);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M4</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">企业团购</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">B端客户开发<br>月净利≥¥36,000</div>
-      </div>
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--ink);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M5</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">私域成熟</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">社群≥200人<br>复购率≥40%</div>
-      </div>
-
-      <div style="text-align:center;padding:0 12px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--g);font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">M6</div>
-        <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:6px;">目标达成</div>
-        <div style="font-size:11px;color:var(--sub);line-height:1.6;">净利率≥28%<br>输出复制手册</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 风险预案 -->
-  <div class="label">风险识别与预案</div>
-  <table class="t">
-    <thead><tr><th>风险场景</th><th>可能原因</th><th>预案</th><th class="r">概率</th></tr></thead>
-    <tbody>
-      <tr>
-        <td class="str">出杯量未达30杯/天（M1）</td>
-        <td class="sub">顾客不了解产品 / 员工推荐不积极 / 口味不对</td>
-        <td>加强员工推荐激励（多卖1杯奖励¥0.5）；首周限时折扣刺激尝试；优先推荐最易接受的PROTEIN款</td>
-        <td class="r" style="color:#E07B00;font-weight:700;">中</td>
-      </tr>
-      <tr>
-        <td class="str">口感差评 / 顾客不接受</td>
-        <td class="sub">配方调试不足 / 原料质量问题 / 口感与预期落差</td>
-        <td>M1前完成≥20杯内测，邀请不同人群盲测；建立差评快速响应机制（2小时内响应处理）；保留配方调整备用方案</td>
-        <td class="r" style="color:#E07B00;font-weight:700;">低</td>
-      </tr>
-      <tr>
-        <td class="str">原料供应不稳定</td>
-        <td class="sub">供应商断货 / 物流延误</td>
-        <td>首批采购量覆盖2个月用量；提前备2家备用供应商联系方式；功能性粉类保质期长，可适当超量储备</td>
-        <td class="r" style="color:var(--g);font-weight:700;">低</td>
-      </tr>
-      <tr>
-        <td class="str">竞争对手快速模仿</td>
-        <td class="sub">同商圈其他饮品店推出类似产品</td>
-        <td>核心壁垒在品牌信任和配方口感，不在产品类别；加快M3全系列上线占位；强化「通喜出品」的信任背书</td>
-        <td class="r" style="color:var(--g);font-weight:700;">低</td>
-      </tr>
-      <tr class="hl">
-        <td class="str">M2未能达成推广目标</td>
-        <td class="sub">内容传播乏力 / KOL效果不佳</td>
-        <td>切换推广重心：从线上内容转向线下健身房直接联动；考虑小额信息流投放（¥500/周测试）；举办门店快闪活动制造话题</td>
-        <td class="r" style="color:#E07B00;font-weight:700;">中</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- FINAL BAND -->
-<div class="band">
-  <div class="band-inner">
-    <div class="band-eyebrow">6个月目标</div>
-    <div class="band-text">
-      JFC品尚中心，<strong>从¥5,520到¥50,160的月净利跨越。</strong><br>
-      不是运气，是<strong>每一天的动线、每一杯的推荐、每一条内容的积累。</strong><br>
-      <span class="g">验证完成之日，就是全网络复制启动之时。</span>
-    </div>
-  </div>
-</div>
-
-<div class="s s-tight">
-  <div class="stat-row" style="margin-bottom:0;">
-    <div class="stat-col"><span class="stat-n">¥11,500</span><div class="stat-l">总启动成本</div><div class="stat-s">含原料+物料+应急备金</div></div>
-    <div class="stat-col"><span class="stat-n">7天</span><div class="stat-l">从决策到开卖</div><div class="stat-s">Day1下单·Day7正式上线</div></div>
-    <div class="stat-col"><span class="stat-n">6个月</span><div class="stat-l">达成31%净利率</div><div class="stat-s">月净利¥5,520→¥50,160</div></div>
-    <div class="stat-col"><span class="stat-n">M6</span><div class="stat-l">输出复制手册</div><div class="stat-s">全网络30家门店扩张起点</div></div>
-  </div>
-</div>
-
-<footer>
-  <div class="ft-l">通喜果汁 · JFC品尚中心 · 单店UE增长计划 · 2026</div>
-  <div class="ft-r">内部文件 · Confidential</div>
-</footer>
-
-</div><!-- /page-ue -->
 
 </body>
