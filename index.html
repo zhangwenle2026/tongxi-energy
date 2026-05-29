@@ -788,12 +788,14 @@ svg.chart{display:block;overflow:visible;}
 .tc-img-wrap {
   position: relative;
   overflow: hidden;
-  height: 100%;
+  width: 100%;
+  aspect-ratio: 3 / 7;
 }
 .tc-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 8%;
   display: block;
 }
 .tc-recipe-label {
@@ -2017,8 +2019,8 @@ function switchTab(tab){
   <div style="margin-top:40px;">
 
   <!-- P1: RECOVERY -->
-  <div style="display:grid;grid-template-columns:480px 1fr;min-height:500px;border-bottom:1px solid #f0f0f0;">
-    <div class="tc-img-wrap" style="background:#1a0a2e;min-height:500px;">
+  <div style="display:grid;grid-template-columns:280px 1fr;align-items:stretch;border-bottom:1px solid #f0f0f0;">
+    <div class="tc-img-wrap" style="background:#1a0a2e;">
       <img src="assets/torce_p1.png" alt="RECOVERY">
       <div class="tc-product-badge" style="background:#7B2FBE;">运动恢复</div>
       <div class="tc-recipe-label">
@@ -2074,7 +2076,7 @@ function switchTab(tab){
   </div>
 
   <!-- P2: PERFORMANCE -->
-  <div style="display:grid;grid-template-columns:1fr 480px;min-height:500px;border-bottom:1px solid #f0f0f0;">
+  <div style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-bottom:1px solid #f0f0f0;">
     <div class="tc-product-info" style="border-right:1px solid #f0f0f0;">
       <div>
         <div class="tc-product-num" style="color:#F59E0B;">02</div>
@@ -2112,7 +2114,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">杯型设计</div><div class="tc-price-val" style="font-size:13px;color:#666;">半透明质感杯</div></div>
       </div>
     </div>
-    <div class="tc-img-wrap" style="background:#fff8e7;min-height:500px;">
+    <div class="tc-img-wrap" style="background:#fff8e7;">
       <img src="assets/torce_p2.png" alt="PERFORMANCE">
       <div class="tc-product-badge" style="background:#F59E0B;">运动表现</div>
       <div class="tc-recipe-label">
@@ -2130,8 +2132,8 @@ function switchTab(tab){
   </div>
 
   <!-- P3: PROTEIN -->
-  <div style="display:grid;grid-template-columns:480px 1fr;min-height:500px;border-bottom:1px solid #f0f0f0;">
-    <div class="tc-img-wrap" style="background:#f5f5f0;min-height:500px;">
+  <div style="display:grid;grid-template-columns:280px 1fr;align-items:stretch;border-bottom:1px solid #f0f0f0;">
+    <div class="tc-img-wrap" style="background:#f5f5f0;">
       <img src="assets/torce_p3.png" alt="PROTEIN">
       <div class="tc-product-badge" style="background:#6B4226;">高蛋白代餐</div>
       <div class="tc-recipe-label">
@@ -2185,7 +2187,7 @@ function switchTab(tab){
   </div>
 
   <!-- P4: DETOX -->
-  <div style="display:grid;grid-template-columns:1fr 480px;min-height:500px;border-bottom:1px solid #f0f0f0;">
+  <div style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-bottom:1px solid #f0f0f0;">
     <div class="tc-product-info" style="border-right:1px solid #f0f0f0;">
       <div>
         <div class="tc-product-num" style="color:#00C853;">04</div>
@@ -2223,7 +2225,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">杯型设计</div><div class="tc-price-val" style="font-size:13px;color:#666;">Neon Glossy杯</div></div>
       </div>
     </div>
-    <div class="tc-img-wrap" style="background:#0a1f0a;min-height:500px;">
+    <div class="tc-img-wrap" style="background:#0a1f0a;">
       <img src="assets/torce_p4.png" alt="DETOX">
       <div class="tc-product-badge" style="background:#00C853;color:#000;">⭐ 标志产品</div>
       <div class="tc-recipe-label">
@@ -2241,8 +2243,8 @@ function switchTab(tab){
   </div>
 
   <!-- P5: ENERGY -->
-  <div style="display:grid;grid-template-columns:480px 1fr;min-height:500px;border-bottom:1px solid #f0f0f0;">
-    <div class="tc-img-wrap" style="background:#fff0f0;min-height:500px;">
+  <div style="display:grid;grid-template-columns:280px 1fr;align-items:stretch;border-bottom:1px solid #f0f0f0;">
+    <div class="tc-img-wrap" style="background:#fff0f0;">
       <img src="assets/torce_p5.png" alt="ENERGY">
       <div class="tc-product-badge" style="background:#EF4444;">天然提神</div>
       <div class="tc-recipe-label">
@@ -2296,7 +2298,7 @@ function switchTab(tab){
   </div>
 
   <!-- P6: L-CARNITINE -->
-  <div style="display:grid;grid-template-columns:1fr 480px;min-height:500px;border-bottom:1px solid #f0f0f0;">
+  <div style="display:grid;grid-template-columns:1fr 280px;align-items:stretch;border-bottom:1px solid #f0f0f0;">
     <div class="tc-product-info" style="border-right:1px solid #f0f0f0;">
       <div>
         <div class="tc-product-num" style="color:#5D7A5D;">06</div>
@@ -2333,7 +2335,7 @@ function switchTab(tab){
         <div class="tc-price-box"><div class="tc-price-label">杯型设计</div><div class="tc-price-val" style="font-size:13px;color:#666;">Matte雾面杯</div></div>
       </div>
     </div>
-    <div class="tc-img-wrap" style="background:#e8ede8;min-height:500px;">
+    <div class="tc-img-wrap" style="background:#e8ede8;">
       <img src="assets/torce_p6.png" alt="L-CARNITINE">
       <div class="tc-product-badge" style="background:#5D7A5D;">燃脂辅助</div>
       <div class="tc-recipe-label">
